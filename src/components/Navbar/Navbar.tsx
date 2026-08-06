@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, BookOpen, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronRight } from 'lucide-react'
+import logo from '../../assets/logo.png'
 import { useLocation, useNavigate, Link } from 'react-router-dom'
 import { NAV_LINKS } from '../../constants/data'
 import { useScrollProgress } from '../../hooks/useScrollProgress'
@@ -98,21 +99,15 @@ export const Navbar: React.FC = () => {
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center gap-2.5 group"
+              className="flex items-center group"
               aria-label="IntellxSkill Technologies — go to homepage"
             >
-              <motion.div
+              <motion.img
+                src={logo}
+                alt="IntellxSkill Technologies"
                 whileHover={{ scale: 1.05 }}
-                className="w-9 h-9 bg-gradient-to-br from-[#1E3A8A] to-[#3B5CC4] rounded-xl flex items-center justify-center shadow-md"
-              >
-                <BookOpen className="w-5 h-5 text-white" />
-              </motion.div>
-              <div className="flex flex-col leading-none">
-                <span className="text-lg font-extrabold text-gray-900 tracking-tight">
-                  Intellx<span className="text-[#1E3A8A]">Skill</span>
-                </span>
-                <span className="text-[10px] font-medium text-gray-500 tracking-wide">Technologies</span>
-              </div>
+                className="h-12 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -128,11 +123,10 @@ export const Navbar: React.FC = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05 + 0.3, duration: 0.4 }}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                      isActive
+                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive
                         ? 'text-[#1E3A8A]'
                         : 'text-gray-600 hover:text-[#1E3A8A] hover:bg-blue-50'
-                    }`}
+                      }`}
                     aria-current={isActive ? 'page' : undefined}
                   >
                     {link.label}
@@ -149,9 +143,6 @@ export const Navbar: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <Button variant="ghost" size="sm">
-                Student Login
-              </Button>
               <Button
                 variant="secondary"
                 size="sm"

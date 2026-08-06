@@ -34,13 +34,13 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
     background-color: var(--color-bg);
     color: var(--color-heading);
-    overflow-x: hidden;
     line-height: 1.6;
   }
 

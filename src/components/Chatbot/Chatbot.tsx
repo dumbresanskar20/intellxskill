@@ -235,16 +235,16 @@ export const Chatbot: React.FC = () => {
   return (
     <>
       {/* ── Floating Toggle Button ── */}
-      <div className="fixed bottom-24 right-6 z-[1000] flex flex-col items-end gap-2">
+      <div className="fixed bottom-16 right-4 sm:bottom-24 sm:right-6 z-[1000] flex flex-col items-end gap-2">
         {/* Tooltip bubble */}
         <AnimatePresence>
           {!open && (
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: 10, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.8 }}
               transition={{ duration: 0.2 }}
-              className="relative bg-white rounded-2xl px-4 py-2.5 shadow-xl border border-gray-100 text-sm font-medium text-gray-700 max-w-[180px] text-center"
+              className="relative hidden sm:block bg-white rounded-2xl px-4 py-2.5 shadow-xl border border-gray-100 text-sm font-medium text-gray-700 max-w-[180px] text-center"
             >
               💬 Chat with us!
               <div className="absolute -bottom-2 right-6 w-3 h-3 bg-white border-b border-r border-gray-100 rotate-45" />
@@ -309,8 +309,8 @@ export const Chatbot: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.92 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-44 right-6 z-[1000] w-[360px] max-w-[calc(100vw-24px)] flex flex-col rounded-3xl overflow-hidden shadow-2xl"
-            style={{ height: '520px', maxHeight: 'calc(100vh - 120px)', border: '1px solid rgba(30,58,138,0.15)' }}
+            className="fixed inset-x-2 bottom-2 top-16 sm:inset-auto sm:bottom-44 sm:right-6 sm:w-[360px] z-[1000] flex flex-col rounded-3xl overflow-hidden shadow-2xl"
+            style={{ maxHeight: 'calc(100dvh - 80px)', border: '1px solid rgba(30,58,138,0.15)' }}
             role="dialog"
             aria-modal="true"
             aria-label="Chat window"
@@ -434,6 +434,7 @@ export const Chatbot: React.FC = () => {
             <form
               onSubmit={handleSubmit}
               className="flex items-center gap-2 px-4 py-3 bg-white border-t border-gray-100 flex-shrink-0"
+              style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}
             >
               <input
                 ref={inputRef}

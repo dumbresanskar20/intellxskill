@@ -13,7 +13,7 @@ export const WhatsAppButton: React.FC = () => {
   }
 
   return (
-    <div className="fixed right-6 bottom-6 z-[999] flex items-center gap-3">
+    <div className="fixed right-4 bottom-[7.5rem] sm:right-6 sm:bottom-6 z-[999] flex items-center gap-3 flex-row-reverse sm:flex-row">
       {/* Tooltip */}
       <AnimatePresence>
         {hovered && (
