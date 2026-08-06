@@ -8,12 +8,12 @@ export const WhatsAppButton: React.FC = () => {
   const [hovered, setHovered] = useState(false)
 
   const handleClick = () => {
-    const url = `https://wa.me/${9764781298}}?text=${encodeURIComponent("Hii, I am interested in your courses")}`
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
     window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
-    <div className="fixed left-5 bottom-24 z-[999] flex items-center gap-3">
+    <div className="fixed right-6 bottom-6 z-[999] flex items-center gap-3">
       {/* Tooltip */}
       <AnimatePresence>
         {hovered && (
@@ -25,13 +25,13 @@ export const WhatsAppButton: React.FC = () => {
             className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-xl whitespace-nowrap pointer-events-none"
           >
             💬 Chat on WhatsApp
-            {/* Arrow pointing left */}
+            {/* Arrow pointing right */}
             <div
-              className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0"
+              className="absolute left-[-6px] top-1/2 -translate-y-1/2 w-0 h-0"
               style={{
                 borderTop: '6px solid transparent',
                 borderBottom: '6px solid transparent',
-                borderLeft: '6px solid #111827',
+                borderRight: '6px solid #111827',
               }}
             />
           </motion.div>

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Bot, User, ChevronDown } from 'lucide-react'
 
@@ -158,6 +158,19 @@ export const Chatbot: React.FC = () => {
   const [unread, setUnread] = useState<number>(1)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+  const messagesRef = useRef<HTMLDivElement>(null)
+
+  // Prevent wheel/touchpad scroll from bubbling to the page
+  const handleWheel = useCallback((e: React.WheelEvent<HTMLDivElement>) => {
+    const el = messagesRef.current
+    if (!el) return
+    const { scrollTop, scrollHeight, clientHeight } = el
+    const atTop = scrollTop === 0 && e.deltaY < 0
+    const atBottom = scrollTop + clientHeight >= scrollHeight && e.deltaY > 0
+    if (!atTop && !atBottom) {
+      e.stopPropagation()
+    }
+  }, [])
 
   useEffect(() => {
     if (open) {
@@ -297,7 +310,7 @@ export const Chatbot: React.FC = () => {
             exit={{ opacity: 0, y: 20, scale: 0.92 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="fixed bottom-44 right-6 z-[1000] w-[360px] max-w-[calc(100vw-24px)] flex flex-col rounded-3xl overflow-hidden shadow-2xl"
-            style={{ height: '520px', border: '1px solid rgba(30,58,138,0.15)' }}
+            style={{ height: '520px', maxHeight: 'calc(100vh - 120px)', border: '1px solid rgba(30,58,138,0.15)' }}
             role="dialog"
             aria-modal="true"
             aria-label="Chat window"
@@ -330,8 +343,10 @@ export const Chatbot: React.FC = () => {
 
             {/* Messages */}
             <div
-              className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
+              ref={messagesRef}
+              className="flex-1 min-h-0 overflow-y-auto px-4 py-4 space-y-3"
               style={{ background: '#F8FAFF' }}
+              onWheel={handleWheel}
             >
               {messages.map((msg) => (
                 <motion.div
