@@ -1,9 +1,31 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Search, ChevronRight, PlayCircle, Clock, BookOpen, Briefcase, Trophy } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Search, ChevronRight, Calendar, CheckCircle2, Clock, Briefcase, Trophy } from 'lucide-react'
 import { AnimatedCounter } from '../Common/AnimatedCounter'
 import { Button } from '../Common/Button'
-import { STATS } from '../../constants/data'
+
+const HERO_SLIDES = [
+  {
+    id: 1,
+    image: '/images/hero/hero-slide-1.png',
+    alt: 'Professional instructor teaching cloud data analytics in a modern classroom',
+  },
+  {
+    id: 2,
+    image: '/images/hero/hero-slide-2.png',
+    alt: 'Students attentively listening to technology lecture in modern lab',
+  },
+  {
+    id: 3,
+    image: '/images/hero/hero-slide-3.png',
+    alt: 'Students working practically on laptops during data analytics session',
+  },
+  {
+    id: 4,
+    image: '/images/hero/hero-slide-4.png',
+    alt: 'Instructor guiding students hands-on during practical technology session',
+  },
+]
 
 const FloatingBadge: React.FC<{
   icon: React.ReactNode
@@ -30,6 +52,15 @@ const FloatingBadge: React.FC<{
 )
 
 export const Hero: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length)
+    }, 4500)
+    return () => clearInterval(timer)
+  }, [])
+
   const handleNavClick = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -39,6 +70,12 @@ export const Hero: React.FC = () => {
     { value: 5, suffix: '', label: 'Industry Tools' },
     { value: 7, suffix: '+', label: 'Career Roles' },
     { value: 100, suffix: '%', label: 'Job Assistance' },
+  ]
+
+  const highlights = [
+    'Online & Classroom Training',
+    'Live Practical Sessions',
+    'Career-Focused Programs',
   ]
 
   return (
@@ -68,7 +105,7 @@ export const Hero: React.FC = () => {
             >
               <span className="w-2 h-2 bg-[#F97316] rounded-full animate-pulse-dot" />
               <span className="text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">
-                #1 Cloud Data Analytics Program
+                Practical Learning. Real Skills. Better Career Opportunities.
               </span>
             </motion.div>
 
@@ -79,10 +116,10 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] tracking-tight"
             >
-              Master{' '}
-              <span className="text-gradient-primary">Cloud Data</span>
-              {' '}&{' '}
-              <span className="text-gradient-accent">BI Engineering</span>
+              Build{' '}
+              <span className="text-gradient-primary">Job-Ready Skills</span>
+              {' '}{' '}
+              <span className="text-gradient-accent"> with Intellxskill Technologies</span>
             </motion.h1>
 
             {/* Sub-headline */}
@@ -92,8 +129,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-5 text-lg text-gray-500 leading-relaxed"
             >
-              Join India's most comprehensive training program in Cloud Data Analytics & BI Engineering.
-              Land your dream job with{' '}
+              Master in-demand Data, Cloud, Technology and AI skills through practical sessions, real-world projects and expert guidance.{' '}
               <strong className="text-gray-700 font-semibold">100% placement assistance</strong>.
             </motion.p>
 
@@ -118,6 +154,21 @@ export const Hero: React.FC = () => {
               </div>
             </motion.div>
 
+            {/* Highlights */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-sm font-semibold text-gray-700"
+            >
+              {highlights.map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#F97316] flex-shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </motion.div>
+
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -130,18 +181,18 @@ export const Hero: React.FC = () => {
                 size="lg"
                 icon={<ChevronRight className="w-5 h-5" />}
                 iconPosition="right"
-                onClick={() => handleNavClick('#contact')}
+                onClick={() => handleNavClick('#courses')}
                 className="btn-glow"
               >
-                Start Learning Today
+                Explore Our Courses
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                icon={<PlayCircle className="w-5 h-5" />}
-                onClick={() => handleNavClick('#courses')}
+                icon={<Calendar className="w-5 h-5" />}
+                onClick={() => handleNavClick('#contact')}
               >
-                Explore Courses
+                Book Free Counselling
               </Button>
             </motion.div>
 
@@ -169,67 +220,57 @@ export const Hero: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Visual */}
-          <div className="relative hidden lg:flex items-center justify-center">
+          {/* Right Visual Slider */}
+          <div className="relative flex items-center justify-center lg:justify-start mt-8 lg:mt-0">
             <motion.div
-              initial={{ opacity: 0, scale: 0.85, y: 30 }}
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-full max-w-md"
+              className="relative w-full max-w-xl lg:max-w-none lg:w-[115%] lg:-mr-12 xl:-mr-20"
             >
-              {/* Hero Card */}
-              <div className="relative bg-gradient-to-br from-[#1E3A8A] to-[#3B5CC4] rounded-3xl p-8 shadow-2xl overflow-hidden">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/4" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/4" />
+              {/* Soft ambient background glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-400/20 via-indigo-300/15 to-orange-300/20 rounded-full blur-3xl -z-10 scale-110" />
 
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-white font-bold text-sm">BI Engineering Program</p>
-                      <p className="text-blue-200 text-xs">Cloud Data Analytics</p>
-                    </div>
-                  </div>
+              {/* Slider Image Container with Feathered Edge Blending */}
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-[1.15/1] xl:aspect-[1.25/1]">
+                <div
+                  className="relative w-full h-full"
+                  style={{
+                    WebkitMaskImage:
+                      'radial-gradient(ellipse 70% 70% at 50% 50%, #000 30%, rgba(0,0,0,0.85) 52%, rgba(0,0,0,0.2) 75%, transparent 92%), linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%)',
+                    WebkitMaskComposite: 'source-in',
+                    maskImage:
+                      'radial-gradient(ellipse 70% 70% at 50% 50%, #000 30%, rgba(0,0,0,0.85) 52%, rgba(0,0,0,0.2) 75%, transparent 92%), linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%)',
+                    maskComposite: 'intersect',
+                  }}
+                >
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentSlide}
+                      src={HERO_SLIDES[currentSlide].image}
+                      alt={HERO_SLIDES[currentSlide].alt}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.98 }}
+                      transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                      className="w-full h-full object-cover"
+                    />
+                  </AnimatePresence>
+                </div>
 
-                  {/* Progress bars */}
-                  {[
-                    { label: 'Power BI', pct: 92 },
-                    { label: 'Snowflake', pct: 78 },
-                    { label: 'Python Analytics', pct: 85 },
-                    { label: 'SQL Server', pct: 88 },
-                  ].map((item, i) => (
-                    <div key={item.label} className="mb-4">
-                      <div className="flex justify-between text-xs text-white/80 mb-1.5">
-                        <span>{item.label}</span>
-                        <span>{item.pct}%</span>
-                      </div>
-                      <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${item.pct}%` }}
-                          transition={{ duration: 1, delay: 0.8 + i * 0.15, ease: 'easeOut' }}
-                          className="h-full bg-gradient-to-r from-white to-blue-200 rounded-full"
-                        />
-                      </div>
-                    </div>
+                {/* Minimal Subtle Indicators / Navigation Dots */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/40 shadow-sm">
+                  {HERO_SLIDES.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index
+                        ? 'w-6 bg-[#1E3A8A]'
+                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                        }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
                   ))}
-
-                  <div className="mt-6 pt-4 border-t border-white/20 flex items-center justify-between">
-                    <div>
-                      <p className="text-white font-bold text-lg">500+ Students</p>
-                      <p className="text-blue-200 text-xs">Placed Successfully</p>
-                    </div>
-                    <div className="flex -space-x-2">
-                      {['from-blue-400 to-indigo-500', 'from-orange-400 to-rose-500', 'from-emerald-400 to-teal-500'].map((g, i) => (
-                        <div key={i} className={`w-8 h-8 rounded-full bg-gradient-to-br ${g} border-2 border-white`} />
-                      ))}
-                      <div className="w-8 h-8 rounded-full bg-white/30 border-2 border-white flex items-center justify-center">
-                        <span className="text-[9px] text-white font-bold">+97</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -238,21 +279,21 @@ export const Hero: React.FC = () => {
                 icon={<Trophy className="w-5 h-5" />}
                 label="100% Job Assistance"
                 sub="Placement Guaranteed"
-                className="-top-8 -left-8"
+                className="-top-6 -left-4 hidden sm:flex"
                 delay={0.6}
               />
               <FloatingBadge
                 icon={<Clock className="w-5 h-5" />}
                 label="100+ Hours"
                 sub="Live Training"
-                className="-bottom-6 -right-6"
+                className="-bottom-4 -right-4 hidden sm:flex"
                 delay={0.8}
               />
               <FloatingBadge
                 icon={<Briefcase className="w-5 h-5" />}
                 label="7+ Career Roles"
                 sub="In Data & BI"
-                className="top-1/3 -right-12"
+                className="top-1/3 -right-6 hidden md:flex"
                 delay={1.0}
               />
             </motion.div>
@@ -262,3 +303,5 @@ export const Hero: React.FC = () => {
     </section>
   )
 }
+
+
