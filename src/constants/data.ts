@@ -1,5 +1,7 @@
 // All constants / mock data for the site
 
+import { href } from "react-router-dom"
+
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
@@ -8,6 +10,7 @@ export const NAV_LINKS = [
   { label: 'Certificates', href: '#certificate' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'Contact', href: '#contact' },
+  { label: 'FAQs', href: 'faq' },
 ]
 
 export const STATS = [

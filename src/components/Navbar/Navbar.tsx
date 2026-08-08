@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
                 src={logo}
                 alt="IntellxSkill Technologies"
                 whileHover={{ scale: 1.05 }}
-                className="h-12 w-auto object-contain"
+                className="h-18 w-auto object-contain"
               />
             </Link>
 
@@ -124,8 +124,8 @@ export const Navbar: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05 + 0.3, duration: 0.4 }}
                     className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive
-                        ? 'text-[#1E3A8A]'
-                        : 'text-gray-600 hover:text-[#1E3A8A] hover:bg-blue-50'
+                      ? 'text-[#1E3A8A]'
+                      : 'text-gray-600 hover:text-[#1E3A8A] hover:bg-blue-50'
                       }`}
                     aria-current={isActive ? 'page' : undefined}
                   >
@@ -213,9 +213,7 @@ export const Navbar: React.FC = () => {
                   </motion.a>
                 ))}
                 <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-gray-100">
-                  <Button variant="outline" size="sm" className="w-full justify-center">
-                    Student Login
-                  </Button>
+
                   <Button
                     variant="secondary"
                     size="sm"
