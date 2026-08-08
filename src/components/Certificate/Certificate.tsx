@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Shield, Award, CheckCircle2, Star } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 import { SectionWrapper, SectionHeading } from '../Common/SectionWrapper'
+import certificateImg from '../../assets/certificate.png'
 
 export const Certificate: React.FC = () => {
   const ref = useRef(null)
@@ -23,88 +24,18 @@ export const Certificate: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9, x: -30 }}
             animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            className="relative group"
           >
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl shine-animation">
-              {/* Certificate Design */}
-              <div className="bg-gradient-to-br from-[#1E3A8A] via-[#1E40AF] to-[#1D4ED8] p-8 sm:p-12 relative">
-                {/* Background pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  {Array.from({ length: 6 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute border border-white rounded-full"
-                      style={{
-                        width: `${(i + 1) * 120}px`,
-                        height: `${(i + 1) * 120}px`,
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                      }}
-                    />
-                  ))}
-                </div>
-
-                <div className="relative z-10">
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-                        <Award className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <p className="text-white font-extrabold text-sm">IntellxSkill</p>
-                        <p className="text-blue-200 text-xs">Technologies</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-blue-200 text-xs">Certificate No.</p>
-                      <p className="text-white text-xs font-bold">IXT-2024-DA-001</p>
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <div className="text-center mb-8">
-                    <p className="text-blue-200 text-xs uppercase tracking-widest font-bold mb-2">
-                      This certifies that
-                    </p>
-                    <div className="h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent mb-4" />
-                    <p className="text-white text-3xl font-extrabold mb-1">Your Name Here</p>
-                    <div className="h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent mt-4 mb-4" />
-                    <p className="text-blue-200 text-xs uppercase tracking-widest mb-3">
-                      has successfully completed
-                    </p>
-                    <p className="text-white text-xl font-bold leading-tight">
-                      Cloud Data Analytics &<br />BI Engineering Program
-                    </p>
-                  </div>
-
-                  {/* Stars */}
-                  <div className="flex justify-center gap-1 mb-8">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-[#F97316] fill-[#F97316]" />
-                    ))}
-                  </div>
-
-                  {/* Signature area */}
-                  <div className="flex justify-between items-end">
-                    <div className="text-center">
-                      <div className="h-0.5 w-24 bg-white/40 mb-1 mx-auto" />
-                      <p className="text-blue-200 text-xs">Director, IntellxSkill</p>
-                    </div>
-                    <div className="w-12 h-12 border-2 border-white/40 rounded-full flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-white/60" />
-                    </div>
-                    <div className="text-center">
-                      <div className="h-0.5 w-24 bg-white/40 mb-1 mx-auto" />
-                      <p className="text-blue-200 text-xs">Program Coordinator</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Orange accent bar */}
-              <div className="h-2 bg-gradient-to-r from-[#F97316] via-[#FBBF24] to-[#F97316]" />
+            {/* Elegant container holding the certificate image */}
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-[1.02] border border-gray-100/60 bg-white">
+              <img
+                src={certificateImg}
+                alt="IntellxSkill Technologies Certificate of Completion"
+                className="w-full h-auto object-cover block"
+              />
+              
+              {/* Premium hover overlay glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
             </div>
 
             {/* Floating verification badge */}
@@ -112,7 +43,7 @@ export const Certificate: React.FC = () => {
               initial={{ opacity: 0, scale: 0, y: 20 }}
               animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-5 -right-5 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex items-center gap-3"
+              className="absolute -bottom-5 -right-5 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex items-center gap-3 z-10"
             >
               <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
                 <CheckCircle2 className="w-5 h-5 text-green-600" />

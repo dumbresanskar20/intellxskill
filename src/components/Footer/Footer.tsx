@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
-  BookOpen,
   ArrowUp,
   Mail,
   Phone,
@@ -12,6 +11,7 @@ import {
   ExternalLink,
 } from 'lucide-react'
 import { NAV_LINKS, COURSES } from '../../constants/data'
+import logo from '../../assets/logo.png'
 
 const handleNavClick = (href: string) => {
   document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
@@ -74,17 +74,19 @@ export const Footer: React.FC = () => {
             <a
               href="#home"
               onClick={(e) => { e.preventDefault(); handleNavClick('#home') }}
-              className="flex items-center gap-2.5 mb-5 group"
+              className="flex items-center gap-3.5 mb-5 group"
               aria-label="IntellxSkill Technologies"
             >
-              <div className="w-9 h-9 bg-gradient-to-br from-[#1E3A8A] to-[#3B5CC4] rounded-xl flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-white" />
-              </div>
+              <img
+                src={logo}
+                alt="IntellxSkill Technologies"
+                className="w-14 h-14 object-contain rounded-xl"
+              />
               <div>
-                <p className="text-white font-extrabold text-lg leading-none">
+                <p className="text-white font-extrabold text-xl leading-none">
                   Intellx<span className="text-[#3B5CC4]">Skill</span>
                 </p>
-                <p className="text-gray-500 text-[10px] font-medium">Technologies</p>
+                <p className="text-gray-500 text-[11px] font-medium mt-1">Technologies</p>
               </div>
             </a>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
@@ -216,9 +218,6 @@ export const Footer: React.FC = () => {
             {' '}|{' '}
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </p>
-          <div className="flex items-center gap-2 text-xs text-gray-500">
-            <span>Made with ❤️ for data enthusiasts</span>
-          </div>
         </div>
       </div>
 

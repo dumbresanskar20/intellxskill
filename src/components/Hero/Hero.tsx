@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, ChevronRight, Calendar, CheckCircle2, Clock, Briefcase, Trophy } from 'lucide-react'
+import { ChevronRight, Calendar, CheckCircle2, Clock, Briefcase, Trophy } from 'lucide-react'
 import { AnimatedCounter } from '../Common/AnimatedCounter'
 import { Button } from '../Common/Button'
 
@@ -33,7 +33,7 @@ const FloatingBadge: React.FC<{
   sub?: string
   className?: string
   delay?: number
-}> = ({ icon, label, sub, className = '', delay = 0 }) => (
+ }> = ({ icon, label, sub, className = '', delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.8, y: 20 }}
     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20"
+      className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden pt-24 md:pt-26 pb-4"
       style={{
         background:
           'radial-gradient(ellipse 80% 60% at 60% 20%, #DBEAFE 0%, transparent 55%), radial-gradient(ellipse 50% 50% at 85% 75%, #FED7AA 0%, transparent 55%), #FFFFFF',
@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-slow" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow" style={{ animationDelay: '2s' }} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-2 pb-6 lg:pt-4 lg:pb-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="relative z-10 max-w-xl">
@@ -101,7 +101,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-4"
             >
               <span className="w-2 h-2 bg-[#F97316] rounded-full animate-pulse-dot" />
               <span className="text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">
@@ -127,39 +127,18 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-5 text-lg text-gray-500 leading-relaxed"
+              className="mt-3.5 text-lg text-gray-500 leading-relaxed"
             >
               Master in-demand Data, Cloud, Technology and AI skills through practical sessions, real-world projects and expert guidance.{' '}
               <strong className="text-gray-700 font-semibold">100% placement assistance</strong>.
             </motion.p>
-
-            {/* Search Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-8 relative"
-            >
-              <div className="flex items-center bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden p-1.5">
-                <Search className="w-5 h-5 text-gray-400 ml-3 flex-shrink-0" />
-                <input
-                  type="search"
-                  placeholder="Search courses – Power BI, Snowflake, Python..."
-                  className="flex-1 px-4 py-2.5 text-sm text-gray-700 bg-transparent outline-none placeholder:text-gray-400"
-                  aria-label="Search courses"
-                />
-                <Button variant="primary" size="sm" className="rounded-xl flex-shrink-0">
-                  Search
-                </Button>
-              </div>
-            </motion.div>
 
             {/* Highlights */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-sm font-semibold text-gray-700"
+              className="mt-4.5 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-sm font-semibold text-gray-700"
             >
               {highlights.map((item) => (
                 <div key={item} className="flex items-center gap-2">
@@ -174,7 +153,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="mt-6 flex flex-col sm:flex-row gap-3"
+              className="mt-4.5 flex flex-col sm:flex-row gap-3"
             >
               <Button
                 variant="primary"
@@ -201,7 +180,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.65 }}
-              className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4"
+              className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4"
             >
               {statDisplay.map((stat, i) => (
                 <motion.div
@@ -257,21 +236,6 @@ export const Hero: React.FC = () => {
                     />
                   </AnimatePresence>
                 </div>
-
-                {/* Minimal Subtle Indicators / Navigation Dots */}
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/40 shadow-sm">
-                  {HERO_SLIDES.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index
-                        ? 'w-6 bg-[#1E3A8A]'
-                        : 'w-2 bg-gray-300 hover:bg-gray-400'
-                        }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
               </div>
 
               {/* Floating Badges */}
@@ -303,5 +267,3 @@ export const Hero: React.FC = () => {
     </section>
   )
 }
-
-
