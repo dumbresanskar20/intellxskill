@@ -419,5 +419,134 @@
   .delay-500 { animation-delay: 0.5s; }
   .delay-700 { animation-delay: 0.7s; }
   .delay-1000 { animation-delay: 1s; }
+
+  /* ─── Hiring Partners Marquee ──────────────────────── */
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
 }
 
+/* Hiring Partners — outside @layer for specificity */
+.hiring-marquee-track {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.hiring-marquee-content {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-speed, 30s) linear infinite;
+}
+
+.hiring-marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.hiring-marquee-reverse {
+  animation-name: marquee-scroll-reverse;
+}
+
+.hiring-partner-card {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.hiring-partner-card:hover {
+  border-color: #1E3A8A;
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.12), 0 1px 4px rgba(30, 58, 138, 0.06);
+  transform: translateY(-2px);
+}
+
+.hiring-partner-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.hiring-partner-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Tech Stack Grid ──────────────────────────────── */
+.tech-stack-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tech-stack-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.tech-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.25rem 0.75rem;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+  flex-shrink: 0;
+  min-width: 5.5rem;
+}
+
+.tech-stack-item:hover {
+  border-color: #e2e8f0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+}
+
+.tech-stack-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-stack-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
