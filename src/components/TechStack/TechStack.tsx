@@ -123,21 +123,20 @@ export const TechStack: React.FC = () => {
           Technologies You'll Master
         </motion.h3>
 
-        <div className="tech-stack-grid">
-          {TECHNOLOGIES.map((tech, i) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="tech-stack-item"
-            >
-              <div className="tech-stack-icon" style={{ backgroundColor: tech.bg }}>
-                {TechSVG[tech.name]}
+        <div className="tech-stack-track">
+          <div className="tech-stack-scroll">
+            {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, i) => (
+              <div
+                key={`${tech.name}-${i}`}
+                className="tech-stack-item"
+              >
+                <div className="tech-stack-icon" style={{ backgroundColor: tech.bg }}>
+                  {TechSVG[tech.name]}
+                </div>
+                <span className="tech-stack-label">{tech.name}</span>
               </div>
-              <span className="tech-stack-label">{tech.name}</span>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>

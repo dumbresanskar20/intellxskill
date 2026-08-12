@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { Lightbulb, ClipboardCheck, Briefcase, CheckCircle2 } from 'lucide-react'
 import { SectionWrapper, SectionHeading, ScrollReveal } from '../Common/SectionWrapper'
 import { ABOUT_TABS } from '../../constants/data'
+import logo from '../../assets/logo.png'
 
 const TAB_ICONS: Record<string, React.ReactNode> = {
   Lightbulb: <Lightbulb className="w-4 h-4" />,
@@ -29,6 +30,18 @@ export const About: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-16 items-start" ref={ref}>
           {/* Left - Info Cards */}
+          <div className="space-y-6">
+            {/* IntellxSkill Logo */}
+            <ScrollReveal direction="up">
+              <div className="flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt="IntellxSkill Technologies"
+                  className="h-28 w-auto object-contain drop-shadow-md"
+                />
+              </div>
+            </ScrollReveal>
+
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
@@ -60,6 +73,7 @@ export const About: React.FC = () => {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
           </div>
 
           {/* Right - Interactive Tabs */}

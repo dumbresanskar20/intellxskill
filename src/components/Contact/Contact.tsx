@@ -100,14 +100,21 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess }) => {
                     Follow Us
                   </p>
                   <div className="flex gap-3">
-                    {['LinkedIn', 'YouTube', 'Instagram', 'Twitter'].map(s => (
+                    {[
+                      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/intellxskilltechnologies-undefined-402892414/' },
+                      { name: 'YouTube', href: 'https://www.youtube.com/@IntellxskillTechnologies' },
+                      { name: 'Instagram', href: 'https://www.instagram.com/intellxskill_technologies/' },
+                      { name: 'Facebook', href: 'https://www.facebook.com/?checkpoint_src=any' },
+                    ].map(s => (
                       <a
-                        key={s}
-                        href="#"
-                        aria-label={`Follow us on ${s}`}
+                        key={s.name}
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Follow us on ${s.name}`}
                         className="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center hover:bg-[#F97316] transition-colors text-xs font-bold"
                       >
-                        {s[0]}
+                        {s.name[0]}
                       </a>
                     ))}
                   </div>

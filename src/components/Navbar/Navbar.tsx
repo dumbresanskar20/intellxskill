@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
                 src={logo}
                 alt="IntellxSkill Technologies"
                 whileHover={{ scale: 1.05 }}
-                className="h-18 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
             </Link>
 
