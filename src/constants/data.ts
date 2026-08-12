@@ -68,9 +68,9 @@ export const COURSES = [
   {
     id: 1,
     slug: 'excel-ai',
-    title: 'Microsoft Advanced Excel with AI',
-    category: 'Excel' as CourseCategory,
-    duration: '25 Hours',
+    title: 'Advanced SQL Server, SSIS & Power BI Program',
+    category: 'SQL Server' as CourseCategory,
+    duration: '100 Hours',
     sessions: '20 Live Sessions',
     mode: 'Online (Live + Recorded)',
     level: 'Beginner to Advanced',
@@ -488,7 +488,7 @@ export const CONTACT_INFO = {
 }
 
 export const COURSE_OPTIONS = [
-  'Microsoft Advanced Excel with AI',
+  'Advanced SQL Server, SSIS & Power BI Program',
   'Microsoft SQL Server',
   'Snowflake Data Warehousing',
   'Python for Data Analytics',
