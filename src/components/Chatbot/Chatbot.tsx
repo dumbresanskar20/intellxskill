@@ -22,7 +22,7 @@ const QA_DATABASE: QA[] = [
   },
   {
     patterns: ['courses', 'what courses', 'available courses', 'programs', 'training', 'learn', 'what do you offer'],
-    answer: "📚 We offer 5 industry-leading courses:\n\n• **Microsoft Advanced Excel with AI** (25 hrs)\n• **Microsoft SQL Server** (30 hrs)\n• **Snowflake Data Warehousing** (20 hrs)\n• **Python for Data Analytics** (35 hrs)\n• **Microsoft Power BI** (30 hrs)\n\nAll include live + recorded sessions! Which one interests you?",
+    answer: "📚 We offer 5 industry-leading courses:\n\n• **Microsoft Advanced Excel with AI** (25 hrs)\n• **Advanced SQL Server Program** (100 hrs)\n• **Snowflake Data Warehousing** (20 hrs)\n• **Python for Data Analytics** (35 hrs)\n• **Microsoft Power BI** (30 hrs)\n\nAll include live + recorded sessions! Which one interests you?",
   },
   {
     patterns: ['excel', 'microsoft excel', 'advanced excel'],
@@ -30,7 +30,7 @@ const QA_DATABASE: QA[] = [
   },
   {
     patterns: ['sql', 'sql server', 'microsoft sql', 'database'],
-    answer: "🗄️ **Microsoft SQL Server** covers:\n• T-SQL Fundamentals & Advanced Queries\n• Stored Procedures, Functions & Triggers\n• Performance Tuning & Indexing\n• SSIS & SSRS\n• Database Design & Normalization\n\nDuration: 30 Hours | 24 Live Sessions\nLevel: Intermediate\n\nPerfect for aspiring SQL Developers and Data Engineers!",
+    answer: "🗄️ **Advanced SQL Server Program** covers:\n• Database Fundamentals, Data Types & Clauses\n• Database Design (Normalization, Star/Snowflake Schemas)\n• Advanced Joins, Set Operations & Subqueries\n• CTEs, Views, Stored Procedures, UDFs & Triggers\n• Performance Tuning (Indexes & Execution Plans)\n\nDuration: 100 Hours | 80 Live Sessions\nLevel: Beginner to Advanced\n\nPerfect for aspiring SQL Developers, Data Engineers, and BI Professionals!",
   },
   {
     patterns: ['snowflake', 'cloud warehouse', 'data warehouse'],
@@ -58,7 +58,7 @@ const QA_DATABASE: QA[] = [
   },
   {
     patterns: ['duration', 'how long', 'time', 'weeks', 'months'],
-    answer: "⏱️ Course durations vary:\n• Excel with AI: 25 hours\n• SQL Server: 30 hours\n• Snowflake: 20 hours\n• Python Analytics: 35 hours\n• Power BI: 30 hours\n\nTypically completed in **4–8 weeks** with weekend batches or **2–4 weeks** with daily classes.",
+    answer: "⏱️ Course durations vary:\n• Excel with AI: 25 hours\n• SQL Server Program: 100 hours\n• Snowflake: 20 hours\n• Python Analytics: 35 hours\n• Power BI: 30 hours\n\nTypically completed in **4–8 weeks** with weekend batches or **2–4 weeks** with daily classes.",
   },
   {
     patterns: ['online', 'offline', 'mode', 'live', 'recorded', 'sessions'],

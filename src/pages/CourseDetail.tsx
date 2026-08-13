@@ -162,12 +162,12 @@ const SectionLabel: React.FC<{ icon: React.ReactNode; label: string }> = ({ icon
 const EnrollSidebar: React.FC<{ course: Course }> = ({ course }) => (
   <div className="bg-white rounded-2xl border border-gray-100 shadow-xl p-6 sticky top-24">
     {/* Price placeholder */}
-    <div className="flex items-baseline gap-2 mb-1">
+    {/* <div className="flex items-baseline gap-2 mb-1">
       <span className="text-3xl font-extrabold text-gray-900">₹ 999</span>
       <span className="text-gray-400 line-through text-sm">₹ 4,999</span>
       <span className="text-green-600 font-bold text-sm">80% OFF</span>
     </div>
-    <p className="text-xs text-gray-400 mb-5">Limited seats available – Offer ends soon</p>
+    <p className="text-xs text-gray-400 mb-5">Limited seats available – Offer ends soon</p> */}
 
     {/* Course quick info */}
     <div className="space-y-3 mb-6 p-4 bg-gray-50 rounded-xl">
@@ -189,17 +189,17 @@ const EnrollSidebar: React.FC<{ course: Course }> = ({ course }) => (
 
     <Link
       to="/#contact"
-      className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#1E3A8A] text-white rounded-xl font-bold text-sm hover:bg-[#152B6B] transition-colors shadow-md mb-3"
+      className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#1E3A8A] text-white rounded-xl font-bold text-sm hover:bg-[#152B6B] transition-colors shadow-md"
     >
       Enroll Now
       <ChevronRight className="w-4 h-4" />
     </Link>
-    <Link
+    {/* <Link
       to="/#contact"
       className="w-full flex items-center justify-center gap-2 py-3.5 border-2 border-[#F97316] text-[#F97316] rounded-xl font-bold text-sm hover:bg-[#F97316] hover:text-white transition-colors"
     >
       Book Free Demo
-    </Link>
+    </Link> */}
 
     <p className="text-center text-xs text-gray-400 mt-4">🔒 Secure enrollment. Cancel anytime.</p>
   </div>
@@ -580,17 +580,17 @@ export const CourseDetail: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 py-6 border-t border-gray-100">
                 <Link
                   to="/#contact"
-                  className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1E3A8A] text-white rounded-xl font-bold hover:bg-[#152B6B] transition-colors shadow-md"
+                  className="w-full flex items-center justify-center gap-2 py-4 bg-[#1E3A8A] text-white rounded-xl font-bold hover:bg-[#152B6B] transition-colors shadow-md"
                 >
-                  Enroll Now — ₹999
+                  Enroll Now {/* — ₹999 */}
                   <ChevronRight className="w-4 h-4" />
                 </Link>
-                <Link
+                {/* <Link
                   to="/#contact"
                   className="flex-1 flex items-center justify-center gap-2 py-4 border-2 border-[#F97316] text-[#F97316] rounded-xl font-bold hover:bg-[#F97316] hover:text-white transition-all"
                 >
                   Book a Free Demo
-                </Link>
+                </Link> */}
               </div>
             </Reveal>
           </div>
@@ -608,16 +608,16 @@ export const CourseDetail: React.FC = () => {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100 shadow-2xl px-4 py-3 flex gap-3">
         <Link
           to="/#contact"
-          className="flex-1 flex items-center justify-center gap-1.5 py-3 bg-[#1E3A8A] text-white rounded-xl font-bold text-sm"
+          className="w-full flex items-center justify-center gap-1.5 py-3 bg-[#1E3A8A] text-white rounded-xl font-bold text-sm"
         >
           Enroll Now
         </Link>
-        <Link
+        {/* <Link
           to="/#contact"
           className="flex-1 flex items-center justify-center gap-1.5 py-3 border-2 border-[#F97316] text-[#F97316] rounded-xl font-bold text-sm"
         >
           Free Demo
-        </Link>
+        </Link> */}
       </div>
     </MainLayout>
   )
