@@ -177,12 +177,12 @@ const EnrollSidebar: React.FC<{ course: Course }> = ({ course }) => (
         { icon: <BookOpen className="w-4 h-4" />, label: 'Sessions', val: course.sessions },
         { icon: <BarChart2 className="w-4 h-4" />, label: 'Level', val: course.level },
       ].map(({ icon, label, val }) => (
-        <div key={label} className="flex items-center justify-between text-sm">
-          <span className="flex items-center gap-2 text-gray-500">
+        <div key={label} className="flex items-center justify-between gap-4 text-sm">
+          <span className="flex items-center gap-2 text-gray-500 flex-shrink-0">
             <span className="text-[#1E3A8A]">{icon}</span>
             {label}
           </span>
-          <span className="font-semibold text-gray-800">{val}</span>
+          <span className="font-semibold text-gray-800 text-right">{val}</span>
         </div>
       ))}
     </div>
