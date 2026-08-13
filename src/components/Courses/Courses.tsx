@@ -21,15 +21,30 @@ const CourseCard: React.FC<{
     layout
     className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
   >
-    {/* Gradient Banner */}
-    <div className={`relative h-44 bg-gradient-to-br ${course.color} p-6 overflow-hidden`}>
-      <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/4 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full translate-y-1/3 -translate-x-1/4" />
-      <div className="relative z-10">
-        <span className="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full backdrop-blur-sm mb-3">
-          {course.category}
-        </span>
-        <h3 className="text-white text-lg font-extrabold leading-tight">{course.title}</h3>
+    {/* Gradient / Image Banner */}
+    <div className={`relative h-44 bg-gradient-to-br ${course.color} p-6 overflow-hidden flex flex-col justify-between`}>
+      {course.image ? (
+        <div className="absolute inset-0 z-0 overflow-hidden bg-slate-950">
+          <img
+            src={course.image}
+            alt={course.title}
+            className="w-full h-full object-cover object-right-top opacity-95 group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-900/10" />
+        </div>
+      ) : (
+        <>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/4 translate-x-1/4" />
+          <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full translate-y-1/3 -translate-x-1/4" />
+        </>
+      )}
+      <div className="relative z-10 flex flex-col justify-between h-full">
+        <div>
+          <span className="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full backdrop-blur-sm mb-2">
+            {course.category}
+          </span>
+        </div>
+        <h3 className="text-white text-lg font-extrabold leading-tight drop-shadow-md">{course.title}</h3>
       </div>
     </div>
 

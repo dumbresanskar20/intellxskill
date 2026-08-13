@@ -22,7 +22,7 @@ export interface WhyCard {
   iconColor: string
 }
 
-export type CourseCategory = 'All' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
+export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
 
 export interface CourseModule {
   title: string
@@ -54,6 +54,7 @@ export interface Course {
   textColor: string
   bgColor: string
   bannerGrad: string
+  image?: string
   syllabus: string[]
   modules: CourseModule[]
   skills: string[]

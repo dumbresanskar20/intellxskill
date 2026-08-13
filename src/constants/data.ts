@@ -59,72 +59,74 @@ export const WHY_CARDS = [
   },
 ]
 
+<<<<<<< HEAD
 
 
 
-export type CourseCategory = 'All' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
+export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
 
 export const COURSES = [
   {
     id: 1,
-    slug: 'excel-ai',
-    title: 'Advanced SQL Server, SSIS & Power BI Program',
-    category: 'SQL Server' as CourseCategory,
+    slug: 'databricks-analytics-ai',
+    title: 'Advanced Data Analytics with Databricks & AI',
+    category: 'Databricks & AI' as CourseCategory,
     duration: '100 Hours',
-    sessions: '20 Live Sessions',
+    sessions: '80 Live Sessions',
     mode: 'Online (Live + Recorded)',
     level: 'Beginner to Advanced',
-    description: 'Master Excel with AI-powered features, advanced formulas, Power Query, and data visualization for business intelligence.',
-    tags: ['Excel', 'Power Query', 'Pivot Tables', 'VBA', 'AI Tools'],
-    color: 'from-green-400 to-emerald-600',
-    textColor: 'text-green-700',
-    bgColor: 'bg-green-50',
-    bannerGrad: 'from-green-500 via-emerald-600 to-teal-700',
+    description: 'Learn Modern Data Warehousing and BI Tools to Build Industry-Ready Analytics Solutions.',
+    tags: ['Databricks', 'SQL Server', 'Python', 'Power BI', 'MS Excel'],
+    color: 'from-blue-600 via-indigo-700 to-slate-900',
+    textColor: 'text-blue-700',
+    bgColor: 'bg-blue-50',
+    bannerGrad: 'from-blue-600 via-indigo-700 to-slate-900',
+    image: '/images/courses/databricks-ai-card.png',
     syllabus: [
-      'Excel Fundamentals & Advanced Formulas (XLOOKUP, LET, LAMBDA)',
-      'Power Query for Data Transformation',
-      'Advanced Pivot Tables & Pivot Charts',
-      'Data Validation & Conditional Formatting',
-      'VBA Macros & Automation',
-      'AI-powered Excel features (Copilot integration)',
-      'Dashboard Design & Data Storytelling',
-      'Financial Modeling & Analysis',
+      'MS Excel Fundamentals & Advanced Dataset Analysis',
+      'SQL Server Queries, Joins, Window Functions & Indexing',
+      'Python for Data Cleaning, Pandas, NumPy & Visualization',
+      'Databricks Cloud Platform & PySpark Fundamentals',
+      'Delta Lake Architecture (Bronze, Silver, Gold)',
+      'Building Scalable ETL Pipelines & Workflows',
+      'Microsoft Power BI Dashboards & DAX Measures',
+      'Real-Time Big Data Ingestion & Enterprise Analytics',
     ],
     modules: [
       {
-        title: 'Module 1 – Excel Foundations & Advanced Formulas',
-        lessons: ['Cell References & Named Ranges', 'XLOOKUP, VLOOKUP, INDEX-MATCH', 'LET & LAMBDA Functions', 'Array Formulas & Dynamic Arrays', 'Date & Text Functions'],
+        title: 'Module 1 – MS Excel Fundamentals & Data Analysis',
+        lessons: ['Excel Interface & Navigation', 'Core Arithmetic & Error Handling (IFERROR)', 'Advanced Formulas (XLOOKUP, LET, LAMBDA)', 'Data Cleaning, Filtering & Conditional Formatting', 'Pivot Tables, Slicers & Dynamic MIS Dashboards'],
       },
       {
-        title: 'Module 2 – Power Query & Data Transformation',
-        lessons: ['Power Query Editor Interface', 'Connecting to Multiple Data Sources', 'Data Cleaning & Shaping with M Language', 'Merging & Appending Queries', 'Automating ETL Workflows'],
+        title: 'Module 2 – Microsoft SQL Server & Database Querying',
+        lessons: ['SQL Server Setup, DML, DDL & DQL Commands', 'Constraints (Primary, Foreign Key, Unique, Identity)', 'Joins (INNER, LEFT, RIGHT, FULL, CROSS, SELF)', 'Aggregate & Window Functions (ROW_NUMBER, RANK, DENSE_RANK)', 'Stored Procedures, Views, Indexing & Query Optimization'],
       },
       {
-        title: 'Module 3 – Pivot Tables & Advanced Analysis',
-        lessons: ['Creating Complex Pivot Tables', 'Calculated Fields & Items', 'Pivot Charts & Slicers', 'Power Pivot & Data Model', 'DAX Basics in Excel'],
+        title: 'Module 3 – Python for Data Analytics & Visualization',
+        lessons: ['Python Basics, Variables, Control Flow & Loops', 'Data Structures (Lists, Tuples, Dictionaries)', 'NumPy Arrays & Mathematical Operations', 'Pandas DataFrames, GroupBy, Merging & Null Handling', 'Matplotlib & Seaborn Visualizations + Power BI Integration'],
       },
       {
-        title: 'Module 4 – VBA & Automation',
-        lessons: ['Introduction to VBA & Macros', 'Writing VBA Procedures', 'Loops, Conditions & Error Handling', 'UserForms & Event-Driven Programming', 'Automating Reports'],
+        title: 'Module 4 – Databricks, PySpark & Delta Lake',
+        lessons: ['Big Data Architecture, Workspaces & Clusters', 'PySpark DataFrames, Transformations & Actions', 'Data Ingestion from S3, CSV, JSON & Parquet', 'Delta Lake Fundamentals (ACID, Time Travel, Upsert)', 'Building Medallion Architecture (Bronze, Silver, Gold) & Workflows'],
       },
       {
-        title: 'Module 5 – AI Tools & Dashboard Design',
-        lessons: ['Excel Copilot Integration', 'AI-assisted Formula Suggestions', 'Dashboard Design Principles', 'Interactive Charts & Slicers', 'Publishing & Sharing Dashboards'],
+        title: 'Module 5 – Microsoft Power BI & Enterprise BI',
+        lessons: ['Power BI Ecosystem, Installation & Data Sources', 'Power Query Transformation & Data Modeling', 'DAX Measures, Functions & Calculated Columns', 'Interactive Reports, Charts, Slicers & Drill-through', 'Publishing to Power BI Service & Performance Optimization'],
       },
     ],
-    skills: ['Advanced Excel Formulas', 'Power Query (M Language)', 'Data Cleaning', 'Pivot Analysis', 'VBA Automation', 'Dashboard Design', 'Financial Modeling', 'AI-Assisted Analytics'],
-    tools: ['Microsoft Excel 365', 'Power Query', 'Power Pivot', 'VBA Editor', 'Excel Copilot (AI)'],
+    skills: ['Databricks & PySpark', 'Delta Lake Architecture', 'SQL Server & T-SQL', 'Python Data Science (Pandas/NumPy)', 'Power BI & DAX', 'Advanced MS Excel', 'ETL Pipeline Design', 'Enterprise Data Warehousing'],
+    tools: ['Databricks', 'PySpark', 'Microsoft SQL Server', 'Python', 'Power BI Desktop', 'MS Excel', 'Delta Lake'],
     projects: [
-      { title: 'Sales Performance Dashboard', desc: 'Build a fully interactive sales analytics dashboard with slicers and drill-down capabilities.' },
-      { title: 'HR Analytics Report', desc: 'Automate employee data cleaning and generate monthly HR reports using Power Query + VBA.' },
-      { title: 'Financial Model', desc: 'Create a 3-statement financial model with dynamic scenarios and sensitivity analysis.' },
+      { title: 'End-to-End Databricks & Delta Lake ETL Pipeline', desc: 'Build a scalable cloud data warehouse ingesting SQL Server & S3 datasets using PySpark and Delta Lake medallion architecture.' },
+      { title: 'Enterprise Power BI Business Intelligence Dashboard', desc: 'Design an interactive Power BI dashboard featuring custom DAX measures, automated refresh, and drill-through analytics.' },
+      { title: 'Automated Multi-Tool MIS Analytics System', desc: 'Perform end-to-end data cleaning, transformation, and automated reporting across Excel, SQL, and Python.' },
     ],
-    careers: ['Data Analyst', 'Business Analyst', 'Financial Analyst', 'MIS Executive', 'Operations Analyst', 'Reporting Specialist'],
+    careers: ['Data Analyst', 'BI Analyst', 'Power BI Developer', 'SQL Developer', 'Reporting Analyst', 'MIS Executive', 'Data Visualization Specialist'],
     faqs: [
-      { q: 'Do I need prior Excel knowledge?', a: 'No! We start from the very basics and gradually move to advanced topics. Absolute beginners are welcome.' },
-      { q: 'Is this course online or offline?', a: 'This is an online live training program. Recorded sessions are also provided so you never miss a class.' },
-      { q: 'Will I get a certificate after completion?', a: 'Yes, upon successful completion of the course and capstone project, you receive an industry-recognized certificate from IntellxSkill Technologies.' },
-      { q: 'How long will I have access to the recordings?', a: 'You will have lifetime access to all recorded sessions and course materials.' },
+      { q: 'What are the prerequisites for this 100-Hour course?', a: 'No prior programming experience is required! The program starts from foundational Excel and SQL concepts and progresses to advanced Databricks and PySpark cloud analytics.' },
+      { q: 'Which key technologies are covered in this course?', a: 'You will learn 5 industry-essential technologies: MS Excel, Microsoft SQL Server, Python, Databricks (with PySpark & Delta Lake), and Power BI.' },
+      { q: 'Is this course online and recorded?', a: 'Yes, this is a 100-Hour online training program with live sessions as well as lifetime access to recorded sessions and learning materials.' },
+      { q: 'Will I receive certification and job assistance?', a: 'Yes! Upon completion, you receive an industry-recognized certificate from IntellxSkill Technologies along with a 6-month practical industry experience certification and 100% job placement assistance.' },
     ],
   },
   {
@@ -545,4 +547,4 @@ export const ABOUT_TABS = [
   },
 ]
 
-export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Excel', 'SQL', 'Snowflake', 'Python', 'Power BI']
+export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Databricks & AI', 'SQL', 'Snowflake', 'Python', 'Power BI']

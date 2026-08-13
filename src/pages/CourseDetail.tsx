@@ -210,7 +210,7 @@ export const CourseDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
 
-  const course = COURSES.find(c => c.slug === slug)
+  const course = COURSES.find(c => c.slug === slug) || (slug === 'excel-ai' ? COURSES.find(c => c.id === 1) : undefined)
 
   // Scroll to top on mount
   useEffect(() => {
