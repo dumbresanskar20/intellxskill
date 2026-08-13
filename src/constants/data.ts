@@ -1,6 +1,7 @@
 // All constants / mock data for the site
 
 import { href } from "react-router-dom"
+import type { Course } from '../types'
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -64,7 +65,7 @@ export const WHY_CARDS = [
 
 export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
 
-export const COURSES = [
+export const COURSES: Course[] = [
   {
     id: 1,
     slug: 'databricks-analytics-ai',
@@ -223,7 +224,7 @@ export const COURSES = [
     id: 3,
     slug: 'advanced-sql-server-ssis-power-bi',
     title: 'Advanced SQL Server, SSIS & Power BI Program',
-    category: 'Data Analytics & Business Intelligence',
+    category: 'SQL' as CourseCategory,
     duration: '100 Hours',
     sessions: 'Live Sessions + Practical Training',
     mode: 'Online',
