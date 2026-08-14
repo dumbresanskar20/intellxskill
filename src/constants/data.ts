@@ -63,7 +63,7 @@ export const WHY_CARDS = [
 
 
 
-export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
+export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI' | 'Data Analytics & Business Intelligence' | 'SAP'
 
 export const COURSES: Course[] = [
   {
@@ -224,13 +224,15 @@ export const COURSES: Course[] = [
     id: 3,
     slug: 'advanced-sql-server-ssis-power-bi',
     title: 'Advanced SQL Server, SSIS & Power BI Program',
-    category: 'SQL' as CourseCategory,
+    category: 'Data Analytics & Business Intelligence',
     duration: '100 Hours',
-    sessions: 'Live Sessions + Practical Training',
+    sessions: 'Live Sessions',
     mode: 'Online',
     level: 'Beginner to Advanced',
+
     description:
-      'Build industry-ready skills in Microsoft SQL Server, SSIS, and Power BI. Learn database development, ETL, data warehousing, data integration, business intelligence, data visualization, and performance optimization through hands-on training and real-time projects.',
+      'Learn Modern Data Warehousing and BI Tools to Build Industry-Ready Analytics Solutions. Gain comprehensive hands-on training in Microsoft SQL Server, SQL Server Integration Services (SSIS), and Microsoft Power BI with real-time projects, assignments, and interview preparation.',
+
     tags: [
       'SQL Server',
       'SSIS',
@@ -241,139 +243,546 @@ export const COURSES: Course[] = [
       'Data Analytics',
       'DAX',
     ],
+
     color: 'from-cyan-400 to-blue-600',
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-cyan-500 via-blue-600 to-indigo-700',
 
     syllabus: [
-      'Microsoft SQL Server Fundamentals & Database Management',
-      'SQL Commands, Operators, Queries & Joins',
-      'Aggregate Functions, Clauses & Window Functions',
-      'Indexing, Query Optimization & Advanced SQL',
-      'Data Warehousing & Business Intelligence Fundamentals',
-      'SSIS Architecture, Control Flow & Data Flow',
-      'SSIS Transformations & Dynamic ETL',
-      'Error Handling, Debugging & Logging in SSIS',
-      'SSIS Deployment, Scheduling & Administration',
-      'SSIS Performance Tuning & Optimization',
-      'Power BI Installation, Data Sources & Power Query',
-      'Data Modeling, DAX, Dashboards & Report Publishing',
+      'Microsoft SQL Server',
+      'SQL Server Integration Services (SSIS)',
+      'Microsoft Power BI',
     ],
 
     modules: [
+
+      // =========================================================
+      // CONCEPT 1 — MICROSOFT SQL SERVER
+      // =========================================================
+
       {
-        title: 'Module 1 – Microsoft SQL Server',
+        concept: 'Microsoft SQL Server',
+        title: 'Module 1 – Introduction',
         lessons: [
-          'SQL Server Overview & Editions',
-          'Installation & Configuration',
-          'Creating & Managing Databases',
-          'SQL Server Data Types',
-          'Constraints – Primary Key, Foreign Key, Unique, Check, Default, NOT NULL & Identity',
-          'DML, DDL, DQL, DCL & TCL Commands',
-          'Arithmetic, Comparison & Logical Operators',
-          'LIKE, IN & BETWEEN Operators',
-          'SELECT, TOP & DISTINCT',
-          'UNION & UNION ALL',
-          'Aggregate Functions – COUNT, SUM, MIN, MAX & AVG',
-          'WHERE, ORDER BY, GROUP BY & HAVING',
-          'Aliases & Query Fundamentals',
-          'INNER, LEFT, RIGHT & FULL JOIN',
-          'SELF JOIN & CROSS JOIN',
-          'ROW_NUMBER, RANK & DENSE_RANK',
-          'Clustered & Non-Clustered Indexes',
-          'Query Optimization',
-          'Stored Procedures, CTEs, Views & Functions',
+          'Overview of SQL Server & its editions',
+          'Installation & Configuration of SQL Server',
         ],
       },
 
       {
-        title: 'Module 2 – Data Warehousing & SSIS',
+        concept: 'Microsoft SQL Server',
+        title: 'Module 2 – Database Basics',
         lessons: [
-          'Data & Database Fundamentals',
-          'Introduction to Business Intelligence',
+          'Creating and Managing Databases',
+          'Data Types in SQL Server',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 3 – Constraints',
+        lessons: [
+          'Primary Key',
+          'Foreign Key',
+          'Unique',
+          'Check',
+          'Default',
+          'NOT NULL',
+          'Identity',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 4 – SQL Commands',
+        lessons: [
+          'DML',
+          'DDL',
+          'DQL',
+          'DCL',
+          'TCL',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 5 – SQL Operators',
+        lessons: [
+          'Arithmetic',
+          'Comparison',
+          'Logical',
+          'LIKE',
+          'IN',
+          'BETWEEN',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 6 – SQL Query Fundamentals',
+        lessons: [
+          'SELECT Statement',
+          'TOP',
+          'DISTINCT',
+          'UNION',
+          'UNION ALL',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 7 – Aggregate Functions',
+        lessons: [
+          'COUNT',
+          'SUM',
+          'MIN & MAX',
+          'AVG',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 8 – SQL Clauses',
+        lessons: [
+          'WHERE',
+          'ORDER BY',
+          'GROUP BY',
+          'HAVING',
+          'DISTINCT',
+          'TOP',
+          'ALIAS',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 9 – Joins',
+        lessons: [
+          'INNER JOIN',
+          'LEFT JOIN',
+          'RIGHT JOIN',
+          'FULL JOIN',
+          'SELF JOIN',
+          'CROSS JOIN',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 10 – Window Functions',
+        lessons: [
+          'ROW_NUMBER()',
+          'RANK()',
+          'DENSE_RANK()',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 11 – Indexing',
+        lessons: [
+          'Clustered Index',
+          'Non-Clustered Index',
+          'Query Optimization',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 12 – Advanced SQL',
+        lessons: [
+          'Stored Procedures',
+          'CTE',
+          'Views',
+          'Functions',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 2 — SQL SERVER INTEGRATION SERVICES (SSIS)
+      // =========================================================
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 1 – Data Warehousing & Business Intelligence Fundamentals',
+        lessons: [
+          'Introduction to Data & BI',
+          'What is Data?',
+          'What is Database?',
+          'Introduction to Business Intelligence (BI)',
           'Introduction to Data Warehousing',
           'OLTP vs OLAP',
+          'What is ETL?',
           'ETL Lifecycle',
           'Data Mart Concepts',
-          'Staging Areas',
-          'Fact & Dimension Tables',
+          'Staging Area',
+          'Fact Tables & Dimension Tables',
           'Star Schema & Snowflake Schema',
-          'SSIS Fundamentals & Architecture',
-          'SSIS Package Structure & Components',
-          'Control Flow, Data Flow & Event Handlers',
-          'Tasks, Containers & Precedence Constraints',
-          'Execute SQL, Execute Process & Execute Package Tasks',
-          'Script, Send Mail, File System & Bulk Insert Tasks',
-          'Data Flow Sources & Destinations',
-          'OLE DB, SQL Server, Flat File & Excel Sources',
-          'Derived Column & Data Conversion',
-          'Conditional Split, Sort & Aggregate',
-          'Multicast, Union All, Merge & Merge Join',
-          'Lookup & Slowly Changing Dimension',
-          'Variables, Parameters & Expressions',
-          'Dynamic SQL Queries & Connection Strings',
-          'Dynamic File Names & File Paths',
-          'Dynamic File & Excel Processing',
-          'Foreach File, Folder & ADO Enumerators',
-          'Error Handling & Error Outputs',
-          'Breakpoints, Data Viewers & Watch Window',
-          'SSIS Logging & Event Handling',
-          'Transactions, Checkpoints & Failure Recovery',
-          'SSIS Deployment & SSIS Catalog',
-          'SQL Server Agent & Package Scheduling',
-          'SSIS Security & Administration',
-          'Performance Tuning & Optimization',
         ],
       },
 
       {
-        title: 'Module 3 – Microsoft Power BI',
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 2 – Introduction to SSIS & Architecture',
         lessons: [
-          'Introduction to Power BI',
+          'SSIS Fundamentals',
+          'What is SSIS?',
+          'Why SSIS?',
+          'Advantages of SSIS',
+          'Features of SSIS',
+          'SSIS Architecture',
+          'SSIS Package Structure',
+          'SSIS Components',
+          'Control Flow',
+          'Data Flow',
+          'Event Handlers',
+          'Package Explorer',
+          'Parameters',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 3 – Working with Control Flow',
+        lessons: [
+          'Control Flow Basics',
+          'Tasks',
+          'Containers',
+          'Precedence Constraints',
+          'Expressions',
+          'Working with Tasks',
+          'Execute SQL Task',
+          'Execute Process Task',
+          'Execute Package Task',
+          'Script Task',
+          'Send Mail Task',
+          'File System Task',
+          'Bulk Insert Task',
+          'Data Profiling Task',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 4 – Working with Data Flow Task',
+        lessons: [
+          'Data Flow Architecture',
+          'Sources',
+          'Transformations',
+          'Destinations',
+          'Data Sources',
+          'OLEDB Source',
+          'SQL Server Source',
+          'Flat File Source',
+          'Excel Source',
+          'Data Destinations',
+          'OLEDB Destination',
+          'SQL Server Destination',
+          'Flat File Destination',
+          'Excel Destination',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 5 – SSIS Transformations',
+        lessons: [
+          'Basic Transformations',
+          'Derived Column Transformation',
+          'Data Conversion Transformation',
+          'Conditional Split Transformation',
+          'Sort Transformation',
+          'Aggregate Transformation',
+          'Multicast Transformation',
+          'Union All Transformation',
+          'Merge Transformation',
+          'Merge Join Transformation',
+          'Advanced Transformations',
+          'Lookup Transformation',
+          'Slowly Changing Dimension (SCD)',
+          'Row Count Transformation',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 6 – Variables, Parameters & Expressions',
+        lessons: [
+          'Variables',
+          'System Variables',
+          'User Variables',
+          'Variable Scope',
+          'Parameters',
+          'Package Parameters',
+          'Project Parameters',
+          'Expressions',
+          'Expression Builder',
+          'Dynamic File Names',
+          'Dynamic SQL Queries',
+          'Dynamic Connection Strings',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 7 – Working with Files & Dynamic ETL',
+        lessons: [
+          'Flat File Handling',
+          'Single File Processing',
+          'Multiple File Processing',
+          'Dynamic File Loading',
+          'Excel Handling',
+          'Dynamic Excel Loading',
+          'Worksheet Automation',
+          'Looping Techniques',
+          'Foreach File Enumerator',
+          'Foreach Folder Enumerator',
+          'Foreach ADO Enumerator',
+          'Dynamic Package Development',
+          'Dynamic Variables',
+          'Dynamic Connections',
+          'Dynamic File Paths',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 8 – Error Handling & Debugging',
+        lessons: [
+          'Error Handling',
+          'Redirect Rows',
+          'Ignore Failures',
+          'Fail Components',
+          'Error Outputs',
+          'Debugging Techniques',
+          'Breakpoints',
+          'Data Viewers',
+          'Watch Window',
+          'Logging',
+          'SSIS Logging',
+          'Log Providers',
+          'Event Handling',
+          'OnError',
+          'OnWarning',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 9 – Package Configurations & Transactions',
+        lessons: [
+          'Configurations',
+          'SQL Server Configuration',
+          'Environment Variables',
+          'Transactions',
+          'Transaction Handling',
+          'Commit & Rollback',
+          'Checkpoints',
+          'Restartability',
+          'Failure Recovery',
+          'Real-Time Scenarios',
+          'Restart Failed Packages',
+          'Recover ETL Jobs',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 10 – Deployment & SSIS Catalog',
+        lessons: [
+          'Deployment Models',
+          'Package Deployment Model',
+          'Project Deployment Model',
+          'SSIS Catalog',
+          'Creating SSISDB',
+          'Catalog Configuration',
+          'Environment Setup',
+          'Package Deployment',
+          'Deploy using SSDT',
+          'Deploy using SSMS',
+          'Package Execution',
+          'Execute from SSDT',
+          'Execute from SSMS',
+          'Execute using DTEXEC Utility',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 11 – Scheduling & Automation',
+        lessons: [
+          'SQL Server Agent',
+          'Creating Jobs',
+          'Job Steps',
+          'Scheduling Packages',
+          'Monitoring Jobs',
+          'Automation',
+          'Daily ETL Jobs',
+          'Batch Processing',
+          'Automated File Handling',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 12 – SSIS Security & Administration',
+        lessons: [
+          'Security Concepts',
+          'Protection Levels',
+          'Package Encryption',
+          'Roles & Permissions',
+          'Administration',
+          'SSIS Service Management',
+          'Monitoring Package Execution',
+          'Viewing Reports',
+          'Catalog Reports',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 13 – Performance Tuning & Optimization',
+        lessons: [
+          'Performance Optimization',
+          'Fast Load Options',
+          'Buffer Optimization',
+          'Parallel Processing',
+          'Efficient Lookup Design',
+          'Package Optimization',
+          'Reduce Memory Usage',
+          'Improve Data Flow Speed',
+          'Optimize Large Data Loads',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 3 — MICROSOFT POWER BI
+      // =========================================================
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 1 – Introduction to Power BI',
+        lessons: [
+          'What is Power BI?',
+          'Why is Power BI Important?',
           'Power BI Ecosystem',
-          'Power BI Desktop Installation & Setup',
-          'Connecting to Excel, SQL & Online Data Sources',
-          'Import Mode vs DirectQuery',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 2 – Power BI Installation & Setup',
+        lessons: [
+          'How to Install Power BI Desktop',
+          'System Requirements',
+          'First Look at Power BI Interface',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 3 – Connecting to Data Sources',
+        lessons: [
+          'Common Data Sources (Excel, SQL, Online Services)',
+          'Import Mode vs. Direct Query',
           'Live Data Refresh',
-          'Power Query Data Cleaning & Transformation',
-          'Removing Duplicates & Handling Null Values',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 4 – Data Transformation with Power Query',
+        lessons: [
+          'Cleaning & Transforming Data',
+          'Removing Duplicates, Handling Null Values',
           'Merging & Splitting Columns',
-          'Data Modeling Fundamentals',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 5 – Data Modeling Basics',
+        lessons: [
           'Creating Relationships Between Tables',
-          'Star Schema & Snowflake Schema',
-          'Introduction to DAX',
-          'SUM, COUNT, AVERAGE, IF & SWITCH',
-          'Measures & Calculated Columns',
-          'Charts, Tables, Maps & Other Visualizations',
-          'Visual Formatting & Customization',
-          'Filters & Slicers',
-          'Drill-through & Tooltip Pages',
-          'Publishing Reports to Power BI Service',
+          'Understanding Star & Snowflake Schema',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 6 – Introduction to DAX',
+        lessons: [
+          'What is DAX?',
+          'Basic Functions (SUM, COUNT, AVERAGE, IF, SWITCH)',
+          'Creating Measures & Calculated Columns',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 7 – Creating Visualizations',
+        lessons: [
+          'Types of Charts: Bar, Line, Pie, Maps, Tables',
+          'Formatting and Customizing Visuals',
+          'Best Practices for Effective Data Representation',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 8 – Filters, Slicers, and Drill-through',
+        lessons: [
+          'Applying Filters at Different Levels',
+          'Slicers and Their Use Cases',
+          'Drill-through and Tooltip Pages',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 9 – Publishing & Sharing Reports',
+        lessons: [
+          'Publishing to Power BI Service',
           'Creating Dashboards',
-          'Report Sharing & Collaboration',
-          'Power BI Performance Optimization',
+          'Sharing Reports & Collaborating',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 10 – Power BI Best Practices',
+        lessons: [
+          'Performance Optimization Techniques',
           'Data Modeling Best Practices',
-          'Visual Design Best Practices',
+          'Visual Design Tips',
         ],
       },
     ],
 
     skills: [
       'Microsoft SQL Server',
+      'SQL Query Development',
       'Advanced SQL',
+      'Database Management',
       'Database Development',
-      'ETL Development',
-      'SSIS',
       'Data Warehousing',
-      'Business Intelligence',
+      'ETL Development',
+      'SQL Server Integration Services (SSIS)',
       'Data Integration',
+      'Dynamic ETL',
+      'SSIS Package Development',
+      'SSIS Deployment',
+      'ETL Performance Optimization',
+      'Microsoft Power BI',
       'Power Query',
       'DAX',
-      'Power BI Dashboard Development',
       'Data Modeling',
-      'Performance Optimization',
-      'ETL Pipeline Development',
+      'Dashboard Development',
+      'Business Intelligence',
+      'Data Analytics',
     ],
 
     tools: [
@@ -382,25 +791,26 @@ export const COURSES: Course[] = [
       'SQL Server Integration Services (SSIS)',
       'SQL Server Data Tools (SSDT)',
       'SQL Server Agent',
+      'DTEXEC Utility',
       'Power BI Desktop',
       'Power BI Service',
     ],
 
     projects: [
       {
-        title: 'Real-Time ETL & Data Warehouse Project',
+        title: 'SQL Server Data Analytics Project',
         desc:
-          'Work on industry-based projects and case studies involving data integration, ETL processes, data warehousing, and business intelligence workflows.',
+          'Apply SQL Server database development, SQL queries, data manipulation, joins, functions, indexing, stored procedures, and query optimization to real-world business data.',
       },
       {
-        title: 'SQL Analytics & Reporting Project',
+        title: 'SSIS ETL & Data Warehousing Project',
         desc:
-          'Apply SQL Server database development, advanced queries, data manipulation, and performance optimization to real-world business datasets.',
+          'Build industry-based ETL workflows using SSIS for data extraction, transformation, loading, dynamic file processing, data warehousing, deployment, scheduling, and optimization.',
       },
       {
-        title: 'Power BI Business Intelligence Project',
+        title: 'Power BI Business Intelligence Dashboard',
         desc:
-          'Build professional dashboards and reports using real-world datasets, data modeling, Power Query, DAX, and Power BI visualization techniques.',
+          'Create interactive dashboards and reports using real-world datasets with Power Query, data modeling, DAX, filters, slicers, drill-through, and Power BI Service.',
       },
     ],
 
@@ -428,27 +838,32 @@ export const COURSES: Course[] = [
       {
         q: 'Is this course suitable for beginners?',
         a:
-          'Yes. The program is designed from Beginner to Advanced level and covers SQL Server, SSIS, and Power BI progressively.',
+          'Yes. The program is designed from Beginner to Advanced level and covers SQL Server, SSIS, and Power BI.',
       },
       {
-        q: 'Is the course online?',
+        q: 'Is the course available online?',
         a:
-          'Yes. The program is delivered online with live sessions, practical exercises, and hands-on training.',
+          'Yes. The program is offered online with live sessions and practical training.',
       },
       {
-        q: 'Will I work on real-time projects?',
+        q: 'Does the course include real-time projects?',
         a:
-          'Yes. The program includes real-time projects, industry-based projects, case studies, practical assignments, and interview preparation.',
+          'Yes. The program includes real-time projects, industry-based projects, case studies, practical assignments, and hands-on training.',
       },
       {
-        q: 'Who is this course suitable for?',
+        q: 'Who is this course for?',
         a:
-          'The course is suitable for SQL professionals, Data Analysts, ETL Developers, Power BI Developers, Business Intelligence professionals, IT professionals transitioning into Data Analytics and BI, and professionals preparing for SQL Server, SSIS and Power BI roles.',
+          'The course is designed for SQL professionals, Data Analysts, ETL Developers, Power BI Developers, Business Intelligence professionals, IT professionals transitioning into Data Analytics and Business Intelligence, and professionals preparing for advanced SQL Server, SSIS and Power BI roles.',
       },
       {
-        q: 'Does the course include placement support?',
+        q: 'Does the program include interview preparation?',
         a:
-          'The program provides placement assistance, job referrals, placement guidance, portfolio building, and career support.',
+          'Yes. The program includes interview preparation along with mock sessions, resume building, commonly asked questions, and communication guidance.',
+      },
+      {
+        q: 'Is placement assistance provided?',
+        a:
+          'Yes. Placement assistance includes job referrals, placement guidance, portfolio building, and career opportunities.',
       },
     ],
   },
@@ -1062,6 +1477,466 @@ export const COURSES: Course[] = [
       {
         q: 'Is job assistance and certification provided upon completion?',
         a: 'Yes! IntellxSkill Technologies provides 100% Job Assistance, resume optimization, 200+ interview questions prep, mock interviews, and an industry-recognized Certificate of Completion.',
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: 'sap-mm',
+    title: 'SAP MM',
+    category: 'SAP' as CourseCategory,
+    duration: '100 Hours',
+    sessions: 'Live + Recorded Training',
+    mode: 'Online Training',
+    level: 'Beginner to Advanced',
+    description:
+      'Master SAP Materials Management (MM) from fundamentals to advanced configuration, covering procurement, inventory management, master data, valuation, pricing, release procedures, SAP S/4HANA, integration, reporting, migration, and SAP Fiori.',
+
+    tags: [
+      'SAP MM',
+      'SAP S/4HANA',
+      'Materials Management',
+      'Procurement',
+      'Inventory Management',
+      'Purchasing',
+      'SAP HANA',
+      'Material Master',
+      'Vendor Master',
+      'SAP Fiori',
+    ],
+
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-700',
+    bgColor: 'bg-blue-50',
+    bannerGrad: 'from-blue-600 via-indigo-600 to-purple-700',
+
+    syllabus: [
+      'Introduction to SAP MM & ERP',
+      'SAP HANA & S/4HANA',
+      'Enterprise Organizational Structure',
+      'Master Data',
+      'Business Partner Configuration',
+      'Source Determination',
+      'Purchasing',
+      'Purchasing Document Types & Configuration',
+      'Service Procurement',
+      'Non-Material Procurement',
+      'Optimized Purchasing',
+      'Special Stocks & Special Procurement',
+      'Inventory Management',
+      'Physical Inventory',
+      'Valuation & Account Assignment',
+      'Release Procedure for Purchasing Documents',
+      'Conditions, Pricing Procedure & Price Determination',
+      'Valuation & Account Determination',
+      'Integration with Other SAP Modules',
+      'Output Determination',
+      'SAP Migration Cockpit / LTMC',
+      'Standard & Custom Reports',
+      'BRF+ Output Management',
+      'Introduction to SAP Fiori',
+    ],
+
+    modules: [
+      {
+        title: 'Module 1 – Introduction to SAP MM',
+        lessons: [
+          'Introduction to ERP',
+          'SAP Overview',
+          'Functions and Objectives of SAP MM',
+          'MM Business Cycle',
+          'New Technologies in SAP Business Processes',
+        ],
+      },
+
+      {
+        title: 'Module 2 – SAP HANA & S/4HANA',
+        lessons: [
+          'SAP HANA Technology',
+          'SAP S/4HANA Introduction',
+          'S/4HANA vs ECC',
+          'Need for a New Business Suite',
+        ],
+      },
+
+      {
+        title: 'Module 3 – Enterprise Organizational Structure',
+        lessons: [
+          'Company',
+          'Company Code',
+          'Plant',
+          'Storage Location',
+          'Purchasing Organization',
+          'Purchasing Group',
+          'Organizational Assignments',
+        ],
+      },
+
+      {
+        title: 'Module 4 – Master Data',
+        lessons: [
+          'Material Master',
+          'Vendor Master',
+          'Supplier Account Group',
+          'Info Record',
+          'Number Ranges',
+          'Business Partner Role & Category',
+          'Source List',
+          'CVI – Customer Vendor Integration',
+        ],
+      },
+
+      {
+        title: 'Module 5 – Business Partner Configuration',
+        lessons: [
+          'Configure Business Partner Roles and Categories',
+          'Supplier Account Groups',
+          'Configure Number Ranges',
+          'Business Partner and Supplier Relationship',
+          'Supplier Master Data Configuration',
+          'Supplier Configuration using Business Partner in S/4HANA',
+        ],
+      },
+
+      {
+        title: 'Module 6 – Source Determination',
+        lessons: [
+          'Source Determination Concept',
+          'Material Master in Source Determination',
+          'Vendor Master',
+          'Info Records',
+          'Source Lists',
+          'Approved Sources of Supply',
+        ],
+      },
+
+      {
+        title: 'Module 7 – Purchasing',
+        lessons: [
+          'Purchase Requisition (PR)',
+          'Request for Quotation (RFQ)',
+          'Maintain Quotation',
+          'Purchase Order (PO)',
+          'Contract',
+          'Outline Agreements',
+          'Schedule Agreement',
+        ],
+      },
+
+      {
+        title: 'Module 8 – Document Types for Purchasing Documents',
+        lessons: [
+          'Define Document Types',
+          'Define Number Ranges for Document Types',
+          'Define Screen Layout at Document Level',
+          'Purchasing Document Configuration',
+        ],
+      },
+
+      {
+        title: 'Module 9 – Procedure for Services',
+        lessons: [
+          'Creation of Service Master',
+          'Creation of Service PO',
+          'Service Entry Sheet',
+          'Service Procurement Process',
+        ],
+      },
+
+      {
+        title: 'Module 10 – Non-Material Purchase Order',
+        lessons: [
+          'Introduction to Non-Material Procurement',
+          'Create Non-Material Purchase Orders',
+          'Manage Non-Material Purchasing Requirements',
+        ],
+      },
+
+      {
+        title: 'Module 11 – Optimized Purchasing',
+        lessons: [
+          'Automatic Purchase Order with Reference to PR',
+          'Automatic Purchase Order with Reference to GR',
+          'Optimized Purchasing Processes',
+        ],
+      },
+
+      {
+        title: 'Module 12 – Special Stocks & Special Procurement Types',
+        lessons: [
+          'Consignment',
+          'Stock Transport Order (STO)',
+          'Subcontracting',
+          'Pipeline Procurement',
+          'Returnable Transport Packaging (RTP)',
+          'Special Procurement Scenarios',
+        ],
+      },
+
+      {
+        title: 'Module 13 – Inventory Management',
+        lessons: [
+          'Goods Movement',
+          'Goods Receipt (GR)',
+          'Goods Issue (GI)',
+          'Transfer Posting (TP)',
+          'Reservation',
+          'Material Movement Processing',
+          'Inventory Updates in SAP',
+        ],
+      },
+
+      {
+        title: 'Module 14 – Physical Inventory',
+        lessons: [
+          'Creating Physical Inventory Document',
+          'Entering Physical Inventory Count',
+          'Inventory Difference List',
+          'Posting Inventory Differences',
+          'Physical Stock Verification',
+        ],
+      },
+
+      {
+        title: 'Module 15 – Valuation & Account Assignment',
+        lessons: [
+          'Introduction to Material Valuation',
+          'Split Valuation',
+          'Configure Split Valuation',
+          'Global Valuation Types',
+          'Maintain Valuation Types',
+          'Global Valuation Categories',
+          'Assign Valuation Categories',
+          'Creation of Classes',
+          'Creation of Characteristics',
+        ],
+      },
+
+      {
+        title: 'Module 16 – Release Procedure for Purchasing Documents',
+        lessons: [
+          'Release Group',
+          'Release Indicator',
+          'Release Codes',
+          'Release Prerequisites',
+          'Release Strategies',
+          'Purchasing Document Approval Process',
+        ],
+      },
+
+      {
+        title: 'Module 17 – Conditions, Pricing Procedure & Price Determination',
+        lessons: [
+          'Define Access Sequence',
+          'Define Condition Types',
+          'Define Calculation Schema',
+          'Define Schema Group',
+          'Schema Group – Vendor',
+          'Schema Group – Purchasing Organization',
+          'Define Schema Determination',
+          'Calculation Schema for Standard Purchase Orders',
+        ],
+      },
+
+      {
+        title: 'Module 18 – Valuation & Account Determination',
+        lessons: [
+          'Valuation',
+          'Account Determination',
+          'Valuation-Related Configuration',
+        ],
+      },
+
+      {
+        title: 'Module 19 – Integration with Other Modules',
+        lessons: [
+          'MM with FI/CO',
+          'MM with PP',
+          'Integration of Purchasing and Inventory Transactions',
+          'Cross-Module Business Processes',
+        ],
+      },
+
+      {
+        title: 'Module 20 – Output Determination',
+        lessons: [
+          'Define Output Types',
+          'Business Rules for Output Parameters',
+          'Purchasing-Related Outputs',
+          'Output Parameter Determination',
+        ],
+      },
+
+      {
+        title: 'Module 21 – SAP Migration Cockpit / LTMC',
+        lessons: [
+          'SAP Migration Cockpit',
+          'Direct Data Migration from SAP System',
+          'Staging Table Approach',
+          'Data Preparation for Migration',
+        ],
+      },
+
+      {
+        title: 'Module 22 – Standard Reports',
+        lessons: [
+          'Standard SAP Reports',
+          'Available Standard Reports',
+          'Using Standard Reports',
+          'Business Reporting Requirements',
+        ],
+      },
+
+      {
+        title: 'Module 23 – Custom Reports',
+        lessons: [
+          'Identify Business Reporting Requirements',
+          'Fetching Data from SAP Database Tables',
+          'Basic Approach to Custom Reports',
+          'Custom Reporting Based on Business Requirements',
+        ],
+      },
+
+      {
+        title: 'Module 24 – BRF+ Output Management',
+        lessons: [
+          'Introduction to BRF+',
+          'Business Rules',
+          'Output Parameter Determination',
+          'BRF+ in Output Management',
+          'Converting Business Requirements into Configurable Rules',
+        ],
+      },
+
+      {
+        title: 'Module 25 – Introduction to SAP Fiori',
+        lessons: [
+          'SAP Fiori Introduction',
+          'Fiori Apps Installation',
+          'Assign Roles to Users',
+        ],
+      },
+    ],
+
+    skills: [
+      'SAP MM',
+      'SAP S/4HANA',
+      'SAP HANA',
+      'ERP Fundamentals',
+      'Materials Management',
+      'Procurement',
+      'Purchasing',
+      'Purchase Requisition',
+      'RFQ & Quotations',
+      'Purchase Orders',
+      'Contracts & Outline Agreements',
+      'Material Master',
+      'Vendor Master',
+      'Business Partner',
+      'Source Determination',
+      'Inventory Management',
+      'Goods Receipt & Goods Issue',
+      'Physical Inventory',
+      'Material Valuation',
+      'Account Determination',
+      'Pricing & Conditions',
+      'Release Procedures',
+      'Special Procurement',
+      'SAP Integration',
+      'SAP Migration',
+      'SAP Reporting',
+      'BRF+',
+      'SAP Fiori',
+    ],
+
+    tools: [
+      'SAP ERP',
+      'SAP ECC',
+      'SAP S/4HANA',
+      'SAP HANA',
+      'SAP MM',
+      'SAP Fiori',
+      'SAP Migration Cockpit / LTMC',
+      'BRF+',
+    ],
+
+    projects: [
+      {
+        title: 'End-to-End Procurement Process',
+        desc: 'Configure and execute an end-to-end SAP MM purchasing process from material requirement and purchase requisition through supplier procurement and purchase order processing.',
+      },
+      {
+        title: 'Inventory Management System',
+        desc: 'Work with goods receipts, goods issues, reservations, transfer postings, and physical inventory processes to manage stock in SAP.',
+      },
+      {
+        title: 'Supplier & Business Partner Configuration',
+        desc: 'Configure supplier-related master data using Business Partner roles, supplier account groups, number ranges, and purchasing information.',
+      },
+      {
+        title: 'Special Procurement Scenarios',
+        desc: 'Work through consignment, stock transport orders, subcontracting, pipeline procurement, and returnable transport packaging scenarios.',
+      },
+      {
+        title: 'SAP MM Pricing & Release Strategy',
+        desc: 'Configure purchasing conditions, calculation schemas, pricing procedures, and release strategies for purchasing documents.',
+      },
+      {
+        title: 'SAP MM Reporting & Migration',
+        desc: 'Explore standard and custom reporting, data migration using SAP Migration Cockpit/LTMC, and output management with BRF+.',
+      },
+    ],
+
+    careers: [
+      'SAP MM Consultant',
+      'SAP MM Functional Consultant',
+      'SAP S/4HANA MM Consultant',
+      'SAP Procurement Consultant',
+      'SAP Materials Management Consultant',
+      'SAP MM Support Consultant',
+      'SAP Functional Analyst',
+    ],
+
+    faqs: [
+      {
+        q: 'What is the duration of the SAP MM course?',
+        a: 'The SAP MM program is a 100-hour online training program.',
+      },
+      {
+        q: 'What does this SAP MM course cover?',
+        a: 'The program covers SAP MM fundamentals, S/4HANA, organizational structure, master data, procurement, purchasing, inventory management, valuation, pricing, release procedures, integration, reporting, migration, BRF+, and SAP Fiori.',
+      },
+      {
+        q: 'Will I learn SAP S/4HANA?',
+        a: 'Yes. The course includes SAP HANA, SAP S/4HANA, the differences between S/4HANA and ECC, and the transition to the next-generation SAP ERP platform.',
+      },
+      {
+        q: 'Will I learn the complete SAP MM purchasing process?',
+        a: 'Yes. The purchasing curriculum covers Purchase Requisitions, RFQs, quotations, Purchase Orders, contracts, outline agreements, and schedule agreements.',
+      },
+      {
+        q: 'Does the course cover inventory management?',
+        a: 'Yes. Inventory Management includes Goods Receipt, Goods Issue, Transfer Posting, Reservations, Goods Movements, and Physical Inventory.',
+      },
+      {
+        q: 'Will I learn SAP MM configuration?',
+        a: 'Yes. The curriculum includes configuration topics such as organizational structure, Business Partner, number ranges, document types, release procedures, pricing procedures, valuation, account determination, and output determination.',
+      },
+      {
+        q: 'Does the course cover special procurement?',
+        a: 'Yes. It covers Consignment, Stock Transport Orders, Subcontracting, Pipeline Procurement, and Returnable Transport Packaging.',
+      },
+      {
+        q: 'Will I learn SAP Fiori?',
+        a: 'Yes. The final module introduces SAP Fiori, Fiori app installation, and assigning roles to users.',
+      },
+      {
+        q: 'Does the course include reporting and migration?',
+        a: 'Yes. The program covers standard reports, custom reports, SAP Migration Cockpit/LTMC, and BRF+ Output Management.',
+      },
+      {
+        q: 'Does the training include practical learning?',
+        a: 'Yes. The program includes practical projects, assessments and quizzes, doubt clearing, interview preparation, and career support.',
       },
     ],
   },

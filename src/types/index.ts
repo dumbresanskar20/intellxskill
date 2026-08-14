@@ -22,9 +22,10 @@ export interface WhyCard {
   iconColor: string
 }
 
-export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI'
+export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI' | 'Data Analytics & Business Intelligence' | 'SAP'
 
 export interface CourseModule {
+  concept?: string
   title: string
   lessons: string[]
 }
