@@ -41,6 +41,10 @@ const QA_DATABASE: QA[] = [
     answer: "🐍 **Python for Data Analytics** covers:\n• Python Fundamentals & OOP\n• NumPy & Pandas\n• Data Cleaning & EDA\n• Matplotlib, Seaborn & Plotly\n• ML Intro with Scikit-learn\n\nDuration: 35 Hours | 28 Live Sessions\nLevel: Beginner to Advanced\n\nIdeal for aspiring Data Scientists and Analysts!",
   },
   {
+    patterns: ['dba', 'sql dba', 'core sql', 'sql server dba', 'administration', 'ha/dr', 'high availability'],
+    answer: "🛡️ **CORE SQL SERVER DBA PROGRAM** covers:\n• Module 1: SQL Server Foundation (Architecture, Setup, SQL Basics, Programmability)\n• Module 2: SQL Server Administration (Linked Servers, Backup/Restore Strategies, Agent Jobs)\n• Module 3: Performance Tuning (Execution Plans, Index & Statistics Tuning)\n• Module 4: High Availability & Disaster Recovery (Replication, Log Shipping, Mirroring, Always On)\n• Module 5: Troubleshooting & Maintenance (DBCC Commands, TempDB, Memory Issues, Upgrades)\n• 10 Production Projects & 50+ Troubleshooting Cases\n\nDuration: 100 Hours | Weekday & Weekend Batches\nLevel: Beginner to Advanced",
+  },
+  {
     patterns: ['power bi', 'powerbi', 'bi', 'dax', 'dashboard'],
     answer: "📈 **Microsoft Power BI** covers:\n• Power Query & Data Transformation\n• Data Modeling (Star Schema)\n• DAX Mastery\n• Time Intelligence Functions\n• Row-Level Security & Deployment\n\nDuration: 30 Hours | 24 Live Sessions\nAligns with the PL-300 Certification!",
   },

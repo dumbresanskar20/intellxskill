@@ -134,12 +134,32 @@ const ModuleItem: React.FC<{ module: CourseModule; index: number }> = ({ module,
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <ul className="border-t border-gray-100 divide-y divide-gray-50">
-              {module.lessons.map((lesson, i) => (
-                <li key={i} className="flex items-center gap-3 px-6 py-3 bg-gray-50/60">
-                  <Play className="w-3 h-3 text-[#F97316] flex-shrink-0" />
-                  <span className="text-sm text-gray-600">{lesson}</span>
-                </li>
-              ))}
+              {module.lessons.map((lesson, i) => {
+                const isSubItem = lesson.trim().startsWith('•') || lesson.startsWith('  ')
+                const isSectionHeader = lesson.startsWith('Approach')
+                return (
+                  <li
+                    key={i}
+                    className={`flex items-start gap-3 px-6 py-3 ${
+                      isSectionHeader
+                        ? 'bg-blue-50/80 font-bold text-[#1E3A8A] text-sm'
+                        : isSubItem
+                        ? 'bg-gray-50/40 pl-11 text-gray-600'
+                        : 'bg-gray-50/70 text-gray-800'
+                    }`}
+                  >
+                    {!isSubItem && !isSectionHeader && (
+                      <Play className="w-3.5 h-3.5 text-[#F97316] flex-shrink-0 mt-0.5" />
+                    )}
+                    {isSubItem && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#1E3A8A]/60 flex-shrink-0 mt-1.5 ml-1" />
+                    )}
+                    <span className="text-sm font-medium leading-relaxed">
+                      {lesson.replace(/^[\s•]+/, '')}
+                    </span>
+                  </li>
+                )
+              })}
             </ul>
           </motion.div>
         )}
@@ -210,7 +230,10 @@ export const CourseDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
 
-  const course = COURSES.find(c => c.slug === slug) || (slug === 'excel-ai' ? COURSES.find(c => c.id === 1) : undefined)
+  const course =
+    COURSES.find(c => c.slug === slug) ||
+    (slug === 'excel-ai' ? COURSES.find(c => c.id === 1) : undefined) ||
+    (slug === 'sap-mm' || slug === 'sql-dba' ? COURSES.find(c => c.id === 5) : undefined)
 
   // Scroll to top on mount
   useEffect(() => {
