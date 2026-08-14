@@ -824,64 +824,462 @@ export const COURSES: Course[] = [
   },
   {
     id: 5,
-    slug: 'power-bi',
-    title: 'Microsoft Power BI',
-    category: 'Power BI' as CourseCategory,
-    duration: '30 Hours',
-    sessions: '24 Live Sessions',
-    mode: 'Online (Live + Recorded)',
+    slug: 'sap-mm',
+    title: 'SAP MM',
+    category: 'SAP' as CourseCategory,
+    duration: '100 Hours',
+    sessions: 'Live + Recorded Training',
+    mode: 'Online Training',
     level: 'Beginner to Advanced',
-    description: 'Build stunning Power BI dashboards – DAX mastery, data modeling, Power Query, and enterprise reporting.',
-    tags: ['Power BI', 'DAX', 'Power Query', 'Data Model', 'Reports'],
-    color: 'from-yellow-500 to-amber-600',
-    textColor: 'text-amber-700',
-    bgColor: 'bg-amber-50',
-    bannerGrad: 'from-yellow-500 via-amber-500 to-orange-600',
-    syllabus: [
-      'Power BI Desktop & Service Overview',
-      'Data Sources, Connections & Power Query M',
-      'Data Modeling (Star Schema, Relationships)',
-      'DAX Fundamentals & Advanced Calculations',
-      'Time Intelligence Functions',
-      'Interactive Reports & Dashboard Design',
-      'Row-Level Security (RLS)',
-      'Power BI Service, Workspaces & Deployment',
+    description:
+      'Master SAP Materials Management (MM) from fundamentals to advanced configuration, covering procurement, inventory management, master data, valuation, pricing, release procedures, SAP S/4HANA, integration, reporting, migration, and SAP Fiori.',
+
+    tags: [
+      'SAP MM',
+      'SAP S/4HANA',
+      'Materials Management',
+      'Procurement',
+      'Inventory Management',
+      'Purchasing',
+      'SAP HANA',
+      'Material Master',
+      'Vendor Master',
+      'SAP Fiori',
     ],
+
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-700',
+    bgColor: 'bg-blue-50',
+    bannerGrad: 'from-blue-600 via-indigo-600 to-purple-700',
+
+    syllabus: [
+      'Introduction to SAP MM & ERP',
+      'SAP HANA & S/4HANA',
+      'Enterprise Organizational Structure',
+      'Master Data',
+      'Business Partner Configuration',
+      'Source Determination',
+      'Purchasing',
+      'Purchasing Document Types & Configuration',
+      'Service Procurement',
+      'Non-Material Procurement',
+      'Optimized Purchasing',
+      'Special Stocks & Special Procurement',
+      'Inventory Management',
+      'Physical Inventory',
+      'Valuation & Account Assignment',
+      'Release Procedure for Purchasing Documents',
+      'Conditions, Pricing Procedure & Price Determination',
+      'Valuation & Account Determination',
+      'Integration with Other SAP Modules',
+      'Output Determination',
+      'SAP Migration Cockpit / LTMC',
+      'Standard & Custom Reports',
+      'BRF+ Output Management',
+      'Introduction to SAP Fiori',
+    ],
+
     modules: [
       {
-        title: 'Module 1 – Power BI Fundamentals',
-        lessons: ['Power BI Desktop Interface', 'Connecting to Data Sources', 'Power Query Editor Basics', 'Loading & Refreshing Data', 'Publishing to Power BI Service'],
+        title: 'Module 1 – Introduction to SAP MM',
+        lessons: [
+          'Introduction to ERP',
+          'SAP Overview',
+          'Functions and Objectives of SAP MM',
+          'MM Business Cycle',
+          'New Technologies in SAP Business Processes',
+        ],
       },
+
       {
-        title: 'Module 2 – Power Query & Data Transformation',
-        lessons: ['M Language Fundamentals', 'Data Cleaning & Shaping', 'Merging & Appending Queries', 'Custom Columns & Functions', 'Incremental Refresh Setup'],
+        title: 'Module 2 – SAP HANA & S/4HANA',
+        lessons: [
+          'SAP HANA Technology',
+          'SAP S/4HANA Introduction',
+          'S/4HANA vs ECC',
+          'Need for a New Business Suite',
+        ],
       },
+
       {
-        title: 'Module 3 – Data Modeling',
-        lessons: ['Star Schema & Snowflake Schema', 'Relationships & Cardinality', 'Calculated Columns vs Measures', 'Hidden Fields & Display Folders', 'Composite Models'],
+        title: 'Module 3 – Enterprise Organizational Structure',
+        lessons: [
+          'Company',
+          'Company Code',
+          'Plant',
+          'Storage Location',
+          'Purchasing Organization',
+          'Purchasing Group',
+          'Organizational Assignments',
+        ],
       },
+
       {
-        title: 'Module 4 – DAX Mastery',
-        lessons: ['DAX Syntax & Context', 'CALCULATE & FILTER Functions', 'Time Intelligence (YTD, QTD, MoM)', 'RANKX, TOPN & Advanced Measures', 'Variables in DAX'],
+        title: 'Module 4 – Master Data',
+        lessons: [
+          'Material Master',
+          'Vendor Master',
+          'Supplier Account Group',
+          'Info Record',
+          'Number Ranges',
+          'Business Partner Role & Category',
+          'Source List',
+          'CVI – Customer Vendor Integration',
+        ],
       },
+
       {
-        title: 'Module 5 – Reporting, Security & Deployment',
-        lessons: ['Visual Best Practices', 'Bookmarks, Drill-through & Tooltips', 'Row-Level Security (RLS)', 'Power BI Service Workspaces', 'Dataflows, Apps & Governance'],
+        title: 'Module 5 – Business Partner Configuration',
+        lessons: [
+          'Configure Business Partner Roles and Categories',
+          'Supplier Account Groups',
+          'Configure Number Ranges',
+          'Business Partner and Supplier Relationship',
+          'Supplier Master Data Configuration',
+          'Supplier Configuration using Business Partner in S/4HANA',
+        ],
+      },
+
+      {
+        title: 'Module 6 – Source Determination',
+        lessons: [
+          'Source Determination Concept',
+          'Material Master in Source Determination',
+          'Vendor Master',
+          'Info Records',
+          'Source Lists',
+          'Approved Sources of Supply',
+        ],
+      },
+
+      {
+        title: 'Module 7 – Purchasing',
+        lessons: [
+          'Purchase Requisition (PR)',
+          'Request for Quotation (RFQ)',
+          'Maintain Quotation',
+          'Purchase Order (PO)',
+          'Contract',
+          'Outline Agreements',
+          'Schedule Agreement',
+        ],
+      },
+
+      {
+        title: 'Module 8 – Document Types for Purchasing Documents',
+        lessons: [
+          'Define Document Types',
+          'Define Number Ranges for Document Types',
+          'Define Screen Layout at Document Level',
+          'Purchasing Document Configuration',
+        ],
+      },
+
+      {
+        title: 'Module 9 – Procedure for Services',
+        lessons: [
+          'Creation of Service Master',
+          'Creation of Service PO',
+          'Service Entry Sheet',
+          'Service Procurement Process',
+        ],
+      },
+
+      {
+        title: 'Module 10 – Non-Material Purchase Order',
+        lessons: [
+          'Introduction to Non-Material Procurement',
+          'Create Non-Material Purchase Orders',
+          'Manage Non-Material Purchasing Requirements',
+        ],
+      },
+
+      {
+        title: 'Module 11 – Optimized Purchasing',
+        lessons: [
+          'Automatic Purchase Order with Reference to PR',
+          'Automatic Purchase Order with Reference to GR',
+          'Optimized Purchasing Processes',
+        ],
+      },
+
+      {
+        title: 'Module 12 – Special Stocks & Special Procurement Types',
+        lessons: [
+          'Consignment',
+          'Stock Transport Order (STO)',
+          'Subcontracting',
+          'Pipeline Procurement',
+          'Returnable Transport Packaging (RTP)',
+          'Special Procurement Scenarios',
+        ],
+      },
+
+      {
+        title: 'Module 13 – Inventory Management',
+        lessons: [
+          'Goods Movement',
+          'Goods Receipt (GR)',
+          'Goods Issue (GI)',
+          'Transfer Posting (TP)',
+          'Reservation',
+          'Material Movement Processing',
+          'Inventory Updates in SAP',
+        ],
+      },
+
+      {
+        title: 'Module 14 – Physical Inventory',
+        lessons: [
+          'Creating Physical Inventory Document',
+          'Entering Physical Inventory Count',
+          'Inventory Difference List',
+          'Posting Inventory Differences',
+          'Physical Stock Verification',
+        ],
+      },
+
+      {
+        title: 'Module 15 – Valuation & Account Assignment',
+        lessons: [
+          'Introduction to Material Valuation',
+          'Split Valuation',
+          'Configure Split Valuation',
+          'Global Valuation Types',
+          'Maintain Valuation Types',
+          'Global Valuation Categories',
+          'Assign Valuation Categories',
+          'Creation of Classes',
+          'Creation of Characteristics',
+        ],
+      },
+
+      {
+        title: 'Module 16 – Release Procedure for Purchasing Documents',
+        lessons: [
+          'Release Group',
+          'Release Indicator',
+          'Release Codes',
+          'Release Prerequisites',
+          'Release Strategies',
+          'Purchasing Document Approval Process',
+        ],
+      },
+
+      {
+        title: 'Module 17 – Conditions, Pricing Procedure & Price Determination',
+        lessons: [
+          'Define Access Sequence',
+          'Define Condition Types',
+          'Define Calculation Schema',
+          'Define Schema Group',
+          'Schema Group – Vendor',
+          'Schema Group – Purchasing Organization',
+          'Define Schema Determination',
+          'Calculation Schema for Standard Purchase Orders',
+        ],
+      },
+
+      {
+        title: 'Module 18 – Valuation & Account Determination',
+        lessons: [
+          'Valuation',
+          'Account Determination',
+          'Valuation-Related Configuration',
+        ],
+      },
+
+      {
+        title: 'Module 19 – Integration with Other Modules',
+        lessons: [
+          'MM with FI/CO',
+          'MM with PP',
+          'Integration of Purchasing and Inventory Transactions',
+          'Cross-Module Business Processes',
+        ],
+      },
+
+      {
+        title: 'Module 20 – Output Determination',
+        lessons: [
+          'Define Output Types',
+          'Business Rules for Output Parameters',
+          'Purchasing-Related Outputs',
+          'Output Parameter Determination',
+        ],
+      },
+
+      {
+        title: 'Module 21 – SAP Migration Cockpit / LTMC',
+        lessons: [
+          'SAP Migration Cockpit',
+          'Direct Data Migration from SAP System',
+          'Staging Table Approach',
+          'Data Preparation for Migration',
+        ],
+      },
+
+      {
+        title: 'Module 22 – Standard Reports',
+        lessons: [
+          'Standard SAP Reports',
+          'Available Standard Reports',
+          'Using Standard Reports',
+          'Business Reporting Requirements',
+        ],
+      },
+
+      {
+        title: 'Module 23 – Custom Reports',
+        lessons: [
+          'Identify Business Reporting Requirements',
+          'Fetching Data from SAP Database Tables',
+          'Basic Approach to Custom Reports',
+          'Custom Reporting Based on Business Requirements',
+        ],
+      },
+
+      {
+        title: 'Module 24 – BRF+ Output Management',
+        lessons: [
+          'Introduction to BRF+',
+          'Business Rules',
+          'Output Parameter Determination',
+          'BRF+ in Output Management',
+          'Converting Business Requirements into Configurable Rules',
+        ],
+      },
+
+      {
+        title: 'Module 25 – Introduction to SAP Fiori',
+        lessons: [
+          'SAP Fiori Introduction',
+          'Fiori Apps Installation',
+          'Assign Roles to Users',
+        ],
       },
     ],
-    skills: ['Power BI Desktop & Service', 'Power Query (M Language)', 'DAX Calculations', 'Data Modeling', 'Dashboard Design', 'Time Intelligence', 'Row-Level Security', 'Report Publishing'],
-    tools: ['Power BI Desktop', 'Power BI Service', 'DAX Studio', 'Tabular Editor', 'Power Query Editor'],
+
+    skills: [
+      'SAP MM',
+      'SAP S/4HANA',
+      'SAP HANA',
+      'ERP Fundamentals',
+      'Materials Management',
+      'Procurement',
+      'Purchasing',
+      'Purchase Requisition',
+      'RFQ & Quotations',
+      'Purchase Orders',
+      'Contracts & Outline Agreements',
+      'Material Master',
+      'Vendor Master',
+      'Business Partner',
+      'Source Determination',
+      'Inventory Management',
+      'Goods Receipt & Goods Issue',
+      'Physical Inventory',
+      'Material Valuation',
+      'Account Determination',
+      'Pricing & Conditions',
+      'Release Procedures',
+      'Special Procurement',
+      'SAP Integration',
+      'SAP Migration',
+      'SAP Reporting',
+      'BRF+',
+      'SAP Fiori',
+    ],
+
+    tools: [
+      'SAP ERP',
+      'SAP ECC',
+      'SAP S/4HANA',
+      'SAP HANA',
+      'SAP MM',
+      'SAP Fiori',
+      'SAP Migration Cockpit / LTMC',
+      'BRF+',
+    ],
+
     projects: [
-      { title: 'Executive Sales Dashboard', desc: 'Build a C-suite ready sales dashboard with YTD comparisons, regional drill-downs, and KPI cards.' },
-      { title: 'HR Analytics Report', desc: 'Create an HR metrics dashboard with headcount trends, attrition analysis, and RLS by department.' },
-      { title: 'Financial P&L Report', desc: 'Design a Profit & Loss statement report with dynamic time intelligence and variance analysis.' },
+      {
+        title: 'End-to-End Procurement Process',
+        desc: 'Configure and execute an end-to-end SAP MM purchasing process from material requirement and purchase requisition through supplier procurement and purchase order processing.',
+      },
+      {
+        title: 'Inventory Management System',
+        desc: 'Work with goods receipts, goods issues, reservations, transfer postings, and physical inventory processes to manage stock in SAP.',
+      },
+      {
+        title: 'Supplier & Business Partner Configuration',
+        desc: 'Configure supplier-related master data using Business Partner roles, supplier account groups, number ranges, and purchasing information.',
+      },
+      {
+        title: 'Special Procurement Scenarios',
+        desc: 'Work through consignment, stock transport orders, subcontracting, pipeline procurement, and returnable transport packaging scenarios.',
+      },
+      {
+        title: 'SAP MM Pricing & Release Strategy',
+        desc: 'Configure purchasing conditions, calculation schemas, pricing procedures, and release strategies for purchasing documents.',
+      },
+      {
+        title: 'SAP MM Reporting & Migration',
+        desc: 'Explore standard and custom reporting, data migration using SAP Migration Cockpit/LTMC, and output management with BRF+.',
+      },
     ],
-    careers: ['Power BI Developer', 'BI Analyst', 'Data Analyst', 'Reporting Analyst', 'Business Intelligence Engineer', 'Analytics Consultant'],
+
+    careers: [
+      'SAP MM Consultant',
+      'SAP MM Functional Consultant',
+      'SAP S/4HANA MM Consultant',
+      'SAP Procurement Consultant',
+      'SAP Materials Management Consultant',
+      'SAP MM Support Consultant',
+      'SAP Functional Analyst',
+    ],
+
     faqs: [
-      { q: 'Is Power BI Desktop free?', a: 'Yes! Power BI Desktop is completely free to download. Power BI Service has a free tier and paid Pro/Premium licenses.' },
-      { q: 'How hard is DAX to learn?', a: 'DAX has a learning curve but our structured approach makes it very approachable. We start from basics and build complexity gradually.' },
-      { q: 'Will I learn Power BI for both Desktop and Cloud?', a: 'Absolutely! We cover both Power BI Desktop (reporting tool) and Power BI Service (cloud publishing, sharing, governance).' },
-      { q: 'Is Power BI certification covered?', a: 'This course aligns with the PL-300 (Microsoft Power BI Data Analyst) certification exam objectives.' },
+      {
+        q: 'What is the duration of the SAP MM course?',
+        a: 'The SAP MM program is a 100-hour online training program.',
+      },
+      {
+        q: 'What does this SAP MM course cover?',
+        a: 'The program covers SAP MM fundamentals, S/4HANA, organizational structure, master data, procurement, purchasing, inventory management, valuation, pricing, release procedures, integration, reporting, migration, BRF+, and SAP Fiori.',
+      },
+      {
+        q: 'Will I learn SAP S/4HANA?',
+        a: 'Yes. The course includes SAP HANA, SAP S/4HANA, the differences between S/4HANA and ECC, and the transition to the next-generation SAP ERP platform.',
+      },
+      {
+        q: 'Will I learn the complete SAP MM purchasing process?',
+        a: 'Yes. The purchasing curriculum covers Purchase Requisitions, RFQs, quotations, Purchase Orders, contracts, outline agreements, and schedule agreements.',
+      },
+      {
+        q: 'Does the course cover inventory management?',
+        a: 'Yes. Inventory Management includes Goods Receipt, Goods Issue, Transfer Posting, Reservations, Goods Movements, and Physical Inventory.',
+      },
+      {
+        q: 'Will I learn SAP MM configuration?',
+        a: 'Yes. The curriculum includes configuration topics such as organizational structure, Business Partner, number ranges, document types, release procedures, pricing procedures, valuation, account determination, and output determination.',
+      },
+      {
+        q: 'Does the course cover special procurement?',
+        a: 'Yes. It covers Consignment, Stock Transport Orders, Subcontracting, Pipeline Procurement, and Returnable Transport Packaging.',
+      },
+      {
+        q: 'Will I learn SAP Fiori?',
+        a: 'Yes. The final module introduces SAP Fiori, Fiori app installation, and assigning roles to users.',
+      },
+      {
+        q: 'Does the course include reporting and migration?',
+        a: 'Yes. The program covers standard reports, custom reports, SAP Migration Cockpit/LTMC, and BRF+ Output Management.',
+      },
+      {
+        q: 'Does the training include practical learning?',
+        a: 'Yes. The program includes practical projects, assessments and quizzes, doubt clearing, interview preparation, and career support.',
+      },
     ],
   },
 ]
