@@ -122,8 +122,13 @@ const TestimonialCard: React.FC<{
 
   return (
     <div
-      className="flex-shrink-0 w-[320px] md:w-[360px] bg-white rounded-2xl p-7 shadow-md border border-gray-100 flex flex-col mx-3 select-none"
+      className={`flex-shrink-0 w-[320px] md:w-[360px] bg-white rounded-2xl p-7 shadow-md border border-gray-100 flex flex-col mx-3 select-none ${isLong ? 'cursor-pointer hover:shadow-lg hover:border-blue-200 transition-all duration-200' : ''}`}
       style={{ height: '270px' }}
+      onClick={isLong ? () => onReadMore(testimonial) : undefined}
+      role={isLong ? 'button' : undefined}
+      tabIndex={isLong ? 0 : undefined}
+      onKeyDown={isLong ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onReadMore(testimonial) } } : undefined}
+      aria-label={isLong ? `Read full review by ${testimonial.name}` : undefined}
     >
       {/* Top row */}
       <div className="flex items-center justify-between mb-4">
@@ -243,7 +248,7 @@ export const Testimonials: React.FC = () => {
           </div>
           <div className="h-px w-24 sm:h-16 sm:w-px bg-gray-200" />
           <div className="text-center">
-            <p className="text-3xl font-extrabold text-gray-900">150+</p>
+            <p className="text-3xl font-extrabold text-gray-900">1500+</p>
             <p className="text-sm text-gray-500">Hiring Partners</p>
           </div>
         </motion.div>

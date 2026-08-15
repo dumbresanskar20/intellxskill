@@ -38,7 +38,7 @@ export const HiringPartners: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight"
           >
-            1500+ <span className="text-gradient-primary">Hiring Partners</span>
+            <span className="text-gradient-primary">Leading Companies</span> Across Industries
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

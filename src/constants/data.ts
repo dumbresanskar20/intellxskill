@@ -1,6 +1,5 @@
 // All constants / mock data for the site
 
-import { href } from "react-router-dom"
 import type { Course, CourseCategory } from '../types'
 
 export const NAV_LINKS = [
@@ -71,7 +70,7 @@ export const COURSES: Course[] = [
     id: 1,
     slug: 'databricks-analytics-ai',
     title: 'Advanced Data Analytics with Databricks & AI',
-    category: 'Databricks & AI' as CourseCategory,
+    category: 'Databricks & AI',
     duration: '100 Hours',
     sessions: '80 Live Sessions',
     mode: 'Online (Live + Recorded)',
@@ -134,7 +133,7 @@ export const COURSES: Course[] = [
     id: 2,
     slug: 'sql-server',
     title: 'Advanced SQL Server Program',
-    category: 'SQL' as CourseCategory,
+    category: 'SQL',
     duration: '100 Hours',
     sessions: '80 Live Sessions',
     mode: 'Online (Live + Recorded)',
@@ -1723,7 +1722,7 @@ export const COURSES: Course[] = [
     id: 5,
     slug: 'core-sql-server-dba-program',
     title: 'CORE SQL SERVER DBA PROGRAM',
-    category: 'SQL' as CourseCategory,
+    category: 'SQL',
     duration: '100 Hours',
     sessions: 'Weekday & Weekend Batches Available',
     mode: 'Online Training',
@@ -1967,7 +1966,7 @@ export const COURSES: Course[] = [
     id: 6,
     slug: 'sap-mm',
     title: 'SAP MM',
-    category: 'SAP' as CourseCategory,
+    category: 'SAP',
     duration: '100 Hours',
     sessions: 'Live + Recorded Training',
     mode: 'Online Training',
@@ -2594,4 +2593,4 @@ export const ABOUT_TABS = [
   },
 ]
 
-export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Databricks & AI', 'SQL', 'Snowflake', 'Python', 'Power BI']
+export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Databricks & AI', 'SQL', 'Data Analytics & Business Intelligence', 'Data Analytics & AI', 'SAP']

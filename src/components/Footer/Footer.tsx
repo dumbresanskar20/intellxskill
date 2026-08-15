@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5 text-sm text-gray-400">
                 <Mail className="w-4 h-4 flex-shrink-0 text-[#F97316]" />
-                <span>hello@intellxskill.com</span>
+                <span>info@intellxskill.com</span>
               </div>
             </div>
           </div>
@@ -124,15 +124,7 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/faq"
-                  className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 group"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-[#F97316] group-hover:translate-x-0.5 transition-transform" />
-                  FAQ
-                </Link>
-              </li>
+
             </ul>
           </div>
 

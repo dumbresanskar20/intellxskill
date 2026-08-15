@@ -7,6 +7,12 @@ import { SectionWrapper, SectionHeading } from '../Common/SectionWrapper'
 import { COURSES, FILTER_CATEGORIES } from '../../constants/data'
 import type { CourseCategory, Course } from '../../types'
 
+// Short display labels for filter buttons (long category names → compact pills)
+const FILTER_LABELS: Partial<Record<CourseCategory, string>> = {
+  'Data Analytics & Business Intelligence': 'Data Analytics & BI',
+  'Data Analytics & AI': 'Analytics & AI',
+}
+
 // ─── Course Card ────────────────────────────────────────────────────────────
 
 const CourseCard: React.FC<{
@@ -115,7 +121,7 @@ export const Courses: React.FC = () => {
           badge="Our Courses"
           title="Build Skills That "
           highlight="Employers Want"
-          description="Five comprehensive courses covering the entire modern data stack. From Excel to cloud data warehousing."
+          description={`${COURSES.length} comprehensive courses covering the entire modern data stack — from Excel to cloud data warehousing.`}
         />
 
         {/* Filter Buttons */}
@@ -131,7 +137,7 @@ export const Courses: React.FC = () => {
               }`}
               aria-pressed={activeFilter === cat}
             >
-              {cat}
+              {FILTER_LABELS[cat] || cat}
             </button>
           ))}
         </div>

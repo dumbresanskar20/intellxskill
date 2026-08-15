@@ -160,6 +160,7 @@ export const Chatbot: React.FC = () => {
   const [input, setInput] = useState<string>('')
   const [typing, setTyping] = useState<boolean>(false)
   const [unread, setUnread] = useState<number>(1)
+  const [tooltipVisible, setTooltipVisible] = useState<boolean>(true)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const messagesRef = useRef<HTMLDivElement>(null)
@@ -177,8 +178,16 @@ export const Chatbot: React.FC = () => {
   }, [])
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setTooltipVisible(false)
+    }, 5000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
     if (open) {
       setUnread(0)
+      setTooltipVisible(false)
       const timer = setTimeout(() => {
         inputRef.current?.focus()
       }, 300)
@@ -242,7 +251,7 @@ export const Chatbot: React.FC = () => {
       <div className="fixed bottom-16 right-4 sm:bottom-24 sm:right-6 z-[1000] flex flex-col items-end gap-2">
         {/* Tooltip bubble */}
         <AnimatePresence>
-          {!open && (
+          {!open && tooltipVisible && (
           <motion.div
               initial={{ opacity: 0, y: 10, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
