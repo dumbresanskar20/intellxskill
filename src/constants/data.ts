@@ -1,7 +1,7 @@
 // All constants / mock data for the site
 
 import { href } from "react-router-dom"
-import type { Course } from '../types'
+import type { Course, CourseCategory } from '../types'
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -63,7 +63,7 @@ export const WHY_CARDS = [
 
 
 
-export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI' | 'Data Analytics & Business Intelligence' | 'SAP'
+
 
 export const COURSES: Course[] = [
   // 1
@@ -875,158 +875,504 @@ export const COURSES: Course[] = [
     id: 4,
     slug: 'advanced-data-analytics-snowflake-ai',
     title: 'Advanced Data Analytics with Snowflake & AI',
-    category: 'Data Analytics' as CourseCategory,
+    category: 'Data Analytics & AI',
     duration: '100 Hours',
-    sessions: 'Live + Recorded Training',
-    mode: 'Online Training',
+    sessions: 'Online Training',
+    mode: 'Online',
     level: 'Beginner to Advanced',
+
     description:
-      'Master modern data analytics with Microsoft Excel, SQL Server, Python, Snowflake, and Power BI. Build industry-ready analytics solutions through practical projects, data warehousing, visualization, automation, and business intelligence.',
+      'Master modern data analytics with Microsoft Excel, SQL Server, Python, Snowflake, and Power BI. Build practical skills in data cleaning, analysis, automation, cloud data warehousing, data visualization, business intelligence, and AI-powered Excel analytics using real-world datasets and practical projects.',
+
     tags: [
-      'Data Analytics',
-      'Excel',
+      'Advanced Excel',
+      'Excel with AI',
       'SQL Server',
       'Python',
+      'Pandas',
+      'NumPy',
       'Snowflake',
       'Power BI',
+      'Data Analytics',
+      'Data Visualization',
       'Data Warehousing',
       'Business Intelligence',
-      'AI'
     ],
-    color: 'from-blue-500 to-cyan-500',
+
+    color: 'from-purple-400 to-blue-600',
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
-    bannerGrad: 'from-blue-600 via-cyan-500 to-indigo-600',
+    bannerGrad: 'from-purple-500 via-blue-600 to-cyan-700',
 
     syllabus: [
-      'Advanced Microsoft Excel & AI',
-      'SQL Server – Beginner to Advanced',
-      'Python for Data Analysis',
-      'Pandas, NumPy & Data Visualization',
-      'Snowflake Cloud Data Warehousing',
-      'Snowflake SQL & Database Objects',
-      'Data Loading, Unloading & Performance Optimization',
-      'Snowflake Security, RBAC & Advanced Features',
-      'Power BI Data Transformation & Modeling',
-      'DAX, Dashboards & Power BI Service',
-      'Real-World Data Analytics Projects',
-      'Career Preparation, Assessments & Job Assistance',
+      'Microsoft Advanced Excel with AI',
+      'Microsoft SQL Server',
+      'Python for Data Analyst',
+      'Snowflake',
+      'Microsoft Power BI',
     ],
 
     modules: [
+
+      // =========================================================
+      // CONCEPT 1 — MICROSOFT ADVANCED EXCEL WITH AI
+      // =========================================================
+
       {
-        title: 'Module 1 – Microsoft Advanced Excel with AI',
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 1 – Excel Fundamentals',
         lessons: [
-          'Excel Interface, Workbooks, Worksheets & Tables',
-          'Data Entry, Formatting & Data Validation',
-          'Excel Formulas & Core Functions',
-          'IF, IFS, AND, OR, NOT & IFERROR',
-          'Text & Date Functions',
-          'XLOOKUP & XMATCH',
-          'FILTER, SORT, SORTBY & UNIQUE',
-          'Dynamic Arrays, LET & LAMBDA',
-          'Sorting, Filtering & Subtotals',
-          'What-If Analysis, Goal Seek & Scenario Manager',
-          'Power Query for Data Cleaning & ETL',
-          'Pivot Tables & Pivot Charts',
-          'Slicers & Timelines',
-          'Excel Dashboards & KPI Reports',
-          'Macro Recording & Basic Automation',
-          'Office Scripts & Power Automate Awareness',
-          'AI Features, Analyze Data & Smart Insights',
-          'Forecast Sheet, Flash Fill & Pattern Detection',
-          'MIS Reporting & Productivity Tools',
-          'Real-World MIS Projects',
+          'Introduction to Microsoft Excel interface',
+          'Workbook vs Worksheet vs Table',
+          'Cell, Row, Column basics',
+          'Ribbon, Toolbar & Navigation',
+          'Basic shortcuts for speed',
         ],
       },
 
       {
-        title: 'Module 2 – Microsoft SQL Server',
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 2 – Data Entry & Formatting',
         lessons: [
-          'SQL Server Overview & Editions',
-          'SQL Server Installation & Configuration',
-          'Database Creation & Management',
-          'SQL Server Data Types',
-          'DML, DDL, DQL, DCL & TCL',
-          'Primary Key, Foreign Key & Unique Constraints',
-          'Check, Default, NOT NULL & Identity Constraints',
-          'SELECT, TOP & DISTINCT',
-          'UNION & UNION ALL',
-          'Arithmetic, Comparison & Logical Operators',
-          'LIKE, IN & BETWEEN',
-          'COUNT, SUM, MIN, MAX & AVG',
-          'WHERE, ORDER BY, GROUP BY & HAVING',
-          'INNER, LEFT, RIGHT & FULL JOIN',
-          'SELF JOIN & CROSS JOIN',
-          'ROW_NUMBER, RANK & DENSE_RANK',
-          'Clustered & Non-Clustered Indexes',
+          'Clean data entry standards (MIS accuracy)',
+          'Formatting (fonts, alignment, styles)',
+          'Conditional formatting (error/highlight tracking)',
+          'Excel Tables (structured MIS data)',
+          'Data validation (drop-down controls)',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 3 – Core Formulas',
+        lessons: [
+          'Arithmetic formulas (+, -, *, /)',
+          'SUM, AVERAGE, MIN, MAX, COUNT',
+          'IF, IFS, AND, OR, NOT',
+          'Text functions (LEFT, RIGHT, MID, TRIM, CONCAT, TEXTJOIN)',
+          'Date functions (TODAY, NOW, DATE, DATEDIF)',
+          'Error handling (IFERROR)',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 4 – Advanced Functions',
+        lessons: [
+          'XLOOKUP, XMATCH',
+          'FILTER, SORT, SORTBY, UNIQUE',
+          'Dynamic arrays concept',
+          'LET function',
+          'LAMBDA function',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 5 – Data Cleaning',
+        lessons: [
+          'Power Query (ETL tool)',
+          'Import Excel / CSV data',
+          'Remove duplicates, null handling',
+          'Split & merge columns',
+          'Data transformation',
+          'Append & merge datasets',
+          'Auto refresh reports',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 6 – Analysis & Reporting',
+        lessons: [
+          'Sorting & filtering',
+          'Subtotal & grouping',
+          'What-if analysis',
+          'Goal Seek',
+          'Scenario Manager',
+          'Analysis ToolPak',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 7 – Pivot Tables',
+        lessons: [
+          'Pivot tables from raw data',
+          'Grouping & summarizing',
+          'Pivot charts',
+          'Slicers & timelines',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 8 – Dashboarding',
+        lessons: [
+          'Charts (bar, line, pie)',
+          'Advanced chart formatting',
+          'KPI-style report layout (visual MIS reporting)',
+          'Interactive dashboards using slicers',
+          'Dynamic reporting structure',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 9 – Automation',
+        lessons: [
+          'Macro recording (basic automation)',
+          'Buttons for report generation',
+          'Office Scripts (basic awareness)',
+          'Power Automate integration (workflow idea)',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 10 – AI & Modern Excel',
+        lessons: [
+          'Analyze Data feature',
+          'Smart insights suggestions',
+          'Forecast Sheet',
+          'Flash Fill intelligence',
+          'Pattern detection',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 11 – MIS Reporting & Productivity Tools',
+        lessons: [
+          'Multiple Worksheet & Workbook Data',
+          'Consolidation',
+          'Dynamic Data Validation & Controlled Data Entry',
+          'Named Ranges, Find & Replace, Go To Special',
+          'Report Formatting, Print Setup & PDF Export',
+          'Daily, Weekly & Monthly MIS Report Preparation',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Advanced Excel with AI',
+        title: 'Module 12 – Real-World MIS Projects',
+        lessons: [
+          'Sales MIS Report (daily/monthly)',
+          'HR Attendance Report',
+          'Payroll & salary sheet',
+          'Expense tracking system',
+          'Inventory MIS report',
+          'Automated MIS reporting system',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 2 — MICROSOFT SQL SERVER
+      // =========================================================
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 1 – Introduction',
+        lessons: [
+          'Overview of SQL Server & its editions',
+          'Installation & Configuration of SQL Server',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 2 – Database Basics',
+        lessons: [
+          'Creating and Managing Databases',
+          'Data Types in SQL Server',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 3 – Constraints',
+        lessons: [
+          'Primary Key',
+          'Foreign Key',
+          'Unique',
+          'Check',
+          'Default',
+          'NOT NULL',
+          'Identity',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 4 – SQL Commands',
+        lessons: [
+          'DML',
+          'DDL',
+          'DQL',
+          'DCL',
+          'TCL',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 5 – SQL Operators',
+        lessons: [
+          'Arithmetic',
+          'Comparison',
+          'Logical',
+          'LIKE',
+          'IN',
+          'BETWEEN',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 6 – SQL Query Fundamentals',
+        lessons: [
+          'SELECT Statement',
+          'TOP',
+          'DISTINCT',
+          'UNION',
+          'UNION ALL',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 7 – Aggregate Functions',
+        lessons: [
+          'COUNT',
+          'SUM',
+          'MIN & MAX',
+          'AVG',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 8 – SQL Clauses',
+        lessons: [
+          'WHERE',
+          'ORDER BY',
+          'GROUP BY',
+          'HAVING',
+          'DISTINCT',
+          'TOP',
+          'ALIAS',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 9 – Joins',
+        lessons: [
+          'INNER JOIN',
+          'LEFT JOIN',
+          'RIGHT JOIN',
+          'FULL JOIN',
+          'SELF JOIN',
+          'CROSS JOIN',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 10 – Window Functions',
+        lessons: [
+          'ROW_NUMBER()',
+          'RANK()',
+          'DENSE_RANK()',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 11 – Indexing',
+        lessons: [
+          'Clustered Index',
+          'Non-Clustered Index',
           'Query Optimization',
-          'Stored Procedures, CTEs & Views',
-          'SQL Functions',
         ],
       },
 
       {
-        title: 'Module 3 – Python for Data Analysts',
+        concept: 'Microsoft SQL Server',
+        title: 'Module 12 – Advanced SQL',
         lessons: [
-          'Introduction to Python',
+          'Stored Procedures',
+          'CTE',
+          'Views',
+          'Functions',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 3 — PYTHON FOR DATA ANALYST
+      // =========================================================
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 1 – Introduction to Python',
+        lessons: [
+          'What is Python?',
           'Installing Python & VS Code',
-          'Writing Your First Python Program',
-          'Variables & Data Types',
+          'Writing First Python Program',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 2 – Python Basics',
+        lessons: [
+          'Variables and Data Types',
           'Input & Output',
-          'Functions & Type Casting',
-          'Conditional Statements',
-          'For & While Loops',
-          'range(), break & continue',
-          'Strings & String Methods',
-          'Lists, Tuples & Dictionaries',
-          'Arithmetic, Comparison & Logical Operators',
+          'Functions',
+          'Type Casting',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 3 – Conditional Statements',
+        lessons: [
+          'if',
+          'if-else',
+          'if-elif-else',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 4 – Loops',
+        lessons: [
+          'for Loop',
+          'while Loop',
+          'range()',
+          'break',
+          'continue',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 5 – Data Structures',
+        lessons: [
+          'Strings',
+          'String Methods',
+          'Slicing',
+          'Lists',
+          'List Methods',
+          'Tuples',
+          'Tuple Basics',
+          'Dictionaries',
+          'Dictionary Methods',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 6 – Operators',
+        lessons: [
+          'Arithmetic Operators',
+          'Comparison Operators',
+          'Logical Operators',
           'Assignment Operators',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 7 – Functions',
+        lessons: [
           'Defining Functions',
           'Arguments & Return Values',
           'Lambda Functions',
-          'Reading & Writing CSV Files',
         ],
       },
 
       {
-        title: 'Module 4 – Pandas, NumPy & Data Visualization',
+        concept: 'Python for Data Analyst',
+        title: 'Module 8 – File Handling',
         lessons: [
-          'Pandas Series & DataFrames',
-          'Reading CSV & Excel Files',
-          'Filtering & Sorting Data',
-          'GroupBy Operations',
+          'Reading CSV Files',
+          'Writing CSV Files',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 9 – NumPy',
+        lessons: [
+          'Arrays',
+          'Indexing & Slicing',
+          'Mathematical Operations',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 10 – Pandas',
+        lessons: [
+          'Series & DataFrames',
+          'Reading CSV/Excel Files',
+          'Filtering Data',
+          'Sorting Data',
+          'GroupBy',
           'Merge & Join',
           'Handling Null Values',
-          'Data Cleaning & Transformation',
-          'NumPy Arrays',
-          'NumPy Indexing & Slicing',
-          'Mathematical Operations with NumPy',
-          'Matplotlib Fundamentals',
-          'Line, Bar & Pie Charts',
-          'Seaborn Visualizations',
+          'Data Cleaning/Transformation',
+        ],
+      },
+
+      {
+        concept: 'Python for Data Analyst',
+        title: 'Module 11 – Data Visualization',
+        lessons: [
+          'Matplotlib',
+          'Line Charts',
+          'Bar Charts',
+          'Pie Charts',
+          'Seaborn',
           'Heatmaps',
           'Distribution Plots',
         ],
       },
 
       {
-        title: 'Module 5 – Python & Power BI Integration',
+        concept: 'Python for Data Analyst',
+        title: 'Module 12 – Power BI + Python Integration',
         lessons: [
-          'Installing & Configuring Python for Power BI',
+          'Installing /Configuring Python for Power BI',
           'Running Python Scripts in Power BI',
-          'Importing Python-Processed Data into Power BI',
+          'Importing Python Processed Data into Power BI',
         ],
       },
 
+
+      // =========================================================
+      // CONCEPT 4 — SNOWFLAKE
+      // =========================================================
+
       {
-        title: 'Module 6 – Snowflake Data Warehousing Fundamentals',
+        concept: 'Snowflake',
+        title: 'Module 1 – Data Warehouse Fundamentals',
         lessons: [
           'Data Warehouse Concepts',
           'OLTP vs OLAP',
           'Snowflake Overview',
           'Snowflake Architecture',
-          'Snowflake Object Hierarchy',
+          'Object Hierarchy',
+        ],
+      },
+
+      {
+        concept: 'Snowflake',
+        title: 'Module 2 – Snowflake Environment Setup',
+        lessons: [
           'Snowflake Account Setup',
           'Snowsight Interface',
           'Databases & Schemas',
@@ -1036,20 +1382,36 @@ export const COURSES: Course[] = [
       },
 
       {
-        title: 'Module 7 – Snowflake SQL & Database Objects',
+        concept: 'Snowflake',
+        title: 'Module 3 – Snowflake SQL Overview',
         lessons: [
           'DDL Commands',
           'DML Commands',
           'Query Execution',
           'Data Retrieval',
           'SQL in Snowflake',
+        ],
+      },
+
+      {
+        concept: 'Snowflake',
+        title: 'Module 4 – Snowflake Database Objects',
+        lessons: [
           'Permanent Tables',
           'Temporary Tables',
           'Transient Tables',
           'Views',
           'Secure Views',
           'Materialized Views',
-          'Fact Tables & Dimension Tables',
+        ],
+      },
+
+      {
+        concept: 'Snowflake',
+        title: 'Module 5 – Data Modeling in Snowflake',
+        lessons: [
+          'Fact Tables',
+          'Dimension Tables',
           'Star Schema',
           'Snowflake Schema',
           'Analytical Data Models',
@@ -1057,96 +1419,195 @@ export const COURSES: Course[] = [
       },
 
       {
-        title: 'Module 8 – Snowflake Data Loading & Advanced Features',
+        concept: 'Snowflake',
+        title: 'Module 6 – Performance Optimization',
         lessons: [
-          'Virtual Warehouse Management',
+          'Virtual Warehouses',
           'Auto Suspend & Resume',
           'Query History',
           'Query Profile',
           'Cost Optimization',
+        ],
+      },
+
+      {
+        concept: 'Snowflake',
+        title: 'Module 7 – Advanced Snowflake Features',
+        lessons: [
           'Time Travel',
           'Zero-Copy Cloning',
-          'Data Sharing',
+          'Data Sharing Overview',
           'Streams & Tasks Overview',
-          'Internal & External Stages',
+        ],
+      },
+
+      {
+        concept: 'Snowflake',
+        title: 'Module 8 – Data Loading & Unloading',
+        lessons: [
+          'Internal Stages',
+          'External Stages',
           'File Formats',
           'Loading CSV Files',
           'COPY INTO Command',
-          'Data Validation',
+          'Data Validation Techniques',
           'Unloading Data from Snowflake',
         ],
       },
 
       {
-        title: 'Module 9 – Snowflake Security & Power BI Integration',
+        concept: 'Snowflake',
+        title: 'Module 9 – Security & Access Control',
         lessons: [
           'User Management',
           'Role Management',
-          'Role-Based Access Control (RBAC)',
-          'GRANT & REVOKE Permissions',
-          'Snowflake Connections',
-          'Import Mode in Power BI',
-          'DirectQuery Mode',
-          'Data Refresh',
+          'RBAC',
+          'Grant & Revoke Permissions',
         ],
       },
 
       {
-        title: 'Module 10 – Microsoft Power BI',
+        concept: 'Snowflake',
+        title: 'Module 10 – Snowflake to Power BI Integration',
         lessons: [
-          'Introduction to Power BI',
-          'Power BI Installation & Setup',
+          'Snowflake Connection',
+          'Import Mode',
+          'DirectQuery Mode',
+          'Data Refresh',
+          'Dashboard Publishing',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 5 — MICROSOFT POWER BI
+      // =========================================================
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 1 – Introduction to Power BI',
+        lessons: [
+          'What is Power BI?',
+          'Why is Power BI Important?',
           'Power BI Ecosystem',
-          'Connecting to Excel, SQL & Online Sources',
-          'Import Mode vs DirectQuery',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 2 – Power BI Installation & Setup',
+        lessons: [
+          'How to Install Power BI Desktop',
+          'System Requirements',
+          'First Look at Power BI Interface',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 3 – Connecting to Data Sources',
+        lessons: [
+          'Common Data Sources (Excel, SQL, Online Services)',
+          'Import Mode vs. Direct Query',
           'Live Data Refresh',
-          'Data Transformation with Power Query',
-          'Removing Duplicates & Handling Null Values',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 4 – Data Transformation with Power Query',
+        lessons: [
+          'Cleaning & Transforming Data',
+          'Removing Duplicates, Handling Null Values',
           'Merging & Splitting Columns',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 5 – Data Modeling Basics',
+        lessons: [
           'Creating Relationships Between Tables',
-          'Star & Snowflake Schema',
-          'Introduction to DAX',
-          'Measures & Calculated Columns',
-          'SUM, COUNT, AVERAGE, IF & SWITCH',
-          'Bar, Line, Pie, Map & Table Visualizations',
-          'Filters & Slicers',
-          'Drill-through & Tooltip Pages',
+          'Understanding Star & Snowflake Schema',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 6 – Introduction to DAX',
+        lessons: [
+          'What is DAX?',
+          'Basic Functions (SUM, COUNT, AVERAGE, IF, SWITCH)',
+          'Creating Measures & Calculated Columns',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 7 – Creating Visualizations',
+        lessons: [
+          'Types of Charts: Bar, Line, Pie, Maps, Tables',
+          'Formatting and Customizing Visuals',
+          'Best Practices for Effective Data Representation',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 8 – Filters, Slicers, and Drill-through',
+        lessons: [
+          'Applying Filters at Different Levels',
+          'Slicers and Their Use Cases',
+          'Drill-through and Tooltip Pages',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 9 – Publishing & Sharing Reports',
+        lessons: [
           'Publishing to Power BI Service',
-          'Dashboard Creation',
-          'Report Sharing & Collaboration',
-          'Power BI Performance Optimization',
+          'Creating Dashboards',
+          'Sharing Reports & Collaborating',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 10 – Power BI Best Practices',
+        lessons: [
+          'Performance Optimization Techniques',
           'Data Modeling Best Practices',
-          'Visual Design Best Practices',
+          'Visual Design Tips',
         ],
       },
     ],
 
     skills: [
-      'Advanced Excel',
-      'MIS Reporting',
+      'Advanced Microsoft Excel',
+      'Excel Data Analysis',
+      'Excel MIS Reporting',
       'Excel Dashboarding',
-      'Power Query',
+      'Excel Automation',
+      'AI-Powered Excel Analysis',
       'SQL Server',
-      'SQL Query Writing',
+      'SQL Query Development',
       'Database Management',
-      'SQL Joins & Window Functions',
-      'Python Programming',
-      'Pandas',
+      'Python',
+      'Python Data Analysis',
       'NumPy',
+      'Pandas',
       'Data Cleaning',
       'Data Transformation',
       'Data Visualization',
       'Snowflake',
       'Cloud Data Warehousing',
-      'Data Modeling',
       'Snowflake SQL',
-      'Data Loading & Unloading',
-      'RBAC & Data Security',
+      'Data Modeling',
       'Power BI',
+      'Power Query',
       'DAX',
       'Business Intelligence',
-      'Dashboard Development',
-      'Data Analytics',
     ],
 
     tools: [
@@ -1155,89 +1616,105 @@ export const COURSES: Course[] = [
       'Microsoft SQL Server',
       'Python',
       'VS Code',
-      'Pandas',
       'NumPy',
+      'Pandas',
       'Matplotlib',
       'Seaborn',
       'Snowflake',
       'Snowsight',
-      'Microsoft Power BI',
-      'DAX',
+      'Power BI Desktop',
+      'Power BI Service',
     ],
 
     projects: [
       {
-        title: 'Sales MIS Report',
-        desc: 'Create daily and monthly sales MIS reports using Excel, data analysis, and dashboarding techniques.',
+        title: 'Advanced Excel MIS Projects',
+        desc:
+          'Build real-world MIS solutions including Sales MIS, HR Attendance, Payroll & Salary, Expense Tracking, Inventory MIS, and an Automated MIS Reporting System.',
       },
+
       {
-        title: 'HR Attendance & Payroll System',
-        desc: 'Build HR attendance and payroll reporting systems using real-world business data.',
+        title: 'SQL Server Data Analysis Project',
+        desc:
+          'Practice writing SQL queries, joins, database management, and data analysis using real-time datasets.',
       },
+
       {
-        title: 'Expense & Inventory MIS',
-        desc: 'Develop expense tracking and inventory MIS reports for business reporting and decision-making.',
+        title: 'Python Data Analysis Project',
+        desc:
+          'Perform data cleaning, transformation, analysis, automation, and visualization using Python, Pandas, NumPy, Matplotlib, and Seaborn.',
       },
+
       {
-        title: 'Automated MIS Reporting System',
-        desc: 'Create an automated reporting workflow using Excel automation, Power Query, and reporting techniques.',
+        title: 'Snowflake Cloud Data Warehouse Project',
+        desc:
+          'Work with cloud data warehousing concepts, Snowflake SQL, database objects, data modeling, data loading, optimization, security, and Power BI integration.',
       },
+
       {
-        title: 'Power BI Business Dashboard',
-        desc: 'Transform raw business data into interactive Power BI dashboards with DAX measures, filters, slicers, and drill-through.',
-      },
-      {
-        title: 'Snowflake Analytics Solution',
-        desc: 'Build an analytics workflow using Snowflake data warehousing, SQL, data models, loading pipelines, and Power BI integration.',
+        title: 'Power BI Business Intelligence Project',
+        desc:
+          'Build interactive dashboards and visualize business insights using real-world data, Power Query, data modeling, DAX, and Power BI Service.',
       },
     ],
 
     careers: [
-      'Data Analyst',
       'SQL Developer',
       'Reporting Analyst',
       'BI Analyst',
       'MIS Executive',
+      'Data Analyst',
       'Power BI Developer',
       'Data Visualization Specialist',
     ],
 
     faqs: [
       {
-        q: 'What is the duration of the course?',
-        a: 'The Advanced Data Analytics with Snowflake & AI program is a 100-hour online training program.',
+        q: 'How long is the course?',
+        a:
+          'The Advanced Data Analytics with Snowflake & AI program is 100 hours.',
       },
+
       {
-        q: 'What technologies are covered?',
-        a: 'The program covers Microsoft Excel, SQL Server, Python, Snowflake, and Power BI.',
+        q: 'Is the course available online?',
+        a:
+          'Yes. The program is delivered through online training, with weekday and weekend batches available.',
       },
+
       {
-        q: 'Is this course suitable for beginners?',
-        a: 'Yes. The curriculum progresses from foundational concepts through advanced analytics, data warehousing, BI, and cloud data platform topics.',
+        q: 'Which technologies are covered?',
+        a:
+          'The program covers Microsoft Advanced Excel with AI, Microsoft SQL Server, Python, Snowflake, and Microsoft Power BI.',
       },
+
       {
-        q: 'Will I learn Python for data analysis?',
-        a: 'Yes. The Python modules cover Python fundamentals, data structures, functions, file handling, Pandas, NumPy, data cleaning, transformation, and visualization.',
+        q: 'Will I work on real-world projects?',
+        a:
+          'Yes. The program includes practical projects and real-world business applications, including MIS projects, data analysis, dashboards, and cloud data warehousing.',
       },
+
       {
-        q: 'Will I learn Snowflake?',
-        a: 'Yes. The Snowflake curriculum covers data warehousing concepts, architecture, databases, schemas, virtual warehouses, SQL, data loading, optimization, Time Travel, Zero-Copy Cloning, security, RBAC, and Power BI integration.',
+        q: 'Does the course include interview preparation?',
+        a:
+          'Yes. The program includes interview preparation with mock sessions and expert feedback.',
       },
+
       {
-        q: 'Will I learn Power BI and DAX?',
-        a: 'Yes. The Power BI modules cover data connections, Power Query, data modeling, DAX, measures, calculated columns, visualizations, filters, slicers, drill-through, publishing, dashboards, and performance optimization.',
+        q: 'Are assessments included?',
+        a:
+          'Yes. Module-wise assessments and quizzes are included to track learning progress and reinforce concepts.',
       },
-      {
-        q: 'Does the course include practical projects?',
-        a: 'Yes. The program includes practical projects and real-world scenarios, along with assessments, quizzes, interview preparation, and doubt-clearing support.',
-      },
-      {
-        q: 'What career roles can I target after completing the course?',
-        a: 'The program identifies roles including Data Analyst, SQL Developer, Reporting Analyst, BI Analyst, MIS Executive, Power BI Developer, and Data Visualization Specialist.',
-      },
+
       {
         q: 'Is job assistance provided?',
-        a: 'The program includes 100% job assistance, mock interviews, assessments, practical projects, and career support.',
+        a:
+          'Yes. The program provides 100% job assistance and career support.',
+      },
+
+      {
+        q: 'Will I receive a certificate?',
+        a:
+          'Yes. The PDF includes a certificate of completion for the Advanced Data Analytics with Snowflake & AI program.',
       },
     ],
   },
@@ -2053,7 +2530,7 @@ export const HIRING_PARTNERS = [
 export const CONTACT_INFO = {
   address: '3rd Floor, Tech Hub, Andheri East, Mumbai - 400069, Maharashtra',
   phone: '+91 98765 43210',
-  email: 'hello@intellxskill.com',
+  email: 'info@intellxskill.com',
   website: 'www.intellxskill.com',
   hours: 'Mon–Sat: 9:00 AM – 7:00 PM',
 }
