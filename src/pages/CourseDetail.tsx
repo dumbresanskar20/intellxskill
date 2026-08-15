@@ -443,11 +443,61 @@ export const CourseDetail: React.FC = () => {
                     {course.modules.length} modules · {totalLessons} lessons
                   </div>
                 </div>
-                <div className="space-y-3">
-                  {course.modules.map((mod, i) => (
-                    <ModuleItem key={i} module={mod} index={i} />
-                  ))}
-                </div>
+
+                {/* Group modules by concept if concepts exist */}
+                {(() => {
+                  const hasConcepts = course.modules.some(m => m.concept)
+                  if (!hasConcepts) {
+                    // Flat list for courses without concepts
+                    return (
+                      <div className="space-y-3">
+                        {course.modules.map((mod, i) => (
+                          <ModuleItem key={i} module={mod} index={i} />
+                        ))}
+                      </div>
+                    )
+                  }
+
+                  // Group modules by concept, preserving order
+                  const conceptGroups: { concept: string; modules: { mod: CourseModule; globalIdx: number }[] }[] = []
+                  let globalIdx = 0
+                  course.modules.forEach(mod => {
+                    const conceptName = mod.concept || 'General'
+                    const lastGroup = conceptGroups[conceptGroups.length - 1]
+                    if (lastGroup && lastGroup.concept === conceptName) {
+                      lastGroup.modules.push({ mod, globalIdx })
+                    } else {
+                      conceptGroups.push({ concept: conceptName, modules: [{ mod, globalIdx }] })
+                    }
+                    globalIdx++
+                  })
+
+                  return (
+                    <div className="space-y-8">
+                      {conceptGroups.map((group, gIdx) => (
+                        <Reveal key={group.concept} delay={gIdx * 0.08}>
+                          {/* Concept Header */}
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-9 h-9 bg-gradient-to-br from-[#1E3A8A] to-[#3B5CC4] rounded-xl flex items-center justify-center text-white font-extrabold text-sm flex-shrink-0">
+                              {gIdx + 1}
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-extrabold text-gray-900">{group.concept}</h3>
+                              <p className="text-xs text-gray-400">{group.modules.length} modules · {group.modules.reduce((acc, m) => acc + m.mod.lessons.length, 0)} lessons</p>
+                            </div>
+                          </div>
+                          {/* Modules under this concept */}
+                          <div className="space-y-3 pl-3 border-l-2 border-[#1E3A8A]/10">
+                            {group.modules.map(({ mod, globalIdx: gi }) => (
+                              <ModuleItem key={gi} module={mod} index={gi} />
+                            ))}
+                          </div>
+                        </Reveal>
+                      ))}
+                    </div>
+                  )
+                })()}
+
               </Reveal>
             </section>
 

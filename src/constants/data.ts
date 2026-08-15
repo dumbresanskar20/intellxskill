@@ -66,6 +66,7 @@ export const WHY_CARDS = [
 export type CourseCategory = 'All' | 'Databricks & AI' | 'Excel' | 'SQL' | 'Snowflake' | 'Python' | 'Power BI' | 'Data Analytics & Business Intelligence' | 'SAP'
 
 export const COURSES: Course[] = [
+  // 1
   {
     id: 1,
     slug: 'databricks-analytics-ai',
@@ -128,6 +129,7 @@ export const COURSES: Course[] = [
       { q: 'Will I receive certification and job assistance?', a: 'Yes! Upon completion, you receive an industry-recognized certificate from IntellxSkill Technologies along with a 6-month practical industry experience certification and 100% job placement assistance.' },
     ],
   },
+  // 2
   {
     id: 2,
     slug: 'sql-server',
@@ -220,6 +222,7 @@ export const COURSES: Course[] = [
       { q: 'Which SQL Server tools will we use?', a: 'We will use the latest Microsoft SQL Server 2022 and SQL Server Management Studio (SSMS 20) for hands-on labs and project work.' },
     ],
   },
+  // 3
   {
     id: 3,
     slug: 'advanced-sql-server-ssis-power-bi',
@@ -867,6 +870,7 @@ export const COURSES: Course[] = [
       },
     ],
   },
+  // 4
   {
     id: 4,
     slug: 'advanced-data-analytics-snowflake-ai',
@@ -1237,6 +1241,7 @@ export const COURSES: Course[] = [
       },
     ],
   },
+  // 5
   {
     id: 5,
     slug: 'core-sql-server-dba-program',
@@ -1480,6 +1485,7 @@ export const COURSES: Course[] = [
       },
     ],
   },
+  // 6
   {
     id: 6,
     slug: 'sap-mm',
