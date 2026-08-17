@@ -65,11 +65,6 @@ export const WHY_CARDS = [
   },
 ]
 
-
-
-
-
-
 export const COURSES: Course[] = [
   // 1
 
@@ -978,7 +973,6 @@ export const COURSES: Course[] = [
       },
     ],
   },
-
 
   // 2
   {
@@ -2576,7 +2570,7 @@ export const COURSES: Course[] = [
   {
     id: 5,
     slug: 'core-sql-server-dba-program',
-    title: 'Core Sql Server Dba Program',
+    title: 'Core SQL Server DBA Program',
     category: 'SQL',
     duration: '100 Hours',
     sessions: 'Weekday & Weekend Batches Available',
