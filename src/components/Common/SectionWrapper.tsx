@@ -16,9 +16,10 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({ id, children, cl
     <section
       id={id}
       ref={ref}
-      className={`py-12 md:py-16 ${className}`}
+      className={`py-10 md:py-12 min-h-[calc(100vh-80px)] flex flex-col justify-center ${className}`}
     >
       <motion.div
+        className="w-full"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4 }}
@@ -50,7 +51,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   const parts = highlight ? title.split(highlight) : [title]
 
   return (
-    <div ref={ref} className={`mb-10 ${centered ? 'text-center' : ''}`}>
+    <div ref={ref} className={`mb-8 ${centered ? 'text-center' : ''}`}>
       {badge && (
         <motion.span
           initial={{ opacity: 0, y: 20 }}

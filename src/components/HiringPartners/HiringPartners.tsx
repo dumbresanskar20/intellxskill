@@ -30,7 +30,7 @@ export const HiringPartners: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="inline-block px-4 py-1.5 bg-blue-50 text-[#1E3A8A] text-xs font-bold uppercase tracking-widest rounded-full mb-4 border border-blue-100"
           >
-            Leading Companies Across Industries
+            Industry Experts & Innovators
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}

@@ -11,7 +11,7 @@ import {
   ExternalLink,
 } from 'lucide-react'
 import { NAV_LINKS, COURSES } from '../../constants/data'
-import logo from '../../assets/logo.png'
+import footerLogo from '../../assets/footer-logo.png'
 
 const handleNavClick = (href: string) => {
   document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
@@ -74,24 +74,15 @@ export const Footer: React.FC = () => {
             <a
               href="#home"
               onClick={(e) => { e.preventDefault(); handleNavClick('#home') }}
-              className="flex items-center gap-3.5 mb-5 group"
+              className="inline-block mb-5 group"
               aria-label="IntellxSkill Technologies"
             >
               <img
-                src={logo}
+                src={footerLogo}
                 alt="IntellxSkill Technologies"
-                className="w-14 h-14 object-contain rounded-xl"
+                className="h-36 w-auto object-contain"
               />
-              <div>
-                <p className="text-white font-extrabold text-xl leading-none">
-                  Intellx<span className="text-[#3B5CC4]">Skill</span>
-                </p>
-                <p className="text-gray-500 text-[11px] font-medium mt-1">Technologies</p>
-              </div>
             </a>
-            <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              India's leading Cloud Data Analytics & BI Engineering training institute. Empowering careers through world-class education.
-            </p>
             <div className="space-y-2.5">
               <div className="flex items-start gap-2.5 text-sm text-gray-400">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#F97316]" />

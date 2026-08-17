@@ -34,7 +34,7 @@ const CourseCard: React.FC<{
           <img
             src={course.image}
             alt={course.title}
-            className="w-full h-full object-cover object-right-top opacity-95 group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover object-center opacity-95 group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-900/10" />
         </div>

@@ -1,6 +1,10 @@
 // All constants / mock data for the site
 
 import type { Course, CourseCategory } from '../types'
+import databricksCourseImg from '../assets/databricks-course.png'
+import sqlServerCourseImg from '../assets/sql-server-course.jpg'
+import ssisPowerBiCourseImg from '../assets/ssis-powerbi-course.jpg'
+import snowflakeCourseImg from '../assets/snowflake-course.png'
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -103,7 +107,7 @@ export const COURSES: Course[] = [
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-cyan-500 via-blue-600 to-indigo-700',
-
+    image: databricksCourseImg,
     syllabus: [
       'Microsoft Advanced Excel with AI',
       'Microsoft SQL Server',
@@ -990,6 +994,7 @@ export const COURSES: Course[] = [
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-blue-600 via-blue-700 to-indigo-800',
+    image: sqlServerCourseImg,
     syllabus: [
       'Database Fundamentals, Setup & SQL Data Types (Numeric, String, Date, Boolean)',
       'SQL Querying Essentials: SELECT, WHERE, HAVING, ORDER BY Clauses',
@@ -1096,6 +1101,7 @@ export const COURSES: Course[] = [
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-cyan-500 via-blue-600 to-indigo-700',
+    image: ssisPowerBiCourseImg,
 
     syllabus: [
       'Microsoft SQL Server',
@@ -1748,6 +1754,7 @@ export const COURSES: Course[] = [
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-purple-500 via-blue-600 to-cyan-700',
+    image: snowflakeCourseImg,
 
     syllabus: [
       'Microsoft Advanced Excel with AI',

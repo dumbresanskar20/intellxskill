@@ -97,7 +97,7 @@ export const WhyChooseUs: React.FC = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-24"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
             Why Choose <span className="text-[#1E3A8A]">Intellx</span><span className="text-[#F97316]">Skill</span>?
@@ -151,7 +151,7 @@ export const WhyChooseUs: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-24 text-center"
+          className="mt-12 text-center"
         >
           <p className="text-gray-500 text-sm mb-4">
             Ready to take the leap? Join thousands of successful data professionals.
