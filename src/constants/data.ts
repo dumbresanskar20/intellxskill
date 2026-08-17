@@ -5,6 +5,8 @@ import databricksCourseImg from '../assets/databricks-course.png'
 import sqlServerCourseImg from '../assets/sql-server-course.jpg'
 import ssisPowerBiCourseImg from '../assets/ssis-powerbi-course.jpg'
 import snowflakeCourseImg from '../assets/snowflake-course.png'
+import coreSqlDbaCourseImg from '../assets/core-sql-dba-course.png'
+import sapCourseImg from '../assets/sap-course.png'
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -2574,7 +2576,7 @@ export const COURSES: Course[] = [
   {
     id: 5,
     slug: 'core-sql-server-dba-program',
-    title: 'CORE SQL SERVER DBA PROGRAM',
+    title: 'Core Sql Server Dba Program',
     category: 'SQL',
     duration: '100 Hours',
     sessions: 'Weekday & Weekend Batches Available',
@@ -2596,6 +2598,7 @@ export const COURSES: Course[] = [
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-blue-600 via-indigo-700 to-slate-900',
+    image: coreSqlDbaCourseImg,
 
     syllabus: [
       'SQL Server Foundation & Database Architecture (Instance, Editions & Installation)',
@@ -2844,6 +2847,7 @@ export const COURSES: Course[] = [
     textColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     bannerGrad: 'from-blue-600 via-indigo-600 to-purple-700',
+    image: sapCourseImg,
 
     syllabus: [
       'Introduction to SAP MM & ERP',

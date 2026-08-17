@@ -535,22 +535,47 @@
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: default;
   flex-shrink: 0;
-  min-width: 7rem;
+  min-width: 9rem;
 }
 
 .tech-stack-item:hover {
-  border-color: #e2e8f0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
-  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  transform: translateY(-6px);
+}
+
+.tech-stack-item:hover .tech-stack-icon {
+  transform: translateY(4px);
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.6), 
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15), 
+    0 4px 0 rgba(0, 0, 0, 0.08), 
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tech-stack-item:hover .tech-stack-icon img {
+  transform: scale(1.15) rotate(-2deg);
 }
 
 .tech-stack-icon {
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 1rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 
+    inset 0 4px 0 rgba(255, 255, 255, 0.6), 
+    inset 0 -4px 0 rgba(0, 0, 0, 0.15), 
+    0 8px 0 rgba(0, 0, 0, 0.08), 
+    0 16px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tech-stack-icon img {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .tech-stack-label {

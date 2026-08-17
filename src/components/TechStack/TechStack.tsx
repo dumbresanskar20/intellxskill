@@ -18,16 +18,16 @@ const TECHNOLOGIES = [
 
 /* ── Original logos for each technology ── */
 const TechSVG: Record<string, React.ReactNode> = {
-  'Power BI':    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"                                          alt="Power BI"    className="w-12 h-12 object-contain" />,
-  'Azure':       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"                                  alt="Azure"       className="w-12 h-12 object-contain" />,
-  'SQL Server':  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"         alt="SQL Server"  className="w-12 h-12 object-contain" />,
-  'Python':      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"                                 alt="Python"      className="w-12 h-12 object-contain" />,
-  'Snowflake':   <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/snowflake.svg"                                                    alt="Snowflake"   className="w-12 h-12 object-contain" style={{ filter: 'invert(55%) sepia(98%) saturate(500%) hue-rotate(170deg)' }} />,
-  'Databricks':  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/databricks.svg"                                                   alt="Databricks"  className="w-12 h-12 object-contain" style={{ filter: 'invert(27%) sepia(97%) saturate(5000%) hue-rotate(5deg) brightness(95%)' }} />,
+  'Power BI':    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"                                          alt="Power BI"    className="w-20 h-20 object-contain" />,
+  'Azure':       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"                                  alt="Azure"       className="w-20 h-20 object-contain" />,
+  'SQL Server':  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"         alt="SQL Server"  className="w-20 h-20 object-contain" />,
+  'Python':      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"                                 alt="Python"      className="w-20 h-20 object-contain" />,
+  'Snowflake':   <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/snowflake.svg"                                                    alt="Snowflake"   className="w-20 h-20 object-contain" style={{ filter: 'invert(55%) sepia(98%) saturate(500%) hue-rotate(170deg)' }} />,
+  'Databricks':  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/databricks.svg"                                                   alt="Databricks"  className="w-20 h-20 object-contain" style={{ filter: 'invert(27%) sepia(97%) saturate(5000%) hue-rotate(5deg) brightness(95%)' }} />,
 
-  'Excel':       <img src={excelLogo}                                                                                                              alt="Excel"       className="w-12 h-12 object-contain" />,
-  'Git':         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"                                       alt="Git"         className="w-12 h-12 object-contain" />,
-  'AI / Gen AI': <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"                                                 alt="AI / Gen AI" className="w-12 h-12 object-contain" />,
+  'Excel':       <img src={excelLogo}                                                                                                              alt="Excel"       className="w-20 h-20 object-contain" />,
+  'Git':         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"                                       alt="Git"         className="w-20 h-20 object-contain" />,
+  'AI / Gen AI': <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"                                                 alt="AI / Gen AI" className="w-20 h-20 object-contain" />,
 }
 
 export const TechStack: React.FC = () => {
