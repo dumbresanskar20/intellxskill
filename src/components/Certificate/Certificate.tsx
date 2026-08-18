@@ -119,9 +119,7 @@ export const Certificate: React.FC = () => {
               A Certificate Recognized by Top Employers
             </h3>
             <p className="text-gray-500 leading-relaxed mb-8">
-              Upon successful completion, you receive an industry-recognized certificate that
-              validates your skills in Cloud Data Analytics & BI Engineering. This certificate
-              is designed to impress hiring managers at Fortune 500 companies.
+              Upon successful completion, you receive an industry-recognized certificate.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

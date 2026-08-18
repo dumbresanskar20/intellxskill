@@ -7,12 +7,8 @@ import { SectionWrapper, SectionHeading } from '../Common/SectionWrapper'
 import { COURSES, FILTER_CATEGORIES } from '../../constants/data'
 import type { CourseCategory, Course } from '../../types'
 
-// Short display labels for filter buttons (long category names → compact pills)
-const FILTER_LABELS: Partial<Record<CourseCategory, string>> = {
-  'Microsoft SQL Server': 'SQL Server',
-  'Data Analytics & Business Intelligence': 'Data Analytics & BI',
-  'Data Analytics & AI': 'Analytics & AI',
-}
+// Short display labels for filter buttons (category name → compact pill label)
+const FILTER_LABELS: Partial<Record<CourseCategory, string>> = {}
 
 // ─── Course Card ────────────────────────────────────────────────────────────
 

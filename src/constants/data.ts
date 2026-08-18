@@ -21,7 +21,7 @@ export const NAV_LINKS = [
 
 export const STATS = [
   { value: 100, suffix: '+', label: 'Hours Training', icon: 'Clock' },
-  { value: 5, suffix: '', label: 'Industry Tools', icon: 'Wrench' },
+  { value: 20, suffix: '', label: 'Industry Tools', icon: 'Wrench' },
   { value: 20, suffix: '+', label: 'Career Goals', icon: 'Briefcase' },
   { value: 100, suffix: '%', label: 'Job Assistance', icon: 'Trophy' },
 ]
@@ -72,7 +72,7 @@ export const COURSES: Course[] = [
     id: 1,
     slug: 'advanced-data-analytics-databricks-ai',
     title: 'Advanced Data Analytics with Databricks & AI',
-    category: 'Data Analytics & Business Intelligence',
+    category: 'AI',
     duration: '100 Hours',
     sessions: 'Live Sessions',
     mode: 'Online',
@@ -979,7 +979,7 @@ export const COURSES: Course[] = [
     id: 2,
     slug: 'sql-server',
     title: 'Advanced SQL Server Program',
-    category: 'Microsoft SQL Server',
+    category: 'SQL Server',
     duration: '100 Hours',
     sessions: '80 Live Sessions',
     mode: 'Online (Live + Recorded)',
@@ -1073,7 +1073,7 @@ export const COURSES: Course[] = [
     id: 3,
     slug: 'advanced-sql-server-ssis-power-bi',
     title: 'Advanced SQL Server, SSIS & Power BI Program',
-    category: 'Data Analytics & Business Intelligence',
+    category: 'Power BI',
     duration: '100 Hours',
     sessions: 'Live Sessions',
     mode: 'Online',
@@ -1722,7 +1722,7 @@ export const COURSES: Course[] = [
     id: 4,
     slug: 'advanced-data-analytics-snowflake-ai',
     title: 'Advanced Data Analytics with Snowflake & AI',
-    category: 'Data Analytics & AI',
+    category: 'Data Analytics',
     duration: '100 Hours',
     sessions: 'Online Training',
     mode: 'Online',
@@ -2571,7 +2571,7 @@ export const COURSES: Course[] = [
     id: 5,
     slug: 'core-sql-server-dba-program',
     title: 'Core SQL Server DBA Program',
-    category: 'SQL',
+    category: 'DBA',
     duration: '100 Hours',
     sessions: 'Weekday & Weekend Batches Available',
     mode: 'Online Training',
@@ -2812,7 +2812,7 @@ export const COURSES: Course[] = [
   // 6
   {
     id: 6,
-    slug: 'SAP MM + S/4 HANA Program',
+    slug: 'sap-mm-s4-hana-program',
     title: 'SAP MM + S/4 HANA Program',
     category: 'SAP',
     duration: '100 Hours',
@@ -3378,19 +3378,19 @@ export const HIRING_PARTNERS = [
 export const CONTACT_INFO = {
   address: '3rd Floor, Tech Hub, Andheri East, Mumbai - 400069, Maharashtra',
   phone: '+91 98765 43210',
-  email: 'info@intellxskill.com',
-  website: 'www.intellxskill.com',
+  email: 'info@intellxskill.in',
+  website: 'www.intellxskill.in',
   hours: 'Mon–Sat: 9:00 AM – 7:00 PM',
 }
 
 export const COURSE_OPTIONS = [
   'CORE SQL SERVER DBA PROGRAM',
   'Advanced SQL Server, SSIS & Power BI Program',
-  'Microsoft SQL Server',
-  'Snowflake Data Warehousing',
-  'Python for Data Analytics',
-  'Microsoft Power BI',
-  'Full Program Bundle',
+  'Advanced SQL Server Program',
+  'Advanced Data Analytics with Snowflake & AI',
+  'SAP MM + S/4 HANA Program',
+  'Advanced Data Analytics with Databricks & AI'
+
 ]
 
 export const SOCIAL_LINKS = [
@@ -3442,4 +3442,4 @@ export const ABOUT_TABS = [
   },
 ]
 
-export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Databricks & AI', 'Microsoft SQL Server', 'SQL', 'Data Analytics & Business Intelligence', 'Data Analytics & AI', 'SAP']
+export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'AI', 'Data Analytics', 'SQL Server', 'Power BI', 'SAP', 'DBA']
