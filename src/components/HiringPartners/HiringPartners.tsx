@@ -16,14 +16,15 @@ export const HiringPartners: React.FC = () => {
   const row3 = HIRING_PARTNERS.slice(thirdLen * 2)
 
   return (
-    <section id="hiring-partners" ref={ref} className="py-12 md:py-16 overflow-hidden bg-white">
+    <section id="hiring-partners" ref={ref} className="py-12 md:py-16 overflow-hidden bg-white w-full max-w-full min-w-0">
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4 }}
+        className="w-full max-w-full min-w-0 overflow-hidden"
       >
         {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -51,7 +52,7 @@ export const HiringPartners: React.FC = () => {
         </div>
 
         {/* Marquee rows */}
-        <div className="space-y-5">
+        <div className="space-y-5 w-full max-w-full min-w-0 overflow-hidden">
           <MarqueeRow partners={row1} speed={35} />
           <MarqueeRow partners={row2} speed={28} reverse />
           <MarqueeRow partners={row3} speed={32} />

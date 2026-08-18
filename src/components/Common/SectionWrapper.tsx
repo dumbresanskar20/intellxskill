@@ -16,10 +16,10 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({ id, children, cl
     <section
       id={id}
       ref={ref}
-      className={`py-10 md:py-12 min-h-[calc(100vh-80px)] flex flex-col justify-center ${className}`}
+      className={`py-10 md:py-12 min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-x-clip w-full max-w-full min-w-0 ${className}`}
     >
       <motion.div
-        className="w-full"
+        className="w-full max-w-full min-w-0"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4 }}

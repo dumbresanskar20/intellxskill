@@ -180,7 +180,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.65 }}
-              className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4"
+              className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-full min-w-0"
             >
               {statDisplay.map((stat, i) => (
                 <motion.div
@@ -188,24 +188,24 @@ export const Hero: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: i * 0.1 + 0.7 }}
-                  className="text-center"
+                  className="text-center min-w-0"
                 >
-                  <p className="text-2xl font-extrabold text-[#1E3A8A]">
+                  <p className="text-2xl font-extrabold text-[#1E3A8A] truncate">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </p>
-                  <p className="text-xs text-gray-500 font-medium mt-0.5">{stat.label}</p>
+                  <p className="text-xs text-gray-500 font-medium mt-0.5 truncate">{stat.label}</p>
                 </motion.div>
               ))}
             </motion.div>
           </div>
 
           {/* Right Visual Slider */}
-          <div className="relative flex items-center justify-center lg:justify-start mt-8 lg:mt-0">
+          <div className="relative flex items-center justify-center lg:justify-start mt-8 lg:mt-0 max-w-full overflow-hidden lg:overflow-visible min-w-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-full max-w-xl lg:max-w-none lg:w-[115%] lg:-mr-12 xl:-mr-20"
+              className="relative w-full max-w-full sm:max-w-xl lg:max-w-none lg:w-[115%] lg:-mr-12 xl:-mr-20 min-w-0"
             >
               {/* Soft ambient background glow */}
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400/20 via-indigo-300/15 to-orange-300/20 rounded-full blur-3xl -z-10 scale-110" />

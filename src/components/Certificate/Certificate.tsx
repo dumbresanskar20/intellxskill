@@ -21,8 +21,8 @@ export const Certificate: React.FC = () => {
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           {/* ── Left: Demo Certificate Showcase ──────────────────────────── */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Outer decorative wrapper */}
@@ -77,10 +77,10 @@ export const Certificate: React.FC = () => {
 
                 {/* Floating badges */}
                 <motion.div
-                  initial={{ opacity: 0, scale: 0, x: 20 }}
-                  animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.7, type: 'spring', stiffness: 200 }}
-                  className="absolute -bottom-4 -right-4 sm:-bottom-5 sm:-right-5 bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 flex items-center gap-3 z-20"
+                  className="absolute -bottom-4 -right-2 sm:-bottom-5 sm:-right-5 bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 flex items-center gap-3 z-20"
                 >
                   <div className="w-9 h-9 sm:w-10 sm:h-10 bg-green-100 rounded-xl flex items-center justify-center">
                     <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
@@ -92,10 +92,10 @@ export const Certificate: React.FC = () => {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0, x: -20 }}
-                  animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.9, type: 'spring', stiffness: 200 }}
-                  className="absolute -top-4 -left-4 sm:-top-5 sm:-left-5 bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 flex items-center gap-3 z-20"
+                  className="absolute -top-4 -left-2 sm:-top-5 sm:-left-5 bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 flex items-center gap-3 z-20"
                 >
                   <div className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-100 rounded-xl flex items-center justify-center">
                     <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E3A8A]" />
@@ -111,8 +111,8 @@ export const Certificate: React.FC = () => {
 
           {/* ── Right: Certificate Info & Features ───────────────────────── */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">

@@ -35,12 +35,12 @@ export const TechStack: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: '-40px' })
 
   return (
-    <section ref={ref} className="py-10 md:py-14 bg-gradient-to-b from-gray-50/80 to-white overflow-hidden">
+    <section ref={ref} className="py-10 md:py-14 bg-gradient-to-b from-gray-50/80 to-white overflow-hidden w-full max-w-full min-w-0">
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full min-w-0 overflow-hidden"
       >
         <motion.h3
           initial={{ opacity: 0, y: 20 }}

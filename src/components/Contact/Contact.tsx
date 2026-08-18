@@ -55,8 +55,8 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess }) => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left – Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
@@ -75,8 +75,8 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess }) => {
                   {infoItems.map((item, i) => (
                     <motion.div
                       key={item.label}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.08 }}
                       className="flex items-start gap-4"
@@ -125,8 +125,8 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess }) => {
 
           {/* Right – Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >

@@ -31,12 +31,7 @@ const Reveal: React.FC<{
   direction?: 'up' | 'left' | 'right'
   className?: string
 }> = ({ children, delay = 0, direction = 'up', className = '' }) => {
-  const initial =
-    direction === 'left'
-      ? { opacity: 0, x: -40 }
-      : direction === 'right'
-      ? { opacity: 0, x: 40 }
-      : { opacity: 0, y: 35 }
+  const initial = { opacity: 0, y: 30 }
 
   return (
     <motion.div

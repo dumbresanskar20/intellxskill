@@ -16,15 +16,15 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   useLenis()
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col w-full max-w-full overflow-x-clip min-w-0 relative">
       <Navbar />
-      <main>{children}</main>
+      <main className="flex-1 w-full max-w-full overflow-x-clip min-w-0">{children}</main>
       <Footer />
       <ToastContainer toasts={toasts as any} onRemove={removeToast} />
       {/* Floating action buttons */}
       <WhatsAppButton />
       <Chatbot />
-    </>
+    </div>
   )
 }
 
