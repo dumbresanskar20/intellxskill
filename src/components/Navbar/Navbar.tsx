@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 py-[7px] md:py-0 md:pt-[4px] ${navBg}`}
+        className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 pt-[16px] pb-[7px] md:py-0 md:pt-[4px] ${navBg}`}
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
