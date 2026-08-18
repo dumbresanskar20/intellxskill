@@ -100,7 +100,7 @@ export const WhyChooseUs: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-            Why Choose <span className="text-[#1E3A8A]">Intellx</span><span className="text-[#F97316]">Skill</span>?
+            Why Choose <span className="text-sky-500">Intellx</span><span className="text-[#F97316]">Skill</span>?
           </h2>
         </motion.div>
 
