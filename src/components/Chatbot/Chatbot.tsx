@@ -21,32 +21,32 @@ const QA_DATABASE: QA[] = [
     answer: "👋 Hello! Welcome to IntellxSkill Technologies! I'm your virtual assistant. How can I help you today? You can ask me about our courses, fees, placement, or anything else!",
   },
   {
-    patterns: ['courses', 'what courses', 'available courses', 'programs', 'training', 'learn', 'what do you offer'],
-    answer: "📚 We offer 5 industry-leading courses:\n\n• **Microsoft Advanced Excel with AI** (25 hrs)\n• **Advanced SQL Server Program** (100 hrs)\n• **Snowflake Data Warehousing** (20 hrs)\n• **Python for Data Analytics** (35 hrs)\n• **Microsoft Power BI** (30 hrs)\n\nAll include live + recorded sessions! Which one interests you?",
+    patterns: ['courses', 'what courses', 'available courses', 'programs', 'training', 'learn', 'what do you offer', 'tell me about courses'],
+    answer: "📚 We offer 6 industry-leading programs:\n\n• **AI**\n• **Data Analytics**\n• **SQL Server**\n• **Power BI**\n• **SAP**\n• **DBA**\n\nAll programs include live interactive sessions, hands-on production projects, and 100% Job Assistance! Which one would you like to know more about?",
   },
   {
-    patterns: ['excel', 'microsoft excel', 'advanced excel'],
-    answer: "📊 **Microsoft Advanced Excel with AI** covers:\n• Advanced Formulas (XLOOKUP, LAMBDA, LET)\n• Power Query & Data Transformation\n• VBA Macros & Automation\n• AI-powered features (Copilot)\n• Dashboard Design\n\nDuration: 25 Hours | 20 Live Sessions\nLevel: Beginner to Advanced\n\nWould you like to know about fees or enrollment?",
+    patterns: ['ai', 'artificial intelligence', 'gen ai', 'excel with ai', 'copilot'],
+    answer: "🤖 **AI Program** (Microsoft Advanced Excel with AI & Generative AI Tools):\n• Advanced Analytics & Prompt Engineering\n• Power Query, VBA Automation & AI-powered Copilot\n• Interactive Business Dashboard Design\n\nDuration: 25 Hours | 20 Live Sessions\nLevel: Beginner to Advanced",
   },
   {
-    patterns: ['sql', 'sql server', 'microsoft sql', 'database'],
-    answer: "🗄️ **Advanced SQL Server Program** covers:\n• Database Fundamentals, Data Types & Clauses\n• Database Design (Normalization, Star/Snowflake Schemas)\n• Advanced Joins, Set Operations & Subqueries\n• CTEs, Views, Stored Procedures, UDFs & Triggers\n• Performance Tuning (Indexes & Execution Plans)\n\nDuration: 100 Hours | 80 Live Sessions\nLevel: Beginner to Advanced\n\nPerfect for aspiring SQL Developers, Data Engineers, and BI Professionals!",
+    patterns: ['data analytics', 'analytics', 'python', 'snowflake', 'data science'],
+    answer: "📊 **Data Analytics Program** (Python, Snowflake & Modern BI):\n• Python for Data Analytics (Pandas, NumPy, EDA, Visualization)\n• Snowflake Cloud Data Warehousing & Pipelines\n• End-to-end Data Processing & Reporting\n\nDuration: 35+ Hours | Live Project-Based Training\nLevel: Beginner to Advanced",
   },
   {
-    patterns: ['snowflake', 'cloud warehouse', 'data warehouse'],
-    answer: "❄️ **Snowflake Data Warehousing** covers:\n• Snowflake Architecture & Concepts\n• Data Loading (Stages, COPY INTO, Snowpipe)\n• Semi-structured Data (JSON, Parquet)\n• Tasks, Streams & Pipelines\n• Security & Cost Optimization\n\nDuration: 20 Hours | 16 Live Sessions\nPrepares you for the SnowPro Core Certification!",
-  },
-  {
-    patterns: ['python', 'python analytics', 'pandas', 'data science'],
-    answer: "🐍 **Python for Data Analytics** covers:\n• Python Fundamentals & OOP\n• NumPy & Pandas\n• Data Cleaning & EDA\n• Matplotlib, Seaborn & Plotly\n• ML Intro with Scikit-learn\n\nDuration: 35 Hours | 28 Live Sessions\nLevel: Beginner to Advanced\n\nIdeal for aspiring Data Scientists and Analysts!",
-  },
-  {
-    patterns: ['dba', 'sql dba', 'core sql', 'sql server dba', 'administration', 'ha/dr', 'high availability'],
-    answer: "🛡️ **CORE SQL SERVER DBA PROGRAM** covers:\n• Module 1: SQL Server Foundation (Architecture, Setup, SQL Basics, Programmability)\n• Module 2: SQL Server Administration (Linked Servers, Backup/Restore Strategies, Agent Jobs)\n• Module 3: Performance Tuning (Execution Plans, Index & Statistics Tuning)\n• Module 4: High Availability & Disaster Recovery (Replication, Log Shipping, Mirroring, Always On)\n• Module 5: Troubleshooting & Maintenance (DBCC Commands, TempDB, Memory Issues, Upgrades)\n• 10 Production Projects & 50+ Troubleshooting Cases\n\nDuration: 100 Hours | Weekday & Weekend Batches\nLevel: Beginner to Advanced",
+    patterns: ['sql', 'sql server', 'microsoft sql', 't-sql', 'database'],
+    answer: "🗄️ **Advanced SQL Server Program**:\n• Database Fundamentals, Data Types & SQL Commands\n• Relational Design, Normalization & Advanced Joins\n• Stored Procedures, UDFs, Triggers & Views\n• Performance Tuning, Indexes & Execution Plans\n\nDuration: 100 Hours | 80 Live Sessions\nLevel: Beginner to Advanced",
   },
   {
     patterns: ['power bi', 'powerbi', 'bi', 'dax', 'dashboard'],
-    answer: "📈 **Microsoft Power BI** covers:\n• Power Query & Data Transformation\n• Data Modeling (Star Schema)\n• DAX Mastery\n• Time Intelligence Functions\n• Row-Level Security & Deployment\n\nDuration: 30 Hours | 24 Live Sessions\nAligns with the PL-300 Certification!",
+    answer: "📈 **Microsoft Power BI Program**:\n• Power Query & Advanced Data Modeling (Star Schema)\n• DAX Formulas & Time Intelligence Functions\n• Enterprise Dashboards, RLS & Power BI Service Deployment\n\nDuration: 30 Hours | 24 Live Sessions\nAligns with the PL-300 Certification!",
+  },
+  {
+    patterns: ['sap', 'sap mm', 's/4 hana', 's4 hana', 'sap training'],
+    answer: "💼 **SAP MM + S/4 HANA Program**:\n• Enterprise Structure & Master Data (Material, Vendor/BP)\n• End-to-End Procurement & Purchasing Processes\n• Inventory Management, Physical Inventory & Valuation\n• Invoice Verification & Integration (FI, SD, PP)\n\nDuration: 100 Hours | Live Practical Training\nLevel: Beginner to Advanced",
+  },
+  {
+    patterns: ['dba', 'sql dba', 'core sql', 'sql server dba', 'database administrator', 'administration', 'ha/dr'],
+    answer: "🛡️ **CORE SQL SERVER DBA PROGRAM**:\n• Module 1: SQL Server Foundation & Architecture\n• Module 2: Administration, Backup/Restore Strategies & Agent Jobs\n• Module 3: Performance Tuning & Index Management\n• Module 4: High Availability (Replication, Log Shipping, Mirroring, Always On)\n• Module 5: Troubleshooting & Maintenance (DBCC, TempDB, Memory, Upgrades)\n• 10 Production Projects & 50+ Troubleshooting Cases\n\nDuration: 100 Hours | Weekday & Weekend Batches\nLevel: Beginner to Advanced",
   },
   {
     patterns: ['fee', 'fees', 'price', 'cost', 'pricing', 'how much', 'payment', 'emi'],
@@ -98,7 +98,7 @@ const QA_DATABASE: QA[] = [
   },
   {
     patterns: ['about', 'intellxskill', 'company', 'who are you', 'tell me about'],
-    answer: "🏢 **IntellxSkill Technologies** is India's leading Cloud Data Analytics & BI Engineering training institute!\n\n✅ 500+ students successfully placed\n✅ 100+ hours of comprehensive training\n✅ 5 industry-relevant courses\n✅ 7+ career roles covered\n✅ 100% Job Assistance",
+    answer: "🏢 **IntellxSkill Technologies** is India's leading Cloud Data Analytics & BI Engineering training institute!\n\n✅ 500+ students successfully placed\n✅ 100+ hours of comprehensive training\n✅ 5 industry-relevant courses\n✅ 20+ career goals covered\n✅ 100% Job Assistance",
   },
   {
     patterns: ['whatsapp', 'chat', 'message', 'connect'],

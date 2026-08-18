@@ -595,35 +595,40 @@ export const CourseDetail: React.FC = () => {
             {/* ── Certification Section */}
             <section aria-labelledby="cert-heading">
               <Reveal>
-                <div className="relative overflow-hidden bg-gradient-to-br from-[#1E3A8A] to-[#2D4F9E] rounded-3xl p-8 text-white">
-                  <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/3" />
-                  <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                    <div className="w-16 h-16 bg-white/15 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <Award className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h2 id="cert-heading" className="text-xl font-extrabold mb-2">IntellxSkill Certificate of Completion</h2>
-                      <p className="text-blue-200 text-sm leading-relaxed">
-                        Earn an industry-recognized certificate upon completing <strong className="text-white">{course.title}</strong>.
-                        Verified, shareable on LinkedIn, and lifetime valid.
-                      </p>
+                <SectionLabel icon={<Award className="w-4 h-4" />} label="Official Certification" />
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#1E3A8A] to-[#2D4F9E] rounded-3xl p-6 sm:p-8 text-white shadow-lg">
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/3 pointer-events-none" />
+                  <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 flex-1">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/15 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                        <Award className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h2 id="cert-heading" className="text-xl sm:text-2xl font-extrabold text-white mb-2 leading-tight">
+                          <span className="text-sky-400">Intellx</span><span className="text-[#F97316]">Skill</span> Certificate of Completion
+                        </h2>
+                        <p className="text-blue-100 text-sm leading-relaxed max-w-xl">
+                          Earn an industry-recognized certificate upon completing <strong className="text-white font-semibold">{course.title}</strong>.
+                          Verified, shareable on LinkedIn, and lifetime valid.
+                        </p>
+                      </div>
                     </div>
                     <Link
                       to="/#certificate"
-                      className="flex-shrink-0 px-5 py-2.5 bg-[#F97316] hover:bg-[#EA6B0A] text-white rounded-xl font-semibold text-sm transition-colors whitespace-nowrap"
+                      className="w-full sm:w-auto text-center flex-shrink-0 px-6 py-3 bg-[#F97316] hover:bg-[#EA6B0A] text-white rounded-xl font-bold text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
                     >
                       Learn More
                     </Link>
                   </div>
-                  <div className="mt-6 pt-6 border-t border-white/15 grid grid-cols-3 gap-4">
+                  <div className="mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-2 sm:gap-4 text-center divide-x divide-white/10">
                     {[
                       { val: 'Lifetime', label: 'Validity' },
                       { val: 'Blockchain', label: 'Verified' },
                       { val: 'LinkedIn', label: 'Ready' },
                     ].map(({ val, label }) => (
-                      <div key={label} className="text-center">
-                        <p className="text-white font-extrabold text-lg">{val}</p>
-                        <p className="text-blue-300 text-xs">{label}</p>
+                      <div key={label} className="px-2">
+                        <p className="text-white font-extrabold text-base sm:text-lg">{val}</p>
+                        <p className="text-blue-200 text-xs mt-0.5">{label}</p>
                       </div>
                     ))}
                   </div>

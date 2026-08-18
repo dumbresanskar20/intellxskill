@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
   const statDisplay = [
     { value: 100, suffix: '+', label: 'Hours Training' },
     { value: 5, suffix: '', label: 'Industry Tools' },
-    { value: 7, suffix: '+', label: 'Career Roles' },
+    { value: 20, suffix: '+', label: 'Career Goals' },
     { value: 100, suffix: '%', label: 'Job Assistance' },
   ]
 
@@ -255,7 +255,7 @@ export const Hero: React.FC = () => {
               />
               <FloatingBadge
                 icon={<Briefcase className="w-5 h-5" />}
-                label="7+ Career Roles"
+                label="20+ Career Goals"
                 sub="In Data & BI"
                 className="top-1/3 -right-6 hidden md:flex"
                 delay={1.0}

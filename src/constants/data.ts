@@ -22,7 +22,7 @@ export const NAV_LINKS = [
 export const STATS = [
   { value: 100, suffix: '+', label: 'Hours Training', icon: 'Clock' },
   { value: 5, suffix: '', label: 'Industry Tools', icon: 'Wrench' },
-  { value: 7, suffix: '+', label: 'Career Roles', icon: 'Briefcase' },
+  { value: 20, suffix: '+', label: 'Career Goals', icon: 'Briefcase' },
   { value: 100, suffix: '%', label: 'Job Assistance', icon: 'Trophy' },
 ]
 
@@ -979,7 +979,7 @@ export const COURSES: Course[] = [
     id: 2,
     slug: 'sql-server',
     title: 'Advanced SQL Server Program',
-    category: 'SQL',
+    category: 'Microsoft SQL Server',
     duration: '100 Hours',
     sessions: '80 Live Sessions',
     mode: 'Online (Live + Recorded)',
@@ -2595,16 +2595,14 @@ export const COURSES: Course[] = [
     image: coreSqlDbaCourseImg,
 
     syllabus: [
-      'SQL Server Foundation & Database Architecture (Instance, Editions & Installation)',
-      'SQL Basics (DDL/DML/DCL/TCL), Data Types & Bulk Operations (BULK INSERT)',
-      'Constraints, Indexes, SQL Joins & Views with Row-Level Security (RLS)',
-      'Programmability: Stored Procedures, UDFs, Triggers, Locks & Isolation Levels',
-      'Database Administration: Linked Servers, Backup & Restore Strategies (VERIFYONLY)',
-      'Automation & Maintenance: SQL Server Agent Jobs, MSDB History, Maintenance Plans & Database Mail',
-      'Security & Access Management: Logins, Users, Roles, Security & Policy-Based Management',
-      'Performance Tuning: Execution Plans, Index Tuning, Statistics & Missing Index Analysis',
-      'High Availability & Disaster Recovery: Replication (Part 1 & 2), Log Shipping, Mirroring & Always On',
-      'Troubleshooting & Maintenance: DBCC Commands, TempDB, Memory Pressure, Upgrades & Health Checks',
+      'Module 1: SQL Server Foundation (Architecture, Instances, SQL Basics, Database Objects & Programmability)',
+      'Module 2: SQL Server Administration (Linked Servers, Backup & Restore, Recovery Models, Agent Jobs & Security)',
+      'Module 3: Performance Tuning (Query Performance Analysis, Execution Plans, Index & Statistics Management)',
+      'Module 4: High Availability & Disaster Recovery (Replication Part 1 & 2, Log Shipping, Mirroring & Always On)',
+      'Module 5: Troubleshooting & Maintenance (DBCC Commands, TempDB, Memory Issues, Upgrades & Health Checks)',
+      '30+ Hands-on Practical Labs & 50+ Production Troubleshooting Cases',
+      '10 Realtime Production Projects covering Complete Enterprise DBA Workflows',
+      '200+ Interview Questions, 55 Industry Concepts & 100% Job Assistance',
     ],
 
     modules: [
@@ -2738,44 +2736,44 @@ export const COURSES: Course[] = [
 
     projects: [
       {
-        title: 'Project 1: SQL Server Installation & Configuration',
-        desc: 'Install SQL Server, configure services, memory allocation, TempDB files, and SQL Server Agent settings.',
+        title: 'PROJECT-1: SQL Server Installation & Configuration',
+        desc: 'Install SQL Server, Configure Services, Configure Memory, Configure TempDB, and Configure SQL Agent.',
       },
       {
-        title: 'Project 2: Enterprise Backup & Restore Solution',
-        desc: 'Design full, differential, and transaction log backup strategies with restore validation (VERIFYONLY) and point-in-time recovery.',
+        title: 'PROJECT-2: Enterprise Backup & Restore Solution',
+        desc: 'Implement Full Backup, Differential Backup, Log Backup, Restore Scenarios, and Point-in-Time Recovery.',
       },
       {
-        title: 'Project 3: SQL Server Security',
-        desc: 'Configure logins, database users, server/database roles, granular permissions, and row-level security (RLS) policies.',
+        title: 'PROJECT-3: SQL Server Security',
+        desc: 'Create Logins, Users, Roles, Permissions, and Row-Level Security.',
       },
       {
-        title: 'Project 4: Performance Tuning',
-        desc: 'Analyze slow queries, inspect execution plans, optimize indexes, manage statistics, and identify missing indexes.',
+        title: 'PROJECT-4: Performance Tuning',
+        desc: 'Conduct Slow Query Analysis, Execution Plans Inspection, Index Optimization, Query Store, and Statistics.',
       },
       {
-        title: 'Project 5: High Availability',
-        desc: 'Configure transactional & snapshot replication, log shipping, database mirroring with witness server, and Always On Availability Groups.',
+        title: 'PROJECT-5: High Availability',
+        desc: 'Configure Replication, Configure Log Shipping, Configure Database Mirroring, and Always On Introduction.',
       },
       {
-        title: 'Project 6: Database Migration',
-        desc: 'Execute seamless database migrations using backup/restore, detach & attach methods, copy database wizard, and linked server scripts.',
+        title: 'PROJECT-6: Database Migration',
+        desc: 'Execute Backup Migration, Detach & Attach, Copy Database, and Linked Server Migration.',
       },
       {
-        title: 'Project 7: Production Troubleshooting',
-        desc: 'Troubleshoot production incidents: database offline, login failures, service startup issues, log file full, TempDB full, blocking sessions, deadlocks, and memory pressure.',
+        title: 'PROJECT-7: Production Troubleshooting',
+        desc: 'Troubleshoot Database Offline, Login Failed, SQL Server Not Starting, Log File Full, TempDB Full, Blocking Sessions, Deadlocks, and Memory Pressure.',
       },
       {
-        title: 'Project 8: SQL Server Health Check',
-        desc: 'Perform full database health checks reviewing DB status, backup status, failed jobs, disk space, index fragmentation, security, and performance.',
+        title: 'PROJECT-8: SQL Server Health Check',
+        desc: 'Review Database Status, Backup Status, Failed Jobs, Disk Space, Index Fragmentation, Security Review, and Performance Review.',
       },
       {
-        title: 'Project 9: Production Monitoring Dashboard',
-        desc: 'Set up real-time production monitoring for CPU/memory usage, blocking sessions, database sizes, backup status, job status, and performance counters.',
+        title: 'PROJECT-9: Production Monitoring Dashboard',
+        desc: 'Monitor CPU Usage, Memory Usage, Blocking Sessions, Database Size, Backup Status, Job Status, and Performance Counters.',
       },
       {
-        title: 'Project 10: End-to-End Production Environment',
-        desc: 'Build a production-ready environment from scratch: fresh SQL Server installation, database creation, security configuration, backup strategy, HA setup, health checks, and final documentation.',
+        title: 'PROJECT-10: End-to-End Production Environment',
+        desc: 'Fresh SQL Server Installation, Database Creation, Security Configuration, Backup Strategy, High Availability Setup, Troubleshooting, Health Check, and Final Documentation.',
       },
     ],
 
@@ -3444,4 +3442,4 @@ export const ABOUT_TABS = [
   },
 ]
 
-export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Databricks & AI', 'SQL', 'Data Analytics & Business Intelligence', 'Data Analytics & AI', 'SAP']
+export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'Databricks & AI', 'Microsoft SQL Server', 'SQL', 'Data Analytics & Business Intelligence', 'Data Analytics & AI', 'SAP']

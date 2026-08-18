@@ -66,7 +66,7 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess }) => {
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/4 -translate-x-1/4" />
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-2">Get in Touch</h3>
+                <h3 className="text-2xl font-bold text-[#F97316] mb-2">Get in Touch</h3>
                 <p className="text-blue-200 text-sm leading-relaxed mb-8">
                   Our team of advisors is ready to help you choose the right course and answer all your questions.
                 </p>

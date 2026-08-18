@@ -124,7 +124,7 @@ export const Certificate: React.FC = () => {
               is designed to impress hiring managers at Fortune 500 companies.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
                   icon: '🏆',

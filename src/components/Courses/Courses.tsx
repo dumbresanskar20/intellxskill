@@ -9,6 +9,7 @@ import type { CourseCategory, Course } from '../../types'
 
 // Short display labels for filter buttons (long category names → compact pills)
 const FILTER_LABELS: Partial<Record<CourseCategory, string>> = {
+  'Microsoft SQL Server': 'SQL Server',
   'Data Analytics & Business Intelligence': 'Data Analytics & BI',
   'Data Analytics & AI': 'Analytics & AI',
 }
