@@ -11,7 +11,7 @@ import {
   ExternalLink,
 } from 'lucide-react'
 import { NAV_LINKS, COURSES } from '../../constants/data'
-import footerLogo from '../../assets/logo.png'
+import footerLogo from '../../assets/footer-logo.png'
 
 const handleNavClick = (href: string) => {
   document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
