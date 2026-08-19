@@ -33,7 +33,7 @@ const FloatingBadge: React.FC<{
   sub?: string
   className?: string
   delay?: number
- }> = ({ icon, label, sub, className = '', delay = 0 }) => (
+}> = ({ icon, label, sub, className = '', delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.8, y: 20 }}
     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
 
   const statDisplay = [
     { value: 100, suffix: '+', label: 'Hours Training' },
-    { value: 5, suffix: '', label: 'Industry Tools' },
+    { value: 20, suffix: '', label: 'Industry Tools' },
     { value: 20, suffix: '+', label: 'Career Goals' },
     { value: 100, suffix: '%', label: 'Job Assistance' },
   ]

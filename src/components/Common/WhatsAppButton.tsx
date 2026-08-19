@@ -13,25 +13,25 @@ export const WhatsAppButton: React.FC = () => {
   }
 
   return (
-    <div className="fixed right-4 bottom-[7.5rem] sm:right-6 sm:bottom-6 z-[999] flex items-center gap-3 flex-row-reverse sm:flex-row">
+    <div className="fixed left-4 bottom-[7.5rem] sm:left-6 sm:bottom-6 z-[999] flex items-center gap-3">
       {/* Tooltip */}
       <AnimatePresence>
         {hovered && (
           <motion.div
-            initial={{ opacity: 0, x: -10, scale: 0.9 }}
+            initial={{ opacity: 0, x: 10, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: -10, scale: 0.9 }}
+            exit={{ opacity: 0, x: 10, scale: 0.9 }}
             transition={{ duration: 0.2 }}
-            className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-xl whitespace-nowrap pointer-events-none"
+            className="relative bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-xl whitespace-nowrap pointer-events-none"
           >
             💬 Chat on WhatsApp
-            {/* Arrow pointing right */}
+            {/* Arrow pointing left */}
             <div
-              className="absolute left-[-6px] top-1/2 -translate-y-1/2 w-0 h-0"
+              className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0"
               style={{
                 borderTop: '6px solid transparent',
                 borderBottom: '6px solid transparent',
-                borderRight: '6px solid #111827',
+                borderLeft: '6px solid #111827',
               }}
             />
           </motion.div>

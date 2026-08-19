@@ -44,7 +44,7 @@ const CourseCard: React.FC<{
       <div className="relative z-10 flex flex-col justify-between h-full">
         <div>
           <span className="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full backdrop-blur-sm mb-2">
-            {course.category}
+            {Array.isArray(course.category) ? course.category.join(' · ') : course.category}
           </span>
         </div>
         <h3 className="text-white text-lg font-extrabold leading-tight drop-shadow-md">{course.title}</h3>
@@ -109,7 +109,11 @@ export const Courses: React.FC = () => {
   const filtered =
     activeFilter === 'All'
       ? COURSES
-      : COURSES.filter(c => c.category === activeFilter)
+      : COURSES.filter(c =>
+          Array.isArray(c.category)
+            ? c.category.includes(activeFilter)
+            : c.category === activeFilter
+        )
 
   return (
     <SectionWrapper id="courses" className="bg-gray-50/30">

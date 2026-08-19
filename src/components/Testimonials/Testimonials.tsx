@@ -222,37 +222,6 @@ export const Testimonials: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Aggregate stats ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 p-8 bg-white rounded-2xl shadow-sm border border-gray-100"
-        >
-          <div className="text-center">
-            <p className="text-5xl font-extrabold text-[#1E3A8A]">4.9</p>
-            <StarRating rating={5} />
-            <p className="text-xs text-gray-500 mt-1">Average Rating</p>
-          </div>
-          <div className="h-px w-24 sm:h-16 sm:w-px bg-gray-200" />
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-gray-900">500+</p>
-            <p className="text-sm text-gray-500">Happy Students</p>
-          </div>
-          <div className="h-px w-24 sm:h-16 sm:w-px bg-gray-200" />
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-gray-900">98%</p>
-            <p className="text-sm text-gray-500">Placement Rate</p>
-          </div>
-          <div className="h-px w-24 sm:h-16 sm:w-px bg-gray-200" />
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-gray-900">1500+</p>
-            <p className="text-sm text-gray-500">Hiring Partners</p>
-          </div>
-        </motion.div>
-      </div>
 
       {/* ── Full-review modal ── */}
       <ReviewModal testimonial={activeReview} onClose={() => setActiveReview(null)} />

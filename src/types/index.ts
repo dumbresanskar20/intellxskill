@@ -44,7 +44,7 @@ export interface Course {
   id: number
   slug: string
   title: string
-  category: CourseCategory
+  category: CourseCategory | CourseCategory[]
   duration: string
   sessions: string
   mode: string

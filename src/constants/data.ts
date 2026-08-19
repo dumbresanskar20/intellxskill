@@ -72,7 +72,7 @@ export const COURSES: Course[] = [
     id: 1,
     slug: 'advanced-data-analytics-databricks-ai',
     title: 'Advanced Data Analytics with Databricks & AI',
-    category: 'AI',
+    category: ['AI', 'Data Analytics'],
     duration: '100 Hours',
     sessions: 'Live Sessions',
     mode: 'Online',
@@ -973,756 +973,12 @@ export const COURSES: Course[] = [
       },
     ],
   },
-
   // 2
   {
     id: 2,
-    slug: 'sql-server',
-    title: 'Advanced SQL Server Program',
-    category: 'SQL Server',
-    duration: '100 Hours',
-    sessions: '80 Live Sessions',
-    mode: 'Online (Live + Recorded)',
-    level: 'Beginner to Advanced',
-    description: 'Master SQL Development to Design, Build, Optimize, and Manage Enterprise-Grade Database Solutions for Real-World Business Applications.',
-    tags: ['T-SQL', 'Database Design', 'Window Functions', 'Performance Tuning', 'Stored Procedures'],
-    color: 'from-blue-600 via-indigo-700 to-slate-900',
-    textColor: 'text-blue-700',
-    bgColor: 'bg-blue-50',
-    bannerGrad: 'from-blue-600 via-blue-700 to-indigo-800',
-    image: sqlServerCourseImg,
-    syllabus: [
-      'Database Fundamentals, Setup & SQL Data Types (Numeric, String, Date, Boolean)',
-      'SQL Querying Essentials: SELECT, WHERE, HAVING, ORDER BY Clauses',
-      'Data Integrity with Constraints & Relational Database Design (1NF/2NF/3NF)',
-      'Dimension & Fact Table Design with Star & Snowflake Schemas',
-      'Mastering SQL Joins (Inner, Left, Right, Full, Cross, Self Joins) & Set Operators',
-      'Built-in Functions, Common Table Expressions (CTEs) & Subqueries',
-      'Programmability: Stored Procedures, User Defined Functions (UDFs) & Triggers',
-      'Performance Tuning: Indexes, Execution Plans & Query Optimization',
-    ],
-    modules: [
-      {
-        title: 'Module 1 – Database Fundamentals, Data Types & SQL Commands',
-        lessons: [
-          'SQL Server Overview, Editions & Architecture',
-          'Installation, Configuration & Workspace Setup',
-          'Database Schemas, Tables, Rows & Columns',
-          'SQL Data Types (Numeric, String, Date & Time, Boolean/BIT)',
-          'Introduction to SQL Commands (DDL, DML, DQL, DCL, TCL)',
-        ],
-      },
-      {
-        title: 'Module 2 – Query Filtering, Sorting & Operators',
-        lessons: [
-          'Query Filtering & Sorting with WHERE, HAVING, & ORDER BY Clauses',
-          'Arithmetic, Comparison & Logical Operators',
-          'Pattern Matching with LIKE & Range Filtering (BETWEEN, IN)',
-          'Data Summarization & Grouping (GROUP BY)',
-          'Data Integrity & Constraints (Primary, Foreign, Unique, Check, Default, NOT NULL)',
-        ],
-      },
-      {
-        title: 'Module 3 – Relational Database Design & SQL Joins',
-        lessons: [
-          'Database Normalization (1NF, 2NF, 3NF) & Star/Snowflake Schemas',
-          'Dimension & Fact Table Design',
-          'Querying Multiple Tables (INNER, LEFT, RIGHT, FULL OUTER JOINs)',
-          'Advanced Joins (CROSS & SELF JOIN)',
-          'Set Operations (UNION, UNION ALL, INTERSECT, EXCEPT)',
-        ],
-      },
-      {
-        title: 'Module 4 – SQL Functions & Advanced Querying',
-        lessons: [
-          'Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)',
-          'Built-in SQL Functions (String, Numeric, Date/Time, Conversion)',
-          'Handling NULL Values (ISNULL, COALESCE) & Conditional Logic (CASE)',
-          'CTEs (Common Table Expressions) & Nested Sub-queries',
-          'Views (Virtual Tables) for Security & Simplification',
-        ],
-      },
-      {
-        title: 'Module 5 – Advanced SQL Objects & Performance Tuning',
-        lessons: [
-          'Programmability: Stored Procedures & User Defined Functions (UDFs)',
-          'Database Triggers & Event Handling',
-          'Clustered vs. Non-Clustered Indexes',
-          'Query Execution Plans & Optimization Techniques',
-          'Performance Tuning & System Efficiency Best Practices',
-        ],
-      },
-    ],
-    skills: ['SQL Server & T-SQL', 'Database Design & Normalization', 'SQL Commands, Operators & Clauses', 'SQL Constraints & Integrity', 'Advanced SQL Joins & Set Operators', 'CTEs, Views & Subqueries', 'Stored Procedures, UDFs & Triggers', 'Performance Tuning & Optimization'],
-    tools: ['Microsoft SQL Server 2022', 'SSMS 20', 'SQL Server Profiler', 'Database Engine Tuning Advisor'],
-    projects: [
-      { title: 'Enterprise Relational Database Design', desc: 'Design, normalize, and build a secure relational database schema with full integrity constraints.' },
-      { title: 'Advanced Transactional & Analytical Querying', desc: 'Write complex analytical queries using window functions, self-joins, and set operators for business reporting.' },
-      { title: 'Database Optimization & Performance Challenge', desc: 'Optimize query execution plans using proper indexing, stored procedures, and profile tools.' },
-    ],
-    careers: ['SQL Developer', 'Database Developer', 'Database Administrator (DBA)', 'Data Analyst', 'Data Engineer', 'BI Developer'],
-    faqs: [
-      { q: 'What are the prerequisites for this Advanced SQL Server program?', a: 'No prior database or programming experience is required! The program starts from foundational database concepts and progresses to advanced enterprise-grade SQL querying.' },
-      { q: 'Is this course online and recorded?', a: 'Yes, this is an online training program with live sessions as well as lifetime access to recorded sessions and learning materials.' },
-      { q: 'Will I receive a certificate and placement assistance?', a: 'Yes! Upon completion, you receive an industry-recognized certificate from IntellxSkill Technologies along with 100% job placement assistance.' },
-      { q: 'Which SQL Server tools will we use?', a: 'We will use the latest Microsoft SQL Server 2022 and SQL Server Management Studio (SSMS 20) for hands-on labs and project work.' },
-    ],
-  },
-  // 3
-  {
-    id: 3,
-    slug: 'advanced-sql-server-ssis-power-bi',
-    title: 'Advanced SQL Server, SSIS & Power BI Program',
-    category: 'Power BI',
-    duration: '100 Hours',
-    sessions: 'Live Sessions',
-    mode: 'Online',
-    level: 'Beginner to Advanced',
-
-    description:
-      'Learn Modern Data Warehousing and BI Tools to Build Industry-Ready Analytics Solutions. Gain comprehensive hands-on training in Microsoft SQL Server, SQL Server Integration Services (SSIS), and Microsoft Power BI with real-time projects, assignments, and interview preparation.',
-
-    tags: [
-      'SQL Server',
-      'SSIS',
-      'Power BI',
-      'ETL',
-      'Data Warehousing',
-      'Business Intelligence',
-      'Data Analytics',
-      'DAX',
-    ],
-
-    color: 'from-cyan-400 to-blue-600',
-    textColor: 'text-blue-700',
-    bgColor: 'bg-blue-50',
-    bannerGrad: 'from-cyan-500 via-blue-600 to-indigo-700',
-    image: ssisPowerBiCourseImg,
-
-    syllabus: [
-      'Microsoft SQL Server',
-      'SQL Server Integration Services (SSIS)',
-      'Microsoft Power BI',
-    ],
-
-    modules: [
-
-      // =========================================================
-      // CONCEPT 1 — MICROSOFT SQL SERVER
-      // =========================================================
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 1 – Introduction',
-        lessons: [
-          'Overview of SQL Server & its editions',
-          'Installation & Configuration of SQL Server',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 2 – Database Basics',
-        lessons: [
-          'Creating and Managing Databases',
-          'Data Types in SQL Server',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 3 – Constraints',
-        lessons: [
-          'Primary Key',
-          'Foreign Key',
-          'Unique',
-          'Check',
-          'Default',
-          'NOT NULL',
-          'Identity',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 4 – SQL Commands',
-        lessons: [
-          'DML',
-          'DDL',
-          'DQL',
-          'DCL',
-          'TCL',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 5 – SQL Operators',
-        lessons: [
-          'Arithmetic',
-          'Comparison',
-          'Logical',
-          'LIKE',
-          'IN',
-          'BETWEEN',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 6 – SQL Query Fundamentals',
-        lessons: [
-          'SELECT Statement',
-          'TOP',
-          'DISTINCT',
-          'UNION',
-          'UNION ALL',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 7 – Aggregate Functions',
-        lessons: [
-          'COUNT',
-          'SUM',
-          'MIN & MAX',
-          'AVG',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 8 – SQL Clauses',
-        lessons: [
-          'WHERE',
-          'ORDER BY',
-          'GROUP BY',
-          'HAVING',
-          'DISTINCT',
-          'TOP',
-          'ALIAS',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 9 – Joins',
-        lessons: [
-          'INNER JOIN',
-          'LEFT JOIN',
-          'RIGHT JOIN',
-          'FULL JOIN',
-          'SELF JOIN',
-          'CROSS JOIN',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 10 – Window Functions',
-        lessons: [
-          'ROW_NUMBER()',
-          'RANK()',
-          'DENSE_RANK()',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 11 – Indexing',
-        lessons: [
-          'Clustered Index',
-          'Non-Clustered Index',
-          'Query Optimization',
-        ],
-      },
-
-      {
-        concept: 'Microsoft SQL Server',
-        title: 'Module 12 – Advanced SQL',
-        lessons: [
-          'Stored Procedures',
-          'CTE',
-          'Views',
-          'Functions',
-        ],
-      },
-
-
-      // =========================================================
-      // CONCEPT 2 — SQL SERVER INTEGRATION SERVICES (SSIS)
-      // =========================================================
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 1 – Data Warehousing & Business Intelligence Fundamentals',
-        lessons: [
-          'Introduction to Data & BI',
-          'What is Data?',
-          'What is Database?',
-          'Introduction to Business Intelligence (BI)',
-          'Introduction to Data Warehousing',
-          'OLTP vs OLAP',
-          'What is ETL?',
-          'ETL Lifecycle',
-          'Data Mart Concepts',
-          'Staging Area',
-          'Fact Tables & Dimension Tables',
-          'Star Schema & Snowflake Schema',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 2 – Introduction to SSIS & Architecture',
-        lessons: [
-          'SSIS Fundamentals',
-          'What is SSIS?',
-          'Why SSIS?',
-          'Advantages of SSIS',
-          'Features of SSIS',
-          'SSIS Architecture',
-          'SSIS Package Structure',
-          'SSIS Components',
-          'Control Flow',
-          'Data Flow',
-          'Event Handlers',
-          'Package Explorer',
-          'Parameters',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 3 – Working with Control Flow',
-        lessons: [
-          'Control Flow Basics',
-          'Tasks',
-          'Containers',
-          'Precedence Constraints',
-          'Expressions',
-          'Working with Tasks',
-          'Execute SQL Task',
-          'Execute Process Task',
-          'Execute Package Task',
-          'Script Task',
-          'Send Mail Task',
-          'File System Task',
-          'Bulk Insert Task',
-          'Data Profiling Task',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 4 – Working with Data Flow Task',
-        lessons: [
-          'Data Flow Architecture',
-          'Sources',
-          'Transformations',
-          'Destinations',
-          'Data Sources',
-          'OLEDB Source',
-          'SQL Server Source',
-          'Flat File Source',
-          'Excel Source',
-          'Data Destinations',
-          'OLEDB Destination',
-          'SQL Server Destination',
-          'Flat File Destination',
-          'Excel Destination',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 5 – SSIS Transformations',
-        lessons: [
-          'Basic Transformations',
-          'Derived Column Transformation',
-          'Data Conversion Transformation',
-          'Conditional Split Transformation',
-          'Sort Transformation',
-          'Aggregate Transformation',
-          'Multicast Transformation',
-          'Union All Transformation',
-          'Merge Transformation',
-          'Merge Join Transformation',
-          'Advanced Transformations',
-          'Lookup Transformation',
-          'Slowly Changing Dimension (SCD)',
-          'Row Count Transformation',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 6 – Variables, Parameters & Expressions',
-        lessons: [
-          'Variables',
-          'System Variables',
-          'User Variables',
-          'Variable Scope',
-          'Parameters',
-          'Package Parameters',
-          'Project Parameters',
-          'Expressions',
-          'Expression Builder',
-          'Dynamic File Names',
-          'Dynamic SQL Queries',
-          'Dynamic Connection Strings',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 7 – Working with Files & Dynamic ETL',
-        lessons: [
-          'Flat File Handling',
-          'Single File Processing',
-          'Multiple File Processing',
-          'Dynamic File Loading',
-          'Excel Handling',
-          'Dynamic Excel Loading',
-          'Worksheet Automation',
-          'Looping Techniques',
-          'Foreach File Enumerator',
-          'Foreach Folder Enumerator',
-          'Foreach ADO Enumerator',
-          'Dynamic Package Development',
-          'Dynamic Variables',
-          'Dynamic Connections',
-          'Dynamic File Paths',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 8 – Error Handling & Debugging',
-        lessons: [
-          'Error Handling',
-          'Redirect Rows',
-          'Ignore Failures',
-          'Fail Components',
-          'Error Outputs',
-          'Debugging Techniques',
-          'Breakpoints',
-          'Data Viewers',
-          'Watch Window',
-          'Logging',
-          'SSIS Logging',
-          'Log Providers',
-          'Event Handling',
-          'OnError',
-          'OnWarning',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 9 – Package Configurations & Transactions',
-        lessons: [
-          'Configurations',
-          'SQL Server Configuration',
-          'Environment Variables',
-          'Transactions',
-          'Transaction Handling',
-          'Commit & Rollback',
-          'Checkpoints',
-          'Restartability',
-          'Failure Recovery',
-          'Real-Time Scenarios',
-          'Restart Failed Packages',
-          'Recover ETL Jobs',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 10 – Deployment & SSIS Catalog',
-        lessons: [
-          'Deployment Models',
-          'Package Deployment Model',
-          'Project Deployment Model',
-          'SSIS Catalog',
-          'Creating SSISDB',
-          'Catalog Configuration',
-          'Environment Setup',
-          'Package Deployment',
-          'Deploy using SSDT',
-          'Deploy using SSMS',
-          'Package Execution',
-          'Execute from SSDT',
-          'Execute from SSMS',
-          'Execute using DTEXEC Utility',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 11 – Scheduling & Automation',
-        lessons: [
-          'SQL Server Agent',
-          'Creating Jobs',
-          'Job Steps',
-          'Scheduling Packages',
-          'Monitoring Jobs',
-          'Automation',
-          'Daily ETL Jobs',
-          'Batch Processing',
-          'Automated File Handling',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 12 – SSIS Security & Administration',
-        lessons: [
-          'Security Concepts',
-          'Protection Levels',
-          'Package Encryption',
-          'Roles & Permissions',
-          'Administration',
-          'SSIS Service Management',
-          'Monitoring Package Execution',
-          'Viewing Reports',
-          'Catalog Reports',
-        ],
-      },
-
-      {
-        concept: 'SQL Server Integration Services (SSIS)',
-        title: 'Module 13 – Performance Tuning & Optimization',
-        lessons: [
-          'Performance Optimization',
-          'Fast Load Options',
-          'Buffer Optimization',
-          'Parallel Processing',
-          'Efficient Lookup Design',
-          'Package Optimization',
-          'Reduce Memory Usage',
-          'Improve Data Flow Speed',
-          'Optimize Large Data Loads',
-        ],
-      },
-
-
-      // =========================================================
-      // CONCEPT 3 — MICROSOFT POWER BI
-      // =========================================================
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 1 – Introduction to Power BI',
-        lessons: [
-          'What is Power BI?',
-          'Why is Power BI Important?',
-          'Power BI Ecosystem',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 2 – Power BI Installation & Setup',
-        lessons: [
-          'How to Install Power BI Desktop',
-          'System Requirements',
-          'First Look at Power BI Interface',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 3 – Connecting to Data Sources',
-        lessons: [
-          'Common Data Sources (Excel, SQL, Online Services)',
-          'Import Mode vs. Direct Query',
-          'Live Data Refresh',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 4 – Data Transformation with Power Query',
-        lessons: [
-          'Cleaning & Transforming Data',
-          'Removing Duplicates, Handling Null Values',
-          'Merging & Splitting Columns',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 5 – Data Modeling Basics',
-        lessons: [
-          'Creating Relationships Between Tables',
-          'Understanding Star & Snowflake Schema',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 6 – Introduction to DAX',
-        lessons: [
-          'What is DAX?',
-          'Basic Functions (SUM, COUNT, AVERAGE, IF, SWITCH)',
-          'Creating Measures & Calculated Columns',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 7 – Creating Visualizations',
-        lessons: [
-          'Types of Charts: Bar, Line, Pie, Maps, Tables',
-          'Formatting and Customizing Visuals',
-          'Best Practices for Effective Data Representation',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 8 – Filters, Slicers, and Drill-through',
-        lessons: [
-          'Applying Filters at Different Levels',
-          'Slicers and Their Use Cases',
-          'Drill-through and Tooltip Pages',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 9 – Publishing & Sharing Reports',
-        lessons: [
-          'Publishing to Power BI Service',
-          'Creating Dashboards',
-          'Sharing Reports & Collaborating',
-        ],
-      },
-
-      {
-        concept: 'Microsoft Power BI',
-        title: 'Module 10 – Power BI Best Practices',
-        lessons: [
-          'Performance Optimization Techniques',
-          'Data Modeling Best Practices',
-          'Visual Design Tips',
-        ],
-      },
-    ],
-
-    skills: [
-      'Microsoft SQL Server',
-      'SQL Query Development',
-      'Advanced SQL',
-      'Database Management',
-      'Database Development',
-      'Data Warehousing',
-      'ETL Development',
-      'SQL Server Integration Services (SSIS)',
-      'Data Integration',
-      'Dynamic ETL',
-      'SSIS Package Development',
-      'SSIS Deployment',
-      'ETL Performance Optimization',
-      'Microsoft Power BI',
-      'Power Query',
-      'DAX',
-      'Data Modeling',
-      'Dashboard Development',
-      'Business Intelligence',
-      'Data Analytics',
-    ],
-
-    tools: [
-      'Microsoft SQL Server',
-      'SQL Server Management Studio (SSMS)',
-      'SQL Server Integration Services (SSIS)',
-      'SQL Server Data Tools (SSDT)',
-      'SQL Server Agent',
-      'DTEXEC Utility',
-      'Power BI Desktop',
-      'Power BI Service',
-    ],
-
-    projects: [
-      {
-        title: 'SQL Server Data Analytics Project',
-        desc:
-          'Apply SQL Server database development, SQL queries, data manipulation, joins, functions, indexing, stored procedures, and query optimization to real-world business data.',
-      },
-      {
-        title: 'SSIS ETL & Data Warehousing Project',
-        desc:
-          'Build industry-based ETL workflows using SSIS for data extraction, transformation, loading, dynamic file processing, data warehousing, deployment, scheduling, and optimization.',
-      },
-      {
-        title: 'Power BI Business Intelligence Dashboard',
-        desc:
-          'Create interactive dashboards and reports using real-world datasets with Power Query, data modeling, DAX, filters, slicers, drill-through, and Power BI Service.',
-      },
-    ],
-
-    careers: [
-      'SQL Developer',
-      'Database Administrator (DBA)',
-      'Data Analyst',
-      'Database Engineer',
-      'SSIS Developer',
-      'Data Integration Specialist',
-      'ETL Developer',
-      'Data Engineer',
-      'Power BI Developer',
-      'Business Intelligence Analyst',
-      'Reporting Analyst',
-      'BI Consultant',
-    ],
-
-    faqs: [
-      {
-        q: 'How long is the course?',
-        a:
-          'The complete Advanced SQL Server, SSIS & Power BI Program is 100 hours and includes real-time projects, assignments, and interview preparation.',
-      },
-      {
-        q: 'Is this course suitable for beginners?',
-        a:
-          'Yes. The program is designed from Beginner to Advanced level and covers SQL Server, SSIS, and Power BI.',
-      },
-      {
-        q: 'Is the course available online?',
-        a:
-          'Yes. The program is offered online with live sessions and practical training.',
-      },
-      {
-        q: 'Does the course include real-time projects?',
-        a:
-          'Yes. The program includes real-time projects, industry-based projects, case studies, practical assignments, and hands-on training.',
-      },
-      {
-        q: 'Who is this course for?',
-        a:
-          'The course is designed for SQL professionals, Data Analysts, ETL Developers, Power BI Developers, Business Intelligence professionals, IT professionals transitioning into Data Analytics and Business Intelligence, and professionals preparing for advanced SQL Server, SSIS and Power BI roles.',
-      },
-      {
-        q: 'Does the program include interview preparation?',
-        a:
-          'Yes. The program includes interview preparation along with mock sessions, resume building, commonly asked questions, and communication guidance.',
-      },
-      {
-        q: 'Is placement assistance provided?',
-        a:
-          'Yes. Placement assistance includes job referrals, placement guidance, portfolio building, and career opportunities.',
-      },
-    ],
-  },
-  // 4
-  {
-    id: 4,
     slug: 'advanced-data-analytics-snowflake-ai',
     title: 'Advanced Data Analytics with Snowflake & AI',
-    category: 'Data Analytics',
+    category: ['AI', 'Data Analytics'],
     duration: '100 Hours',
     sessions: 'Online Training',
     mode: 'Online',
@@ -2564,6 +1820,750 @@ export const COURSES: Course[] = [
         a:
           'Yes. The PDF includes a certificate of completion for the Advanced Data Analytics with Snowflake & AI program.',
       },
+    ],
+  },
+
+  // 3
+  {
+    id: 3,
+    slug: 'advanced-sql-server-ssis-power-bi',
+    title: 'Advanced SQL Server, SSIS & Power BI Program',
+    category: 'Power BI',
+    duration: '100 Hours',
+    sessions: 'Live Sessions',
+    mode: 'Online',
+    level: 'Beginner to Advanced',
+
+    description:
+      'Learn Modern Data Warehousing and BI Tools to Build Industry-Ready Analytics Solutions. Gain comprehensive hands-on training in Microsoft SQL Server, SQL Server Integration Services (SSIS), and Microsoft Power BI with real-time projects, assignments, and interview preparation.',
+
+    tags: [
+      'SQL Server',
+      'SSIS',
+      'Power BI',
+      'ETL',
+      'Data Warehousing',
+      'Business Intelligence',
+      'Data Analytics',
+      'DAX',
+    ],
+
+    color: 'from-cyan-400 to-blue-600',
+    textColor: 'text-blue-700',
+    bgColor: 'bg-blue-50',
+    bannerGrad: 'from-cyan-500 via-blue-600 to-indigo-700',
+    image: ssisPowerBiCourseImg,
+
+    syllabus: [
+      'Microsoft SQL Server',
+      'SQL Server Integration Services (SSIS)',
+      'Microsoft Power BI',
+    ],
+
+    modules: [
+
+      // =========================================================
+      // CONCEPT 1 — MICROSOFT SQL SERVER
+      // =========================================================
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 1 – Introduction',
+        lessons: [
+          'Overview of SQL Server & its editions',
+          'Installation & Configuration of SQL Server',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 2 – Database Basics',
+        lessons: [
+          'Creating and Managing Databases',
+          'Data Types in SQL Server',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 3 – Constraints',
+        lessons: [
+          'Primary Key',
+          'Foreign Key',
+          'Unique',
+          'Check',
+          'Default',
+          'NOT NULL',
+          'Identity',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 4 – SQL Commands',
+        lessons: [
+          'DML',
+          'DDL',
+          'DQL',
+          'DCL',
+          'TCL',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 5 – SQL Operators',
+        lessons: [
+          'Arithmetic',
+          'Comparison',
+          'Logical',
+          'LIKE',
+          'IN',
+          'BETWEEN',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 6 – SQL Query Fundamentals',
+        lessons: [
+          'SELECT Statement',
+          'TOP',
+          'DISTINCT',
+          'UNION',
+          'UNION ALL',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 7 – Aggregate Functions',
+        lessons: [
+          'COUNT',
+          'SUM',
+          'MIN & MAX',
+          'AVG',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 8 – SQL Clauses',
+        lessons: [
+          'WHERE',
+          'ORDER BY',
+          'GROUP BY',
+          'HAVING',
+          'DISTINCT',
+          'TOP',
+          'ALIAS',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 9 – Joins',
+        lessons: [
+          'INNER JOIN',
+          'LEFT JOIN',
+          'RIGHT JOIN',
+          'FULL JOIN',
+          'SELF JOIN',
+          'CROSS JOIN',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 10 – Window Functions',
+        lessons: [
+          'ROW_NUMBER()',
+          'RANK()',
+          'DENSE_RANK()',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 11 – Indexing',
+        lessons: [
+          'Clustered Index',
+          'Non-Clustered Index',
+          'Query Optimization',
+        ],
+      },
+
+      {
+        concept: 'Microsoft SQL Server',
+        title: 'Module 12 – Advanced SQL',
+        lessons: [
+          'Stored Procedures',
+          'CTE',
+          'Views',
+          'Functions',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 2 — SQL SERVER INTEGRATION SERVICES (SSIS)
+      // =========================================================
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 1 – Data Warehousing & Business Intelligence Fundamentals',
+        lessons: [
+          'Introduction to Data & BI',
+          'What is Data?',
+          'What is Database?',
+          'Introduction to Business Intelligence (BI)',
+          'Introduction to Data Warehousing',
+          'OLTP vs OLAP',
+          'What is ETL?',
+          'ETL Lifecycle',
+          'Data Mart Concepts',
+          'Staging Area',
+          'Fact Tables & Dimension Tables',
+          'Star Schema & Snowflake Schema',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 2 – Introduction to SSIS & Architecture',
+        lessons: [
+          'SSIS Fundamentals',
+          'What is SSIS?',
+          'Why SSIS?',
+          'Advantages of SSIS',
+          'Features of SSIS',
+          'SSIS Architecture',
+          'SSIS Package Structure',
+          'SSIS Components',
+          'Control Flow',
+          'Data Flow',
+          'Event Handlers',
+          'Package Explorer',
+          'Parameters',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 3 – Working with Control Flow',
+        lessons: [
+          'Control Flow Basics',
+          'Tasks',
+          'Containers',
+          'Precedence Constraints',
+          'Expressions',
+          'Working with Tasks',
+          'Execute SQL Task',
+          'Execute Process Task',
+          'Execute Package Task',
+          'Script Task',
+          'Send Mail Task',
+          'File System Task',
+          'Bulk Insert Task',
+          'Data Profiling Task',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 4 – Working with Data Flow Task',
+        lessons: [
+          'Data Flow Architecture',
+          'Sources',
+          'Transformations',
+          'Destinations',
+          'Data Sources',
+          'OLEDB Source',
+          'SQL Server Source',
+          'Flat File Source',
+          'Excel Source',
+          'Data Destinations',
+          'OLEDB Destination',
+          'SQL Server Destination',
+          'Flat File Destination',
+          'Excel Destination',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 5 – SSIS Transformations',
+        lessons: [
+          'Basic Transformations',
+          'Derived Column Transformation',
+          'Data Conversion Transformation',
+          'Conditional Split Transformation',
+          'Sort Transformation',
+          'Aggregate Transformation',
+          'Multicast Transformation',
+          'Union All Transformation',
+          'Merge Transformation',
+          'Merge Join Transformation',
+          'Advanced Transformations',
+          'Lookup Transformation',
+          'Slowly Changing Dimension (SCD)',
+          'Row Count Transformation',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 6 – Variables, Parameters & Expressions',
+        lessons: [
+          'Variables',
+          'System Variables',
+          'User Variables',
+          'Variable Scope',
+          'Parameters',
+          'Package Parameters',
+          'Project Parameters',
+          'Expressions',
+          'Expression Builder',
+          'Dynamic File Names',
+          'Dynamic SQL Queries',
+          'Dynamic Connection Strings',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 7 – Working with Files & Dynamic ETL',
+        lessons: [
+          'Flat File Handling',
+          'Single File Processing',
+          'Multiple File Processing',
+          'Dynamic File Loading',
+          'Excel Handling',
+          'Dynamic Excel Loading',
+          'Worksheet Automation',
+          'Looping Techniques',
+          'Foreach File Enumerator',
+          'Foreach Folder Enumerator',
+          'Foreach ADO Enumerator',
+          'Dynamic Package Development',
+          'Dynamic Variables',
+          'Dynamic Connections',
+          'Dynamic File Paths',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 8 – Error Handling & Debugging',
+        lessons: [
+          'Error Handling',
+          'Redirect Rows',
+          'Ignore Failures',
+          'Fail Components',
+          'Error Outputs',
+          'Debugging Techniques',
+          'Breakpoints',
+          'Data Viewers',
+          'Watch Window',
+          'Logging',
+          'SSIS Logging',
+          'Log Providers',
+          'Event Handling',
+          'OnError',
+          'OnWarning',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 9 – Package Configurations & Transactions',
+        lessons: [
+          'Configurations',
+          'SQL Server Configuration',
+          'Environment Variables',
+          'Transactions',
+          'Transaction Handling',
+          'Commit & Rollback',
+          'Checkpoints',
+          'Restartability',
+          'Failure Recovery',
+          'Real-Time Scenarios',
+          'Restart Failed Packages',
+          'Recover ETL Jobs',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 10 – Deployment & SSIS Catalog',
+        lessons: [
+          'Deployment Models',
+          'Package Deployment Model',
+          'Project Deployment Model',
+          'SSIS Catalog',
+          'Creating SSISDB',
+          'Catalog Configuration',
+          'Environment Setup',
+          'Package Deployment',
+          'Deploy using SSDT',
+          'Deploy using SSMS',
+          'Package Execution',
+          'Execute from SSDT',
+          'Execute from SSMS',
+          'Execute using DTEXEC Utility',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 11 – Scheduling & Automation',
+        lessons: [
+          'SQL Server Agent',
+          'Creating Jobs',
+          'Job Steps',
+          'Scheduling Packages',
+          'Monitoring Jobs',
+          'Automation',
+          'Daily ETL Jobs',
+          'Batch Processing',
+          'Automated File Handling',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 12 – SSIS Security & Administration',
+        lessons: [
+          'Security Concepts',
+          'Protection Levels',
+          'Package Encryption',
+          'Roles & Permissions',
+          'Administration',
+          'SSIS Service Management',
+          'Monitoring Package Execution',
+          'Viewing Reports',
+          'Catalog Reports',
+        ],
+      },
+
+      {
+        concept: 'SQL Server Integration Services (SSIS)',
+        title: 'Module 13 – Performance Tuning & Optimization',
+        lessons: [
+          'Performance Optimization',
+          'Fast Load Options',
+          'Buffer Optimization',
+          'Parallel Processing',
+          'Efficient Lookup Design',
+          'Package Optimization',
+          'Reduce Memory Usage',
+          'Improve Data Flow Speed',
+          'Optimize Large Data Loads',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 3 — MICROSOFT POWER BI
+      // =========================================================
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 1 – Introduction to Power BI',
+        lessons: [
+          'What is Power BI?',
+          'Why is Power BI Important?',
+          'Power BI Ecosystem',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 2 – Power BI Installation & Setup',
+        lessons: [
+          'How to Install Power BI Desktop',
+          'System Requirements',
+          'First Look at Power BI Interface',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 3 – Connecting to Data Sources',
+        lessons: [
+          'Common Data Sources (Excel, SQL, Online Services)',
+          'Import Mode vs. Direct Query',
+          'Live Data Refresh',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 4 – Data Transformation with Power Query',
+        lessons: [
+          'Cleaning & Transforming Data',
+          'Removing Duplicates, Handling Null Values',
+          'Merging & Splitting Columns',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 5 – Data Modeling Basics',
+        lessons: [
+          'Creating Relationships Between Tables',
+          'Understanding Star & Snowflake Schema',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 6 – Introduction to DAX',
+        lessons: [
+          'What is DAX?',
+          'Basic Functions (SUM, COUNT, AVERAGE, IF, SWITCH)',
+          'Creating Measures & Calculated Columns',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 7 – Creating Visualizations',
+        lessons: [
+          'Types of Charts: Bar, Line, Pie, Maps, Tables',
+          'Formatting and Customizing Visuals',
+          'Best Practices for Effective Data Representation',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 8 – Filters, Slicers, and Drill-through',
+        lessons: [
+          'Applying Filters at Different Levels',
+          'Slicers and Their Use Cases',
+          'Drill-through and Tooltip Pages',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 9 – Publishing & Sharing Reports',
+        lessons: [
+          'Publishing to Power BI Service',
+          'Creating Dashboards',
+          'Sharing Reports & Collaborating',
+        ],
+      },
+
+      {
+        concept: 'Microsoft Power BI',
+        title: 'Module 10 – Power BI Best Practices',
+        lessons: [
+          'Performance Optimization Techniques',
+          'Data Modeling Best Practices',
+          'Visual Design Tips',
+        ],
+      },
+    ],
+
+    skills: [
+      'Microsoft SQL Server',
+      'SQL Query Development',
+      'Advanced SQL',
+      'Database Management',
+      'Database Development',
+      'Data Warehousing',
+      'ETL Development',
+      'SQL Server Integration Services (SSIS)',
+      'Data Integration',
+      'Dynamic ETL',
+      'SSIS Package Development',
+      'SSIS Deployment',
+      'ETL Performance Optimization',
+      'Microsoft Power BI',
+      'Power Query',
+      'DAX',
+      'Data Modeling',
+      'Dashboard Development',
+      'Business Intelligence',
+      'Data Analytics',
+    ],
+
+    tools: [
+      'Microsoft SQL Server',
+      'SQL Server Management Studio (SSMS)',
+      'SQL Server Integration Services (SSIS)',
+      'SQL Server Data Tools (SSDT)',
+      'SQL Server Agent',
+      'DTEXEC Utility',
+      'Power BI Desktop',
+      'Power BI Service',
+    ],
+
+    projects: [
+      {
+        title: 'SQL Server Data Analytics Project',
+        desc:
+          'Apply SQL Server database development, SQL queries, data manipulation, joins, functions, indexing, stored procedures, and query optimization to real-world business data.',
+      },
+      {
+        title: 'SSIS ETL & Data Warehousing Project',
+        desc:
+          'Build industry-based ETL workflows using SSIS for data extraction, transformation, loading, dynamic file processing, data warehousing, deployment, scheduling, and optimization.',
+      },
+      {
+        title: 'Power BI Business Intelligence Dashboard',
+        desc:
+          'Create interactive dashboards and reports using real-world datasets with Power Query, data modeling, DAX, filters, slicers, drill-through, and Power BI Service.',
+      },
+    ],
+
+    careers: [
+      'SQL Developer',
+      'Database Administrator (DBA)',
+      'Data Analyst',
+      'Database Engineer',
+      'SSIS Developer',
+      'Data Integration Specialist',
+      'ETL Developer',
+      'Data Engineer',
+      'Power BI Developer',
+      'Business Intelligence Analyst',
+      'Reporting Analyst',
+      'BI Consultant',
+    ],
+
+    faqs: [
+      {
+        q: 'How long is the course?',
+        a:
+          'The complete Advanced SQL Server, SSIS & Power BI Program is 100 hours and includes real-time projects, assignments, and interview preparation.',
+      },
+      {
+        q: 'Is this course suitable for beginners?',
+        a:
+          'Yes. The program is designed from Beginner to Advanced level and covers SQL Server, SSIS, and Power BI.',
+      },
+      {
+        q: 'Is the course available online?',
+        a:
+          'Yes. The program is offered online with live sessions and practical training.',
+      },
+      {
+        q: 'Does the course include real-time projects?',
+        a:
+          'Yes. The program includes real-time projects, industry-based projects, case studies, practical assignments, and hands-on training.',
+      },
+      {
+        q: 'Who is this course for?',
+        a:
+          'The course is designed for SQL professionals, Data Analysts, ETL Developers, Power BI Developers, Business Intelligence professionals, IT professionals transitioning into Data Analytics and Business Intelligence, and professionals preparing for advanced SQL Server, SSIS and Power BI roles.',
+      },
+      {
+        q: 'Does the program include interview preparation?',
+        a:
+          'Yes. The program includes interview preparation along with mock sessions, resume building, commonly asked questions, and communication guidance.',
+      },
+      {
+        q: 'Is placement assistance provided?',
+        a:
+          'Yes. Placement assistance includes job referrals, placement guidance, portfolio building, and career opportunities.',
+      },
+    ],
+  },
+  // 4
+  {
+    id: 4,
+    slug: 'sql-server',
+    title: 'Advanced SQL Server Program',
+    category: 'SQL Server',
+    duration: '100 Hours',
+    sessions: '80 Live Sessions',
+    mode: 'Online (Live + Recorded)',
+    level: 'Beginner to Advanced',
+    description: 'Master SQL Development to Design, Build, Optimize, and Manage Enterprise-Grade Database Solutions for Real-World Business Applications.',
+    tags: ['T-SQL', 'Database Design', 'Window Functions', 'Performance Tuning', 'Stored Procedures'],
+    color: 'from-blue-600 via-indigo-700 to-slate-900',
+    textColor: 'text-blue-700',
+    bgColor: 'bg-blue-50',
+    bannerGrad: 'from-blue-600 via-blue-700 to-indigo-800',
+    image: sqlServerCourseImg,
+    syllabus: [
+      'Database Fundamentals, Setup & SQL Data Types (Numeric, String, Date, Boolean)',
+      'SQL Querying Essentials: SELECT, WHERE, HAVING, ORDER BY Clauses',
+      'Data Integrity with Constraints & Relational Database Design (1NF/2NF/3NF)',
+      'Dimension & Fact Table Design with Star & Snowflake Schemas',
+      'Mastering SQL Joins (Inner, Left, Right, Full, Cross, Self Joins) & Set Operators',
+      'Built-in Functions, Common Table Expressions (CTEs) & Subqueries',
+      'Programmability: Stored Procedures, User Defined Functions (UDFs) & Triggers',
+      'Performance Tuning: Indexes, Execution Plans & Query Optimization',
+    ],
+    modules: [
+      {
+        title: 'Module 1 – Database Fundamentals, Data Types & SQL Commands',
+        lessons: [
+          'SQL Server Overview, Editions & Architecture',
+          'Installation, Configuration & Workspace Setup',
+          'Database Schemas, Tables, Rows & Columns',
+          'SQL Data Types (Numeric, String, Date & Time, Boolean/BIT)',
+          'Introduction to SQL Commands (DDL, DML, DQL, DCL, TCL)',
+        ],
+      },
+      {
+        title: 'Module 2 – Query Filtering, Sorting & Operators',
+        lessons: [
+          'Query Filtering & Sorting with WHERE, HAVING, & ORDER BY Clauses',
+          'Arithmetic, Comparison & Logical Operators',
+          'Pattern Matching with LIKE & Range Filtering (BETWEEN, IN)',
+          'Data Summarization & Grouping (GROUP BY)',
+          'Data Integrity & Constraints (Primary, Foreign, Unique, Check, Default, NOT NULL)',
+        ],
+      },
+      {
+        title: 'Module 3 – Relational Database Design & SQL Joins',
+        lessons: [
+          'Database Normalization (1NF, 2NF, 3NF) & Star/Snowflake Schemas',
+          'Dimension & Fact Table Design',
+          'Querying Multiple Tables (INNER, LEFT, RIGHT, FULL OUTER JOINs)',
+          'Advanced Joins (CROSS & SELF JOIN)',
+          'Set Operations (UNION, UNION ALL, INTERSECT, EXCEPT)',
+        ],
+      },
+      {
+        title: 'Module 4 – SQL Functions & Advanced Querying',
+        lessons: [
+          'Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)',
+          'Built-in SQL Functions (String, Numeric, Date/Time, Conversion)',
+          'Handling NULL Values (ISNULL, COALESCE) & Conditional Logic (CASE)',
+          'CTEs (Common Table Expressions) & Nested Sub-queries',
+          'Views (Virtual Tables) for Security & Simplification',
+        ],
+      },
+      {
+        title: 'Module 5 – Advanced SQL Objects & Performance Tuning',
+        lessons: [
+          'Programmability: Stored Procedures & User Defined Functions (UDFs)',
+          'Database Triggers & Event Handling',
+          'Clustered vs. Non-Clustered Indexes',
+          'Query Execution Plans & Optimization Techniques',
+          'Performance Tuning & System Efficiency Best Practices',
+        ],
+      },
+    ],
+    skills: ['SQL Server & T-SQL', 'Database Design & Normalization', 'SQL Commands, Operators & Clauses', 'SQL Constraints & Integrity', 'Advanced SQL Joins & Set Operators', 'CTEs, Views & Subqueries', 'Stored Procedures, UDFs & Triggers', 'Performance Tuning & Optimization'],
+    tools: ['Microsoft SQL Server 2022', 'SSMS 20', 'SQL Server Profiler', 'Database Engine Tuning Advisor'],
+    projects: [
+      { title: 'Enterprise Relational Database Design', desc: 'Design, normalize, and build a secure relational database schema with full integrity constraints.' },
+      { title: 'Advanced Transactional & Analytical Querying', desc: 'Write complex analytical queries using window functions, self-joins, and set operators for business reporting.' },
+      { title: 'Database Optimization & Performance Challenge', desc: 'Optimize query execution plans using proper indexing, stored procedures, and profile tools.' },
+    ],
+    careers: ['SQL Developer', 'Database Developer', 'Database Administrator (DBA)', 'Data Analyst', 'Data Engineer', 'BI Developer'],
+    faqs: [
+      { q: 'What are the prerequisites for this Advanced SQL Server program?', a: 'No prior database or programming experience is required! The program starts from foundational database concepts and progresses to advanced enterprise-grade SQL querying.' },
+      { q: 'Is this course online and recorded?', a: 'Yes, this is an online training program with live sessions as well as lifetime access to recorded sessions and learning materials.' },
+      { q: 'Will I receive a certificate and placement assistance?', a: 'Yes! Upon completion, you receive an industry-recognized certificate from IntellxSkill Technologies along with 100% job placement assistance.' },
+      { q: 'Which SQL Server tools will we use?', a: 'We will use the latest Microsoft SQL Server 2022 and SQL Server Management Studio (SSMS 20) for hands-on labs and project work.' },
     ],
   },
   // 5

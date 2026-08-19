@@ -214,7 +214,7 @@ export const Footer: React.FC = () => {
         viewport={{ once: false }}
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-8 right-6 w-12 h-12 bg-[#1E3A8A] text-white rounded-2xl flex items-center justify-center shadow-xl z-50 transition-all"
+        className="fixed bottom-36 right-4 sm:bottom-8 sm:right-6 w-12 h-12 bg-[#1E3A8A] text-white rounded-2xl flex items-center justify-center shadow-xl z-50 transition-all"
         aria-label="Scroll back to top"
       >
         <ArrowUp className="w-5 h-5" />
