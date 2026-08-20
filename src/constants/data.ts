@@ -2506,142 +2506,365 @@ export const COURSES: Course[] = [
       'Performance Tuning',
     ],
     modules: [
+      // DATABASE FUNDAMENTALS
       {
-        title: 'Module 1 – Database Fundamentals',
+        concept: 'DATABASE FUNDAMENTALS',
+        title: 'Installation & Configuration of SQL Server',
+        lessons: ['Install, configure, and set up SQL Server and related tools for database development.'],
+      },
+      {
+        concept: 'DATABASE FUNDAMENTALS',
+        title: 'Tables, Rows & Columns',
+        lessons: ['Understand how data is organized and stored within database tables and structures.'],
+      },
+      {
+        concept: 'DATABASE FUNDAMENTALS',
+        title: 'Overview of SQL Server & its editions',
+        lessons: ['Understand SQL Server editions, features, use cases, and database management capabilities.'],
+      },
+      {
+        concept: 'DATABASE FUNDAMENTALS',
+        title: 'SQL Server Architecture',
+        lessons: ['Learn the core components, services, and architecture of SQL Server environments.'],
+      },
+      {
+        concept: 'DATABASE FUNDAMENTALS',
+        title: 'Schema & Database Objects',
+        lessons: ['Explore schemas, tables, views, indexes, stored procedures, and other database objects.'],
+      },
+      // SQL DATA TYPE
+      {
+        concept: 'SQL DATA TYPE',
+        title: 'NUMERIC DATA TYPE',
+        lessons: ['INT', 'BIGINT', 'DECIMAL', 'FLOAT'],
+      },
+      {
+        concept: 'SQL DATA TYPE',
+        title: 'STRING DATA TYPE',
+        lessons: ['CHAR', 'VARCHAR', 'NVARCHAR', 'TEXT'],
+      },
+      {
+        concept: 'SQL DATA TYPE',
+        title: 'DATE & TIME DATA TYPE',
+        lessons: ['DATE', 'TIME', 'DATETIME', 'TIMESTAMP'],
+      },
+      {
+        concept: 'SQL DATA TYPE',
+        title: 'BOOLEAN DATA TYPE',
+        lessons: ['BIT'],
+      },
+      // SQL COMMANDS
+      {
+        concept: 'SQL COMMANDS',
+        title: 'Data Manipulation Language (DML)',
+        lessons: ['Insert, Update, Delete, and modify data stored in database tables.'],
+      },
+      {
+        concept: 'SQL COMMANDS',
+        title: 'Data Definition Language (DDL)',
+        lessons: ['Create, Alter, Truncate, and manage database objects such as tables and views.'],
+      },
+      {
+        concept: 'SQL COMMANDS',
+        title: 'Data Query Language (DQL)',
+        lessons: ['Retrieve and analyze data from database tables using SQL queries.'],
+      },
+      {
+        concept: 'SQL COMMANDS',
+        title: 'Transaction Control Language (TCL)',
+        lessons: ['Control transactions, save changes, undo operations, and maintain data integrity.'],
+      },
+      {
+        concept: 'SQL COMMANDS',
+        title: 'Data Control Language (DCL)',
+        lessons: ['Manage user permissions, access control, and database security.'],
+      },
+      // SQL OPERATORS
+      {
+        concept: 'SQL OPERATORS',
+        title: 'Arithmetic Operators',
+        lessons: ['Perform mathematical calculations such as addition, subtraction, multiplication, and division.'],
+      },
+      {
+        concept: 'SQL OPERATORS',
+        title: 'Comparison Operators',
+        lessons: ['Compare two values and return TRUE or FALSE based on the specified condition.'],
+      },
+      {
+        concept: 'SQL OPERATORS',
+        title: 'Logical Operators',
+        lessons: ['Combine multiple conditions and control query results using logical expressions.'],
+      },
+      {
+        concept: 'SQL OPERATORS',
+        title: 'LIKE Operator',
+        lessons: ['Search for specific patterns within character or text data.'],
+      },
+      {
+        concept: 'SQL OPERATORS',
+        title: 'IN Operator',
+        lessons: ['Filter records by matching values from a specified list.'],
+      },
+      {
+        concept: 'SQL OPERATORS',
+        title: 'BETWEEN Operator',
+        lessons: ['Retrieve records whose values fall within a specified range.'],
+      },
+      // SQL CLAUSES
+      {
+        concept: 'SQL CLAUSES',
+        title: 'WHERE',
+        lessons: ['Filters records based on specified conditions before retrieving data from a table.'],
+      },
+      {
+        concept: 'SQL CLAUSES',
+        title: 'HAVING',
+        lessons: ['Filters grouped records based on aggregate function conditions after GROUP BY.'],
+      },
+      {
+        concept: 'SQL CLAUSES',
+        title: 'ORDER BY',
+        lessons: ['Sorts query results in ascending (ASC) or descending (DESC) order.'],
+      },
+      // SQL CONSTRAINTS
+      {
+        concept: 'SQL CONSTRAINTS',
+        title: 'Primary Key',
+        lessons: ['Uniquely identifies each record in a table and prevents duplicate or NULL values.'],
+      },
+      {
+        concept: 'SQL CONSTRAINTS',
+        title: 'Check Constraint',
+        lessons: ['Enforces specific conditions on column values to maintain valid data entry.'],
+      },
+      {
+        concept: 'SQL CONSTRAINTS',
+        title: 'Foreign Key',
+        lessons: ['Maintains relationships between tables and ensures referential integrity.'],
+      },
+      {
+        concept: 'SQL CONSTRAINTS',
+        title: 'Default Constraint',
+        lessons: ['Automatically assigns a predefined value when no value is provided.'],
+      },
+      {
+        concept: 'SQL CONSTRAINTS',
+        title: 'Unique Constraint',
+        lessons: ['Ensures that all values in a column are distinct and prevents duplicates.'],
+      },
+      {
+        concept: 'SQL CONSTRAINTS',
+        title: 'NOT Null',
+        lessons: ['Ensures that a column always contains a value and does not allow NULL entries.'],
+      },
+      // SQL FUNCTIONS
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'String Functions',
+        lessons: ['Manipulate and format text data by performing operations on character strings.'],
+      },
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'Numeric Functions',
+        lessons: ['Perform mathematical calculations and operations on numeric values.'],
+      },
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'Date Functions',
+        lessons: ['Work with date and time values for extraction, calculation, and formatting.'],
+      },
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'Conversion Functions',
+        lessons: ['Convert data from one data type to another for accurate processing and analysis.'],
+      },
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'ISNULL',
+        lessons: ['Replace NULL values with a specified default value.'],
+      },
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'COALESCE',
+        lessons: ['Return the first non-NULL value from a list of expressions.'],
+      },
+      {
+        concept: 'SQL FUNCTIONS',
+        title: 'CASE Statement',
+        lessons: ['Apply conditional logic and return values based on specified conditions.'],
+      },
+      // AGGREGATE FUNCTIONS
+      {
+        concept: 'AGGREGATE FUNCTIONS',
+        title: 'COUNT',
+        lessons: ['Returns the total number of rows or records that match a specified condition.'],
+      },
+      {
+        concept: 'AGGREGATE FUNCTIONS',
+        title: 'SUM',
+        lessons: ['Calculates the total value of a numeric column across multiple records.'],
+      },
+      {
+        concept: 'AGGREGATE FUNCTIONS',
+        title: 'MIN, MAX',
+        lessons: ['Returns the smallest and largest values from a selected column.'],
+      },
+      {
+        concept: 'AGGREGATE FUNCTIONS',
+        title: 'AVG',
+        lessons: ['Calculates the average value of a numeric column.'],
+      },
+      // SQL JOINS
+      {
+        concept: 'SQL JOINS',
+        title: 'INNER JOIN',
+        lessons: ['Returns only the matching records that exist in both tables.'],
+      },
+      {
+        concept: 'SQL JOINS',
+        title: 'LEFT JOIN',
+        lessons: ['Returns all records from the left table and matching records from the right table.'],
+      },
+      {
+        concept: 'SQL JOINS',
+        title: 'RIGHT JOIN',
+        lessons: ['Returns all records from the right table and matching records from the left table.'],
+      },
+      {
+        concept: 'SQL JOINS',
+        title: 'FULL JOIN',
+        lessons: ['Returns all records from both tables, including matched and unmatched records.'],
+      },
+      {
+        concept: 'SQL JOINS',
+        title: 'CROSS JOIN',
+        lessons: ['Returns the Cartesian product of two tables by combining every row from both tables.'],
+      },
+      {
+        concept: 'SQL JOINS',
+        title: 'SELF JOIN',
+        lessons: ['Joins a table with itself to compare or relate records within the same table.'],
+      },
+      // SET OPERATORS
+      {
+        concept: 'SET OPERATORS',
+        title: 'UNION',
+        lessons: ['Combines results from multiple queries and returns only distinct records.'],
+      },
+      {
+        concept: 'SET OPERATORS',
+        title: 'UNION ALL',
+        lessons: ['Combines results from multiple queries and includes all duplicate records.'],
+      },
+      {
+        concept: 'SET OPERATORS',
+        title: 'INTERSECT',
+        lessons: ['Returns only the common records that exist in both result sets.'],
+      },
+      {
+        concept: 'SET OPERATORS',
+        title: 'EXCEPT',
+        lessons: ['Returns records from the first query that do not exist in the second query.'],
+      },
+      // SQL WINDOW FUNCTION
+      {
+        concept: 'SQL WINDOW FUNCTION',
+        title: 'Aggregate Functions',
         lessons: [
-          'Overview of SQL Server & its editions',
-          'Installation & Configuration of SQL Server',
-          'SQL Server Architecture',
-          'Tables, Rows & Columns',
-          'Schema & Database Objects',
+          'SUM(), AVG(), COUNT(), MIN(), MAX()',
+          'Calculates running totals or moving averages while keeping detail rows'
         ],
       },
       {
-        title: 'Module 2 – SQL Data Type',
+        concept: 'SQL WINDOW FUNCTION',
+        title: 'Ranking Functions',
         lessons: [
-          'Numeric Data Type (INT, BIGINT, DECIMAL, FLOAT)',
-          'String Data Type (CHAR, VARCHAR, NVARCHAR, TEXT)',
-          'Date & Time Data Type (DATE, TIME, DATETIME, TIMESTAMP)',
-          'Boolean Data Type (BIT)',
+          'ROW_NUMBER(), RANK(), DENSE_RANK()',
+          'Assigns a sequential number to rows.',
+          'RANK() skips positions on ties (1, 2, 2, 4)',
+          'DENSE_RANK() does not (1, 2, 2, 3)'
         ],
       },
       {
-        title: 'Module 3 – SQL Commands',
+        concept: 'SQL WINDOW FUNCTION',
+        title: 'Value Functions',
         lessons: [
-          'Data Definition Language (DDL)',
-          'Data Manipulation Language (DML)',
-          'Data Query Language (DQL)',
-          'Transaction Control Language (TCL)',
-          'Data Control Language (DCL)',
+          'LAG(), LEAD(), FIRST_VALUE(), LAST_VALUE()',
+          'Fetches values from previous (LAG) or following (LEAD) rows without a self-join.'
         ],
       },
+      // DATABASE DESIGN
       {
-        title: 'Module 4 – SQL Operators',
-        lessons: [
-          'Arithmetic Operators',
-          'Comparison Operators',
-          'Logical Operators',
-          'LIKE Operator',
-          'IN Operator',
-          'BETWEEN Operator',
-        ],
+        concept: 'DATABASE DESIGN',
+        title: 'Normalization',
+        lessons: ['1 NF', '2NF', '3NF'],
       },
       {
-        title: 'Module 5 – SQL Clauses',
-        lessons: [
-          'WHERE',
-          'HAVING',
-          'ORDER BY',
-        ],
+        concept: 'DATABASE DESIGN',
+        title: 'TABLE TYPE',
+        lessons: ['FACT TABLE', 'DIMENSION TABLE'],
       },
       {
-        title: 'Module 6 – SQL Constraints',
-        lessons: [
-          'Primary Key',
-          'Foreign Key',
-          'Unique Constraint',
-          'Check Constraint',
-          'Default Constraint',
-          'NOT Null',
-        ],
+        concept: 'DATABASE DESIGN',
+        title: 'SCHEMA',
+        lessons: ['STAR', 'SNOWFLAKE'],
+      },
+      // ADVANCED SQL
+      {
+        concept: 'ADVANCED SQL',
+        title: 'STORE PROCEDURE',
+        lessons: ['A precompiled set of SQL statements used to automate tasks and improve query performance.'],
       },
       {
-        title: 'Module 7 – SQL Functions',
-        lessons: [
-          'String Functions',
-          'Numeric Functions',
-          'Date Functions',
-          'Conversion Functions',
-          'ISNULL',
-          'COALESCE',
-          'CASE Statement',
-        ],
+        concept: 'ADVANCED SQL',
+        title: 'USER DEFINE FUNCTION (UDF)',
+        lessons: ['A reusable function created by users to perform custom calculations and return values.'],
       },
       {
-        title: 'Module 8 – Aggregate Functions',
-        lessons: [
-          'COUNT',
-          'SUM',
-          'MIN, MAX',
-          'AVG',
-        ],
+        concept: 'ADVANCED SQL',
+        title: 'VIEW',
+        lessons: ['A virtual table based on SQL queries that simplifies data access and enhances security.'],
       },
       {
-        title: 'Module 9 – SQL Joins',
-        lessons: [
-          'INNER JOIN',
-          'LEFT JOIN',
-          'RIGHT JOIN',
-          'FULL JOIN',
-          'CROSS JOIN',
-          'SELF JOIN',
-        ],
+        concept: 'ADVANCED SQL',
+        title: 'CTE',
+        lessons: ['A temporary result set used to simplify complex queries and improve readability.'],
       },
       {
-        title: 'Module 10 – Set Operators',
-        lessons: [
-          'UNION',
-          'UNION ALL',
-          'INTERSECT',
-          'EXCEPT',
-        ],
+        concept: 'ADVANCED SQL',
+        title: 'TRIGGER',
+        lessons: ['A special database object that automatically executes when specific events occur.'],
       },
       {
-        title: 'Module 11 – SQL Window Function',
-        lessons: [
-          'Aggregate Functions',
-          'Ranking Functions (ROW_NUMBER, RANK, DENSE_RANK)',
-          'Value Functions (LAG, LEAD, FIRST_VALUE, LAST_VALUE)',
-        ],
+        concept: 'ADVANCED SQL',
+        title: 'SUB-QUERY',
+        lessons: ['A query nested inside another query to retrieve and manipulate related data.'],
+      },
+      // PERFORMANCE TUNING
+      {
+        concept: 'PERFORMANCE TUNING',
+        title: 'Clustered Index',
+        lessons: ['Organizes table data physically to improve data retrieval performance.'],
       },
       {
-        title: 'Module 12 – Database Design',
-        lessons: [
-          'Normalization (1NF, 2NF, 3NF)',
-          'Table Type (Fact Table, Dimension Table)',
-          'Schema (Star, Snowflake)',
-        ],
+        concept: 'PERFORMANCE TUNING',
+        title: 'Non-Clustered Index',
+        lessons: ['Creates a separate index structure to speed up data searches and queries.'],
       },
       {
-        title: 'Module 13 – Advanced SQL',
-        lessons: [
-          'Store Procedure',
-          'User Define Function (UDF)',
-          'View',
-          'CTE',
-          'Trigger',
-          'Sub-Query',
-        ],
+        concept: 'PERFORMANCE TUNING',
+        title: 'Query Optimization',
+        lessons: ['Improves query performance by reducing execution time and resource consumption.'],
       },
       {
-        title: 'Module 14 – Performance Tuning',
-        lessons: [
-          'Clustered Index',
-          'Non-Clustered Index',
-          'Query Optimization',
-          'Execution Plan',
-          'Performance Practices',
-        ],
+        concept: 'PERFORMANCE TUNING',
+        title: 'Execution Plan',
+        lessons: ['Analyzes how SQL Server executes queries to identify performance bottlenecks.'],
+      },
+      {
+        concept: 'PERFORMANCE TUNING',
+        title: 'Performance Practices',
+        lessons: ['Apply indexing, efficient coding techniques, and optimization strategies to enhance database performance.'],
       },
     ],
     skills: ['SQL Server & T-SQL', 'Database Design & Normalization', 'SQL Commands, Operators & Clauses', 'SQL Constraints & Integrity', 'Advanced SQL Joins & Set Operators', 'CTEs, Views & Subqueries', 'Stored Procedures, UDFs & Triggers', 'Performance Tuning & Optimization'],
