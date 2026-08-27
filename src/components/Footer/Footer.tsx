@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   ArrowUp,
@@ -12,10 +12,6 @@ import {
 } from 'lucide-react'
 import { NAV_LINKS, COURSES } from '../../constants/data'
 import footerLogo from '../../assets/footer-logo.png'
-
-const handleNavClick = (href: string) => {
-  document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-}
 
 // Inline SVG social icons (since lucide-react doesn't have brand logos)
 const SocialIcons = {
@@ -44,6 +40,19 @@ const SocialIcons = {
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('/')) {
+      navigate(href)
+    } else if (isHomePage) {
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/' + href)
+    }
+  }
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()

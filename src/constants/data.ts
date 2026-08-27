@@ -16,7 +16,7 @@ export const NAV_LINKS = [
   { label: 'Certificates', href: '#certificate' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'Contact', href: '#contact' },
-  { label: 'FAQs', href: 'faq' },
+  { label: 'FAQs', href: '/faq' },
 ]
 
 export const STATS = [

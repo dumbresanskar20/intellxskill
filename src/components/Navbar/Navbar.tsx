@@ -44,7 +44,9 @@ export const Navbar: React.FC = () => {
   const handleNavClick = useCallback(
     (href: string) => {
       setMobileOpen(false)
-      if (isHomePage) {
+      if (href.startsWith('/')) {
+        navigate(href)
+      } else if (isHomePage) {
         const el = document.querySelector(href)
         if (el) el.scrollIntoView({ behavior: 'smooth' })
       } else {
@@ -113,12 +115,12 @@ export const Navbar: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
               {NAV_LINKS.map((link, i) => {
-                const sectionId = link.href.replace('#', '')
-                const isActive = isHomePage && activeSection === sectionId
+                const sectionId = link.href.startsWith('#') ? link.href.replace('#', '') : ''
+                const isActive = link.href.startsWith('/') ? location.pathname === link.href : (isHomePage && activeSection === sectionId)
                 return (
                   <motion.a
                     key={link.href}
-                    href={isHomePage ? link.href : `/${link.href}`}
+                    href={link.href.startsWith('/') ? link.href : (isHomePage ? link.href : `/${link.href}`)}
                     onClick={e => { e.preventDefault(); handleNavClick(link.href) }}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -202,7 +204,7 @@ export const Navbar: React.FC = () => {
                 {NAV_LINKS.map((link, i) => (
                   <motion.a
                     key={link.href}
-                    href={isHomePage ? link.href : `/${link.href}`}
+                    href={link.href.startsWith('/') ? link.href : (isHomePage ? link.href : `/${link.href}`)}
                     onClick={e => { e.preventDefault(); handleNavClick(link.href) }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}

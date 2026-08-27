@@ -22,6 +22,14 @@ export const Home: React.FC = () => {
     })
   }
 
+  const handleContactError = (message: string) => {
+    addToast({
+      type: 'error',
+      title: '❌ Failed to Send',
+      message,
+    })
+  }
+
   return (
     <MainLayout>
       <Hero />
@@ -32,7 +40,7 @@ export const Home: React.FC = () => {
       <Certificate />
       <Testimonials />
       <HiringPartners />
-      <Contact onSubmitSuccess={handleContactSuccess} />
+      <Contact onSubmitSuccess={handleContactSuccess} onSubmitError={handleContactError} />
     </MainLayout>
   )
 }
