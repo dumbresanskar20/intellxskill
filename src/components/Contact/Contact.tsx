@@ -10,7 +10,7 @@ import { Button } from '../Common/Button'
 // FormSubmit.co endpoint — sends form data directly to info@intellxskill.in
 // No account or API keys needed. On the first submission, FormSubmit will
 // send a confirmation email to info@intellxskill.in — click the link to activate.
-const FORMSUBMIT_URL = 'https://formsubmit.co/intellxskilltechnologies@gmail.com'
+const FORMSUBMIT_URL = 'https://formsubmit.co/info@intellxskill.in'
 
 interface ContactProps {
   onSubmitSuccess: () => void

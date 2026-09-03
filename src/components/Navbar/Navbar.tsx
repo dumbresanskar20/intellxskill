@@ -40,6 +40,24 @@ export const Navbar: React.FC = () => {
     return () => observer.disconnect()
   }, [isHomePage])
 
+  // Smooth scroll to target section with header offset
+  const scrollToSection = useCallback((targetId: string) => {
+    if (targetId === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+    const el = document.querySelector(targetId)
+    if (el) {
+      // Calculate offset considering fixed header height (~70-80px)
+      const elementTop = el.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementTop - 85
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: 'smooth',
+      })
+    }
+  }, [])
+
   // Handle nav link clicks — scroll on home, navigate + hash on other pages
   const handleNavClick = useCallback(
     (href: string) => {
@@ -47,26 +65,27 @@ export const Navbar: React.FC = () => {
       if (href.startsWith('/')) {
         navigate(href)
       } else if (isHomePage) {
-        const el = document.querySelector(href)
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
+        // Small delay allows mobile drawer collapse animation to start cleanly without interrupting scroll calculation
+        setTimeout(() => {
+          scrollToSection(href)
+        }, 150)
       } else {
-        // Navigate to home then scroll — use hash URL
+        // Navigate to home then scroll
         navigate('/' + href)
       }
     },
-    [isHomePage, navigate]
+    [isHomePage, navigate, scrollToSection]
   )
 
-  // When navigating to home with a hash, scroll to target
+  // When navigating to home with a hash (or page load with hash), scroll to target
   useEffect(() => {
     if (location.pathname === '/' && location.hash) {
-      const id = location.hash
-      const el = document.querySelector(id)
-      if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 200)
-      }
+      const timer = setTimeout(() => {
+        scrollToSection(location.hash)
+      }, 350)
+      return () => clearTimeout(timer)
     }
-  }, [location])
+  }, [location.pathname, location.hash, scrollToSection])
 
   // Navbar background: always white on inner pages
   const navBg = isHomePage
