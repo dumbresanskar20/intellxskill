@@ -3271,6 +3271,705 @@ export const COURSES: Course[] = [
       },
     ],
   },
+  // 7
+  {
+    id: 7,
+    slug: 'aws-devops-engineer-ai',
+    title: 'AWS DevOps Engineer & AI Program',
+    category: 'AI',
+    duration: '100 Hours',
+    sessions: 'Live Sessions',
+    mode: 'Online',
+    level: 'Beginner to Advanced',
+
+    description:
+      'Build Industry-Ready AWS DevOps Skills with CI/CD, Containers, Kubernetes, Infrastructure Automation & Generative AI. Gain comprehensive hands-on training in AWS, Linux, Git, Docker, Jenkins, Kubernetes, EKS, Terraform, CloudWatch, and Generative AI with real-time projects and interview preparation.',
+
+    tags: [
+      'AWS',
+      'DevOps',
+      'Linux',
+      'Git',
+      'GitHub',
+      'Docker',
+      'Jenkins',
+      'Kubernetes',
+      'Amazon EKS',
+      'Amazon ECR',
+      'Terraform',
+      'CloudWatch',
+      'Generative AI',
+      'CI/CD',
+      'Infrastructure as Code',
+    ],
+
+    color: 'from-orange-400 to-yellow-600',
+    textColor: 'text-orange-700',
+    bgColor: 'bg-orange-50',
+    bannerGrad: 'from-orange-500 via-yellow-500 to-orange-700',
+
+    syllabus: [
+      'Cloud Computing & DevOps Fundamentals',
+      'Linux Fundamentals for DevOps',
+      'AWS IAM & Security Fundamentals',
+      'Git & GitHub',
+      'AWS Networking – VPC',
+      'AWS EC2 & Load Balancing',
+      'Docker & Containerization',
+      'AWS ECR',
+      'Jenkins CI/CD',
+      'Kubernetes',
+      'AWS EKS',
+      'Terraform – Infrastructure as Code',
+      'AWS Monitoring & Logging',
+      'Generative AI for DevOps',
+      'Real-Time DevOps Project',
+      'Interview & Job Preparation',
+    ],
+
+    modules: [
+
+      // =========================================================
+      // CONCEPT 1 — CLOUD COMPUTING & DEVOPS FUNDAMENTALS
+      // =========================================================
+
+      {
+        concept: 'Cloud Computing & DevOps Fundamentals',
+        title: 'Module 1 – Cloud Computing & DevOps Fundamentals',
+        lessons: [
+          'Introduction to Cloud Computing',
+          'Traditional IT Infrastructure vs Cloud',
+          'Benefits of Cloud Computing',
+          'IaaS, PaaS and SaaS',
+          'Public, Private and Hybrid Cloud',
+          'Introduction to AWS',
+          'AWS Global Infrastructure',
+          'AWS Regions and Availability Zones',
+          'Introduction to DevOps',
+          'DevOps Lifecycle',
+          'DevOps Culture and Practices',
+          'Role and Responsibilities of a DevOps Engineer',
+          'DevOps Tools Overview',
+          'Real-Time DevOps Project Architecture',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 2 — LINUX FUNDAMENTALS FOR DEVOPS
+      // =========================================================
+
+      {
+        concept: 'Linux Fundamentals for DevOps',
+        title: 'Module 2 – Linux Fundamentals for DevOps',
+        lessons: [
+          'Introduction to Linux',
+          'Linux File System',
+          'Disk and Memory Management',
+          'Networking Commands',
+          'SSH',
+          'Linux Troubleshooting & Basic Shell Scripting',
+          'Process Management',
+          'File and Directory Management',
+          'Package Management',
+          'Users and Groups',
+          'Essential Linux Commands',
+          'File Permissions',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 3 — AWS IAM & SECURITY FUNDAMENTALS
+      // =========================================================
+
+      {
+        concept: 'AWS IAM & Security Fundamentals',
+        title: 'Module 3 – AWS IAM & Security Fundamentals',
+        lessons: [
+          'Introduction to IAM',
+          'IAM Users',
+          'IAM Groups',
+          'IAM Policies',
+          'Managed vs Custom Policies',
+          'IAM Roles',
+          'IAM Best Practices',
+          'Multi-Factor Authentication',
+          'EC2 IAM Roles',
+          'AWS CLI Configuration',
+          'Least Privilege Principle',
+          'Access Keys',
+          'Basic AWS Security Concepts',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 4 — GIT & GITHUB
+      // =========================================================
+
+      {
+        concept: 'Git & GitHub',
+        title: 'Module 4 – Git & GitHub',
+        lessons: [
+          'Introduction to Version Control',
+          'Git Architecture',
+          'Git Installation and Configuration',
+          'Git Repository',
+          'Git Basic Commands',
+          'Git Branching',
+          'Git Merge',
+          'Git Conflict Resolution',
+          'Git Tags',
+          'GitHub',
+          'Remote Repository',
+          'Push and Pull',
+          'Pull Requests',
+          'GitHub Branching Strategy',
+          'Git Best Practices',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 5 — AWS NETWORKING – VPC
+      // =========================================================
+
+      {
+        concept: 'AWS Networking – VPC',
+        title: 'Module 5 – AWS Networking – VPC',
+        lessons: [
+          'Introduction to Computer Networking',
+          'IP Address and CIDR',
+          'Introduction to Amazon VPC',
+          'VPC Components',
+          'Public and Private Subnets',
+          'Route Tables',
+          'Internet Gateway',
+          'NAT Gateway',
+          'Security Groups',
+          'Network ACL',
+          'Public vs Private IP',
+          'VPC Peering',
+          'DNS Basics',
+          'Network Troubleshooting',
+          'Production VPC Architecture',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 6 — AWS EC2 & LOAD BALANCING
+      // =========================================================
+
+      {
+        concept: 'AWS EC2 & Load Balancing',
+        title: 'Module 6 – AWS EC2 & Load Balancing',
+        lessons: [
+          'Introduction to Amazon EC2',
+          'EC2 Instance Types',
+          'Amazon Machine Images',
+          'Key Pairs',
+          'Security Groups',
+          'EBS Volumes',
+          'EC2 User Data',
+          'SSH Connection',
+          'Install Software on EC2',
+          'Application Deployment on EC2',
+          'Application Load Balancer',
+          'Target Groups',
+          'Health Checks',
+          'Auto Scaling Groups',
+          'High Availability',
+          'EC2 Troubleshooting',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 7 — DOCKER & CONTAINERIZATION
+      // =========================================================
+
+      {
+        concept: 'Docker & Containerization',
+        title: 'Module 7 – Docker & Containerization',
+        lessons: [
+          'Introduction to Containers',
+          'Virtual Machines vs Containers',
+          'Docker Architecture',
+          'Docker Installation',
+          'Docker Images',
+          'Docker Containers',
+          'Docker Commands',
+          'Dockerfile',
+          'Docker Image Creation',
+          'Docker Registry',
+          'Docker Networking',
+          'Docker Volumes',
+          'Docker Environment Variables',
+          'Docker Compose',
+          'Multi-Container Applications',
+          'Docker Image Optimization',
+          'Docker Troubleshooting',
+          'Container Security Basics',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 8 — AWS ECR
+      // =========================================================
+
+      {
+        concept: 'AWS ECR',
+        title: 'Module 8 – AWS ECR',
+        lessons: [
+          'Introduction to Amazon ECR',
+          'Why ECR is Used',
+          'ECR Repository',
+          'Create ECR Repository',
+          'Docker Authentication with ECR',
+          'Tag Docker Images',
+          'Push Docker Image to ECR',
+          'Pull Docker Image from ECR',
+          'Image Tags',
+          'ECR Lifecycle Policy – Basics',
+          'ECR Security Basics',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 9 — JENKINS CI/CD
+      // =========================================================
+
+      {
+        concept: 'Jenkins CI/CD',
+        title: 'Module 9 – Jenkins CI/CD',
+        lessons: [
+          'Introduction to Jenkins',
+          'Why Jenkins is Used in DevOps',
+          'Jenkins Controller & Agents',
+          'Jenkins Architecture',
+          'Jenkins Installation',
+          'Jenkins Jobs',
+          'Jenkins Dashboard',
+          'Jenkins Plugins',
+          'Jenkins + GitHub Integration',
+          'Jenkins Pipeline',
+          'Jenkins Freestyle Projects',
+          'Jenkinsfile',
+          'Pipeline Stages',
+          'Declarative Pipeline',
+          'Build Automation',
+          'Maven Build',
+          'Jenkins + AWS',
+          'Jenkins + Docker',
+          'Jenkins + ECR',
+          'Environment Variables',
+          'Jenkins + ECS',
+          'Credentials Management',
+          'Approval Gates',
+          'Deployment Strategies',
+          'Jenkins Troubleshooting',
+          'Rollback Strategy',
+          'CI/CD Best Practices',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 10 — KUBERNETES
+      // =========================================================
+
+      {
+        concept: 'Kubernetes',
+        title: 'Module 10 – Kubernetes',
+        lessons: [
+          'Introduction to Kubernetes',
+          'Why Kubernetes?',
+          'Kubernetes Architecture',
+          'Control Plane',
+          'Worker Nodes',
+          'Kubernetes Objects',
+          'Pods',
+          'Namespaces',
+          'Labels and Selectors',
+          'Deployments',
+          'ReplicaSets',
+          'Services',
+          'ClusterIP',
+          'NodePort',
+          'LoadBalancer',
+          'YAML Files',
+          'ConfigMaps',
+          'Secrets',
+          'Kubernetes Commands',
+          'Rolling Updates',
+          'Rollbacks',
+          'Kubernetes Troubleshooting',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 11 — AWS EKS
+      // =========================================================
+
+      {
+        concept: 'AWS EKS',
+        title: 'Module 11 – AWS EKS',
+        lessons: [
+          'Introduction to Amazon EKS',
+          'Why EKS?',
+          'EKS vs Kubernetes',
+          'EKS Architecture',
+          'EKS Control Plane – Basics',
+          'Worker Nodes',
+          'Managed Node Groups',
+          'EKS Cluster Creation',
+          'AWS CLI + Kubernetes',
+          'Kubernetes Service on EKS',
+          'Deploy Application on EKS',
+          'Basic Ingress Concept',
+          'EKS + ECR',
+          'Kubernetes Deployment on EKS',
+          'Basic EKS Troubleshooting',
+          'Basic EKS Security Concepts',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 12 — TERRAFORM
+      // =========================================================
+
+      {
+        concept: 'Terraform – Infrastructure as Code',
+        title: 'Module 12 – Terraform – Infrastructure as Code',
+        lessons: [
+          'Introduction to Infrastructure as Code',
+          'Terraform Introduction',
+          'Terraform Installation',
+          'Terraform Architecture',
+          'Terraform Providers',
+          'Resources',
+          'Variables',
+          'Outputs',
+          'Terraform Plan',
+          'Terraform Apply',
+          'Terraform Commands',
+          'Terraform Destroy',
+          'Terraform State',
+          'Terraform with AWS',
+          'Create AWS Infrastructure Using Terraform',
+          'Terraform Modules',
+          'Terraform Best Practices',
+          'Terraform Troubleshooting',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 13 — AWS MONITORING & LOGGING
+      // =========================================================
+
+      {
+        concept: 'AWS Monitoring & Logging',
+        title: 'Module 13 – AWS Monitoring & Logging',
+        lessons: [
+          'Introduction to Monitoring',
+          'Amazon CloudWatch',
+          'CloudWatch Metrics',
+          'CloudWatch Logs',
+          'CloudWatch Dashboards',
+          'CloudWatch Alarms',
+          'SNS Notifications',
+          'EC2 Monitoring',
+          'Application Monitoring',
+          'Container Monitoring',
+          'Kubernetes Monitoring Basics',
+          'Log Analysis',
+          'Production Monitoring',
+          'Troubleshooting Using Logs and Metrics',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 14 — GENERATIVE AI FOR DEVOPS
+      // =========================================================
+
+      {
+        concept: 'Generative AI for DevOps',
+        title: 'Module 14 – Generative AI for DevOps',
+        lessons: [
+          'Introduction to Generative AI',
+          'GenAI Use Cases in DevOps',
+          'AI-Assisted DevOps',
+          'Using AI for Linux Commands',
+          'Generating Kubernetes YAML',
+          'Troubleshooting Errors Using AI',
+          'Log Analysis Using AI',
+          'AI-Assisted Documentation',
+          'Best Practices and Limitations of AI-Generated Code',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 15 — REAL-TIME DEVOPS PROJECT
+      // =========================================================
+
+      {
+        concept: 'Real-Time DevOps Project',
+        title: 'Module 15 – E-Commerce Application – End-to-End DevOps Project',
+        lessons: [
+          'Application Source Code Management Using GitHub',
+          'AWS Infrastructure Using Terraform',
+          'Dockerize the Application',
+          'Build Docker Image',
+          'Push Image to Amazon ECR',
+          'Configure Kubernetes Deployment and Service',
+          'Build CI/CD Pipeline Using Jenkins',
+          'Deploy Application on Amazon EKS',
+          'Configure Load Balancer / Ingress',
+          'Implement Rolling Deployment',
+          'Implement Rollback',
+          'Configure CloudWatch Monitoring',
+          'Troubleshoot Deployment Issues',
+          'Use Generative AI for Troubleshooting and Automation',
+          'Project Documentation',
+          'Project Presentation',
+        ],
+      },
+
+
+      // =========================================================
+      // CONCEPT 16 — INTERVIEW & JOB PREPARATION
+      // =========================================================
+
+      {
+        concept: 'Interview & Job Preparation',
+        title: 'Module 16 – Interview & Job Preparation',
+        lessons: [
+          'AWS DevOps Interview Questions',
+          'Git Interview Questions',
+          'Docker Interview Questions',
+          'Jenkins Interview Questions',
+          'Kubernetes Interview Questions',
+          'Terraform Interview Questions',
+          'AWS Scenario-Based Questions',
+          'Production Incident Scenarios',
+          'CI/CD Troubleshooting Scenarios',
+          'Resume Project Explanation',
+          'Real-Time Project Discussion',
+          'Technical Interview Questions',
+          'Mock Interviews',
+        ],
+      },
+    ],
+
+
+    // =========================================================
+    // SKILLS
+    // =========================================================
+
+    skills: [
+      'Amazon Web Services (AWS)',
+      'Cloud Computing',
+      'DevOps',
+      'Linux Administration',
+      'Shell Scripting',
+      'AWS IAM',
+      'AWS Security',
+      'AWS CLI',
+      'Git',
+      'GitHub',
+      'Git Branching',
+      'GitHub Workflows',
+      'AWS VPC',
+      'AWS Networking',
+      'Amazon EC2',
+      'Amazon EBS',
+      'Application Load Balancer',
+      'Auto Scaling',
+      'Docker',
+      'Docker Compose',
+      'Containerization',
+      'Amazon ECR',
+      'Jenkins',
+      'CI/CD',
+      'Jenkins Pipeline',
+      'Maven',
+      'Kubernetes',
+      'Amazon EKS',
+      'Kubernetes Deployments',
+      'Kubernetes Services',
+      'Ingress',
+      'Terraform',
+      'Infrastructure as Code',
+      'AWS CloudWatch',
+      'AWS Monitoring',
+      'AWS Logging',
+      'Generative AI',
+      'AI-Assisted DevOps',
+      'DevOps Automation',
+      'Cloud Troubleshooting',
+    ],
+
+
+    // =========================================================
+    // TOOLS
+    // =========================================================
+
+    tools: [
+      'Amazon Web Services (AWS)',
+      'AWS Management Console',
+      'AWS CLI',
+      'Linux',
+      'Git',
+      'GitHub',
+      'Docker',
+      'Docker Compose',
+      'Amazon ECR',
+      'Jenkins',
+      'Maven',
+      'Kubernetes',
+      'kubectl',
+      'Amazon EKS',
+      'Terraform',
+      'Amazon CloudWatch',
+      'Amazon SNS',
+      'Generative AI Tools',
+    ],
+
+
+    // =========================================================
+    // PROJECTS
+    // =========================================================
+
+    projects: [
+      {
+        title: 'E-Commerce Application – End-to-End DevOps Project',
+        desc:
+          'Build and deploy an e-commerce application using AWS DevOps practices including GitHub, Docker, Amazon ECR, Jenkins CI/CD, Kubernetes, Amazon EKS, Terraform, Load Balancer/Ingress, CloudWatch monitoring, rolling deployment, rollback, and Generative AI-assisted troubleshooting.',
+      },
+
+      {
+        title: 'AWS Infrastructure Automation Project',
+        desc:
+          'Create and manage AWS infrastructure using Terraform Infrastructure as Code with reusable configurations, variables, outputs, state management, planning, deployment, and troubleshooting.',
+      },
+
+      {
+        title: 'CI/CD Pipeline Project',
+        desc:
+          'Build an automated Jenkins CI/CD pipeline integrated with GitHub, Docker, Amazon ECR, and AWS deployment services for automated application build and deployment.',
+      },
+
+      {
+        title: 'Kubernetes & EKS Deployment Project',
+        desc:
+          'Deploy containerized applications using Kubernetes and Amazon EKS with deployments, services, ConfigMaps, Secrets, Ingress, rolling updates, rollback, and troubleshooting.',
+      },
+    ],
+
+
+    // =========================================================
+    // CAREERS
+    // =========================================================
+
+    careers: [
+      'AWS DevOps Engineer',
+      'DevOps Engineer',
+      'Cloud DevOps Engineer',
+      'AWS Cloud Engineer',
+      'Cloud Engineer',
+      'Site Reliability Engineer (SRE)',
+      'DevOps Automation Engineer',
+      'CI/CD Engineer',
+      'Cloud Infrastructure Engineer',
+      'Kubernetes Engineer',
+      'AWS Solutions Engineer',
+      'Infrastructure Engineer',
+      'Platform Engineer',
+      'Cloud Support Engineer',
+    ],
+
+
+    // =========================================================
+    // FAQS
+    // =========================================================
+
+    faqs: [
+      {
+        q: 'How long is the course?',
+        a:
+          'The complete AWS DevOps Engineer & AI Program is 100 hours and includes practical training, real-time projects, assessments, interview preparation, and career support.',
+      },
+
+      {
+        q: 'Is this course suitable for beginners?',
+        a:
+          'Yes. The program is designed to build AWS DevOps skills progressively, starting with cloud computing and DevOps fundamentals and moving toward Docker, Kubernetes, Jenkins, EKS, Terraform, monitoring, and Generative AI.',
+      },
+
+      {
+        q: 'Is the course available online?',
+        a:
+          'Yes. The program is offered online with live training sessions and practical learning.',
+      },
+
+      {
+        q: 'Does the course include real-time projects?',
+        a:
+          'Yes. The program includes an end-to-end E-Commerce DevOps project covering GitHub, Terraform, Docker, Amazon ECR, Jenkins, Kubernetes, Amazon EKS, monitoring, deployment, rollback, and Generative AI-assisted troubleshooting.',
+      },
+
+      {
+        q: 'What technologies are covered in the course?',
+        a:
+          'The program covers AWS, Linux, Git, GitHub, Docker, Amazon ECR, Jenkins, Kubernetes, Amazon EKS, Terraform, Amazon CloudWatch, AWS networking, IAM, CI/CD, and Generative AI for DevOps.',
+      },
+
+      {
+        q: 'Does the program include Kubernetes and Docker?',
+        a:
+          'Yes. The program covers Docker and containerization, Docker networking and volumes, Docker Compose, Kubernetes architecture, Pods, Deployments, Services, ConfigMaps, Secrets, rolling updates, rollbacks, troubleshooting, and Amazon EKS.',
+      },
+
+      {
+        q: 'Does the course include CI/CD?',
+        a:
+          'Yes. Jenkins CI/CD is covered in detail, including Jenkins pipelines, Jenkinsfile, GitHub integration, Maven builds, Docker integration, Amazon ECR integration, credentials management, deployment strategies, rollback, troubleshooting, and CI/CD best practices.',
+      },
+
+      {
+        q: 'Does the course include Terraform?',
+        a:
+          'Yes. The Terraform module covers Infrastructure as Code, Terraform architecture, providers, resources, variables, outputs, plan, apply, destroy, state, modules, AWS infrastructure automation, best practices, and troubleshooting.',
+      },
+
+      {
+        q: 'Does the course include Generative AI?',
+        a:
+          'Yes. The program includes Generative AI concepts and practical DevOps use cases such as generating Linux commands, creating Kubernetes YAML, troubleshooting errors, analyzing logs, creating documentation, and AI-assisted automation.',
+      },
+
+      {
+        q: 'Does the program include interview preparation?',
+        a:
+          'Yes. Interview preparation includes AWS, DevOps, Git, Docker, Jenkins, Kubernetes, and Terraform interview questions, scenario-based questions, production incident scenarios, CI/CD troubleshooting scenarios, project explanation, technical discussions, and mock interviews.',
+      },
+
+      {
+        q: 'Is placement assistance provided?',
+        a:
+          'The program information includes job assistance and career support, along with interview preparation, mock interviews, project presentation, and technical communication practice.',
+      },
+    ],
+  }
 ]
 
 export const TESTIMONIALS = [
@@ -3376,8 +4075,8 @@ export const HIRING_PARTNERS = [
 ]
 
 export const CONTACT_INFO = {
-  address: '3rd Floor, Tech Hub, Andheri East, Mumbai - 400069, Maharashtra',
-  phone: '+91 98765 43210',
+  address: 'Suman Business Park, 1st Floor, Office No. 101, Kalyani Nagar, Pune, Maharashtra – 411014, India',
+  phone: '+91 87668 71816',
   email: 'info@intellxskill.in',
   website: 'www.intellxskill.in',
   hours: 'Mon–Sat: 9:00 AM – 7:00 PM',
