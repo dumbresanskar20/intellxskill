@@ -109,11 +109,15 @@ export const Courses: React.FC = () => {
   const filtered =
     activeFilter === 'All'
       ? COURSES
-      : COURSES.filter(c =>
-          Array.isArray(c.category)
-            ? c.category.includes(activeFilter)
-            : c.category === activeFilter
-        )
+      : COURSES.filter(c => {
+          if (Array.isArray(c.category)) {
+            return c.category.includes(activeFilter)
+          }
+          if (activeFilter === 'AI' && c.category === 'DEVOPS and AI') {
+            return true
+          }
+          return c.category === activeFilter
+        })
 
   return (
     <SectionWrapper id="courses" className="bg-gray-50/30">

@@ -22,7 +22,17 @@ export interface WhyCard {
   iconColor: string
 }
 
-export type CourseCategory = 'All' | 'AI' | 'Data Analytics' | 'SQL Server' | 'Power BI' | 'SAP' | 'DBA'
+export type CourseCategory =
+  | 'All'
+  | 'AI'
+  | 'Data Analytics'
+  | 'SQL Server'
+  | 'Power BI'
+  | 'SAP'
+  | 'DBA'
+  | 'Business Intelligence'
+  | 'SQL DBA'
+  | 'DEVOPS and AI'
 
 export interface CourseModule {
   concept?: string

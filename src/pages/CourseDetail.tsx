@@ -295,7 +295,7 @@ export const CourseDetail: React.FC = () => {
                 transition={{ duration: 0.4, delay: 0.05 }}
                 className="inline-block px-4 py-1.5 bg-white/15 text-white text-xs font-bold rounded-full mb-5 backdrop-blur-sm"
               >
-                {course.category}
+                {Array.isArray(course.category) ? course.category.join(' · ') : course.category}
               </motion.span>
 
               <motion.h1

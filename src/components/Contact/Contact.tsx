@@ -7,10 +7,15 @@ import { CONTACT_INFO, COURSE_OPTIONS } from '../../constants/data'
 import type { ContactFormData } from '../../types'
 import { Button } from '../Common/Button'
 
-// FormSubmit.co endpoint — sends form data directly to info@intellxskill.in
-// No account or API keys needed. On the first submission, FormSubmit will
-// send a confirmation email to info@intellxskill.in — click the link to activate.
-const FORMSUBMIT_URL = 'https://formsubmit.co/info@intellxskill.in'
+// Primary: Direct PHP mailer on cPanel server (bypasses external spam filters for local delivery)
+const DIRECT_MAIL_URL =
+  typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'https://intellxskill.in/send-mail.php'
+    : '/send-mail.php'
+
+// Fallback: FormSubmit.co AJAX endpoint
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/info@intellxskill.in'
 
 interface ContactProps {
   onSubmitSuccess: () => void
@@ -20,6 +25,7 @@ interface ContactProps {
 export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess, onSubmitError }) => {
   const formRef = useRef<HTMLFormElement>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const {
     register,
     handleSubmit,
@@ -28,32 +34,78 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess, onSubmitError
   } = useForm<ContactFormData>()
 
   const onSubmit = async (data: ContactFormData) => {
+    setErrorMessage(null)
     try {
-      const response = await fetch(FORMSUBMIT_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          Name: data.name,
-          Email: data.email,
-          Phone: data.phone,
-          'Interested Course': data.course,
-          Message: data.message || 'No message provided',
-          _subject: `New Demo Booking: ${data.course}`,
-          _template: 'table',
-        }),
-      })
+      let sentSuccessfully = false
 
-      if (!response.ok) throw new Error('Network response was not ok')
+      // 1. Try sending directly through cPanel server mailer
+      try {
+        const directResponse = await fetch(DIRECT_MAIL_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            course: data.course,
+            message: data.message || 'No message provided',
+          }),
+        })
+
+        if (directResponse.ok) {
+          const directResult = await directResponse.json().catch(() => null)
+          if (directResult && (directResult.success === true || directResult.success === 'true')) {
+            sentSuccessfully = true
+          }
+        }
+      } catch (err) {
+        console.warn('Direct mailer unreachable, trying fallback endpoint:', err)
+      }
+
+      // 2. If direct mailer did not complete, fall back to FormSubmit
+      if (!sentSuccessfully) {
+        const response = await fetch(FORMSUBMIT_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            Name: data.name,
+            Email: data.email,
+            Phone: data.phone,
+            'Interested Course': data.course,
+            Message: data.message || 'No message provided',
+            _subject: `New Demo Booking: ${data.name} - ${data.course}`,
+            _replyto: data.email,
+            _template: 'table',
+            _captcha: 'false',
+          }),
+        })
+
+        const result = await response.json().catch(() => null)
+
+        if (!response.ok || (result && (result.success === 'false' || result.success === false))) {
+          const message =
+            result?.message || 'Failed to send message. Please try again or contact us directly at info@intellxskill.in'
+          throw new Error(message)
+        }
+      }
 
       reset()
       setSubmitted(true)
       onSubmitSuccess()
-    } catch (error) {
-      console.error('FormSubmit Error:', error)
-      onSubmitError?.('Failed to send message. Please try again or contact us directly at info@intellxskill.in')
+    } catch (error: unknown) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : 'Failed to send message. Please try again or contact us directly at info@intellxskill.in'
+      console.error('Form Submission Error:', error)
+      setErrorMessage(message)
+      onSubmitError?.(message)
     }
   }
 
@@ -228,6 +280,16 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess, onSubmitError
               )}
 
               <h3 className="text-xl font-bold text-gray-900 mb-6">Book a Free Demo Session</h3>
+
+              {errorMessage && (
+                <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-3">
+                  <span className="text-red-500 font-bold">⚠️</span>
+                  <div>
+                    <p className="font-semibold mb-0.5">Submission issue</p>
+                    <p className="text-xs text-red-600">{errorMessage}</p>
+                  </div>
+                </div>
+              )}
 
               <form
                 ref={formRef}

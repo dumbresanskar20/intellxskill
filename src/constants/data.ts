@@ -7,6 +7,7 @@ import ssisPowerBiCourseImg from '../assets/ssis-powerbi-course.jpg'
 import snowflakeCourseImg from '../assets/snowflake-course.png'
 import coreSqlDbaCourseImg from '../assets/core-sql-dba-course.png'
 import sapCourseImg from '../assets/sap-course.png'
+import awsDevopsCourseImg from '../assets/aws-devops-course.jpg'
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -1828,7 +1829,7 @@ export const COURSES: Course[] = [
     id: 3,
     slug: 'advanced-sql-server-ssis-power-bi',
     title: 'Advanced SQL Server, SSIS & Power BI Program',
-    category: 'Power BI',
+    category: 'Business Intelligence',
     duration: '100 Hours',
     sessions: 'Live Sessions',
     mode: 'Online',
@@ -2887,7 +2888,7 @@ export const COURSES: Course[] = [
     id: 5,
     slug: 'core-sql-server-dba-program',
     title: 'Core SQL Server DBA Program',
-    category: 'DBA',
+    category: 'SQL DBA',
     duration: '100 Hours',
     sessions: 'Weekday & Weekend Batches Available',
     mode: 'Online Training',
@@ -3592,7 +3593,7 @@ export const COURSES: Course[] = [
     id: 7,
     slug: 'aws-devops-engineer-ai',
     title: 'AWS DevOps Engineer & AI Program',
-    category: 'AI',
+    category: 'DEVOPS and AI',
     duration: '100 Hours',
     sessions: 'Live Sessions',
     mode: 'Online',
@@ -3623,6 +3624,7 @@ export const COURSES: Course[] = [
     textColor: 'text-orange-700',
     bgColor: 'bg-orange-50',
     bannerGrad: 'from-orange-500 via-yellow-500 to-orange-700',
+    image: awsDevopsCourseImg,
 
     syllabus: [
       'Cloud Computing & DevOps Fundamentals',
@@ -4404,8 +4406,8 @@ export const COURSE_OPTIONS = [
   'Advanced SQL Server Program',
   'Advanced Data Analytics with Snowflake & AI',
   'SAP MM + S/4 HANA Program',
-  'Advanced Data Analytics with Databricks & AI'
-
+  'Advanced Data Analytics with Databricks & AI',
+  'AWS DevOps Engineer & AI Program',
 ]
 
 export const SOCIAL_LINKS = [
@@ -4457,4 +4459,13 @@ export const ABOUT_TABS = [
   },
 ]
 
-export const FILTER_CATEGORIES: CourseCategory[] = ['All', 'AI', 'Data Analytics', 'SQL Server', 'Power BI', 'SAP', 'DBA']
+export const FILTER_CATEGORIES: CourseCategory[] = [
+  'All',
+  'AI',
+  'Data Analytics',
+  'SQL Server',
+  'Business Intelligence',
+  'SAP',
+  'SQL DBA',
+  'DEVOPS and AI',
+]
