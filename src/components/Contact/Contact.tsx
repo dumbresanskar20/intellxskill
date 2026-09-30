@@ -351,12 +351,23 @@ export const Contact: React.FC<ContactProps> = ({ onSubmitSuccess, onSubmitError
                       <input
                         id="phone"
                         type="tel"
+                        inputMode="numeric"
+                        maxLength={10}
                         placeholder="+91 98765 43210"
                         className={inputClass(!!errors.phone)}
                         aria-describedby={errors.phone ? 'phone-error' : undefined}
                         {...register('phone', {
-                          required: 'Phone number is required',
-                          pattern: { value: /^[\d\s\+\-\(\)]{8,15}$/, message: 'Enter a valid phone number' },
+                          required: 'Please enter a valid 10-digit mobile number.',
+                          pattern: {
+                            value: /^[6-9][0-9]{9}$/,
+                            message: 'Please enter a valid 10-digit mobile number.',
+                          },
+                          validate: (value: string) => {
+                            if (/^(\d)\1{9}$/.test(value)) {
+                              return 'Please enter a valid 10-digit mobile number.'
+                            }
+                            return true
+                          },
                         })}
                       />
                       {errors.phone && (

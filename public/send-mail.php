@@ -47,6 +47,17 @@ if (empty($name) || empty($email) || empty($phone) || empty($course)) {
     exit;
 }
 
+// Strict Indian mobile-number validation
+$phone = trim($phone);
+if (!preg_match('/^[6-9][0-9]{9}$/', $phone) || preg_match('/^([0-9])\1{9}$/', $phone)) {
+    http_response_code(400);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Please enter a valid 10-digit mobile number.'
+    ]);
+    exit;
+}
+
 // Recipient email (local cPanel domain mailbox)
 $to = 'info@intellxskill.in';
 $subject = "New Demo Booking: " . $name . " - " . $course;
