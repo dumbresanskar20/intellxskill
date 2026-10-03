@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const WHATSAPP_NUMBER = '8766871816' // Replace with real number
+const WHATSAPP_NUMBER = '918766871816'
 const WHATSAPP_MESSAGE = 'Hello! I am interested in learning more about your courses at IntellxSkill Technologies.'
 
 export const WhatsAppButton: React.FC = () => {
