@@ -4411,7 +4411,7 @@ export const COURSE_OPTIONS = [
 ]
 
 export const SOCIAL_LINKS = [
-  { icon: 'Linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/intellxskilltechnologies-undefined-402892414/' },
+  { icon: 'Linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/company/intellxskill-technologies/' },
   { icon: 'Youtube', label: 'YouTube', href: 'https://www.youtube.com/@IntellxskillTechnologies' },
   { icon: 'Instagram', label: 'Instagram', href: 'https://www.instagram.com/intellxskill_technologies/' },
   { icon: 'Facebook', label: 'Facebook', href: 'https://www.facebook.com/?checkpoint_src=any' },

@@ -67,7 +67,7 @@ export const Footer: React.FC = () => {
   }
 
   const socialLinks = [
-    { name: 'LinkedIn', Icon: SocialIcons.LinkedIn, href: 'https://www.linkedin.com/in/intellxskilltechnologies-undefined-402892414/' },
+    { name: 'LinkedIn', Icon: SocialIcons.LinkedIn, href: 'https://www.linkedin.com/company/intellxskill-technologies/' },
     { name: 'YouTube', Icon: SocialIcons.YouTube, href: 'https://www.youtube.com/@IntellxskillTechnologies' },
     { name: 'Instagram', Icon: SocialIcons.Instagram, href: 'https://www.instagram.com/intellxskill_technologies/' },
     { name: 'Facebook', Icon: SocialIcons.Facebook, href: 'https://www.facebook.com/?checkpoint_src=any' },
