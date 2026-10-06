@@ -62,7 +62,7 @@ const ReviewModal: React.FC<{
           aria-modal="true"
           aria-label={`Full review by ${testimonial.name}`}
         >
-          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg p-8 relative">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg p-8 relative max-h-[85vh] overflow-y-auto">
             {/* Close button */}
             <button
               type="button"
@@ -84,7 +84,7 @@ const ReviewModal: React.FC<{
             </div>
 
             {/* Full review */}
-            <blockquote className="text-base text-gray-700 leading-relaxed mb-6">
+            <blockquote className="text-base text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
               "{testimonial.review}"
             </blockquote>
 
@@ -99,7 +99,7 @@ const ReviewModal: React.FC<{
               <div>
                 <p className="font-bold text-gray-900">{testimonial.name}</p>
                 <p className="text-sm text-gray-500">
-                  {testimonial.role} · {testimonial.company}
+                  {testimonial.role}{testimonial.company ? ` · ${testimonial.company}` : ''}
                 </p>
               </div>
             </div>
@@ -115,10 +115,15 @@ const TestimonialCard: React.FC<{
   testimonial: Testimonial
   onReadMore: (t: Testimonial) => void
 }> = ({ testimonial, onReadMore }) => {
-  const isLong = testimonial.review.length > CHAR_LIMIT
+  const cleanReview = testimonial.review.replace(/\s+/g, ' ').trim()
+  const isLong = cleanReview.length > CHAR_LIMIT
   const preview = isLong
-    ? testimonial.review.slice(0, CHAR_LIMIT).trimEnd() + '…'
-    : testimonial.review
+    ? (() => {
+        const trimmed = cleanReview.slice(0, CHAR_LIMIT)
+        const lastSpace = trimmed.lastIndexOf(' ')
+        return (lastSpace > 0 ? trimmed.slice(0, lastSpace) : trimmed).trimEnd() + '…'
+      })()
+    : cleanReview
 
   return (
     <div
@@ -165,7 +170,7 @@ const TestimonialCard: React.FC<{
         <div className="min-w-0">
           <p className="text-sm font-bold text-gray-900 truncate">{testimonial.name}</p>
           <p className="text-xs text-gray-500 truncate">
-            {testimonial.role} · {testimonial.company}
+            {testimonial.role}{testimonial.company ? ` · ${testimonial.company}` : ''}
           </p>
         </div>
       </div>
@@ -206,9 +211,9 @@ export const Testimonials: React.FC = () => {
 
         {/* Scrolling track */}
         <div
-          className="flex"
+          className="flex marquee-track"
           style={{
-            animation: 'marquee-rtl 30s linear infinite',
+            animation: 'marquee-rtl 35s linear infinite',
             width: 'max-content',
           }}
         >
@@ -231,6 +236,9 @@ export const Testimonials: React.FC = () => {
         @keyframes marquee-rtl {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </SectionWrapper>
