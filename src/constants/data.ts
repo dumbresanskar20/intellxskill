@@ -3588,9 +3588,672 @@ export const COURSES: Course[] = [
       },
     ],
   },
-  // 7
+
+  // 7 — SAP S/4 HANA FICCO
   {
     id: 7,
+    slug: 'sap-s4-hana-finance-controlling',
+    title: 'SAP S/4 HANA Finance & Controlling Program',
+    category: 'SAP',
+    duration: '100 Hours',
+    sessions: 'Live + Recorded Training',
+    mode: 'Online Training',
+    level: 'Beginner to Advanced',
+    description:
+      'Master SAP S/4 HANA Finance & Controlling (FICCO) from fundamentals to advanced configuration, covering enterprise structure, general ledger, accounts payable, accounts receivable, asset accounting, GST, withholding tax, automatic payments, cash journal, depreciation, integration with MM/SD, financial reporting, and controlling.',
+
+    tags: [
+      'SAP FICCO',
+      'SAP S/4HANA',
+      'SAP Finance',
+      'SAP Controlling',
+      'General Ledger',
+      'Accounts Payable',
+      'Accounts Receivable',
+      'Asset Accounting',
+      'GST in SAP',
+      'Financial Reporting',
+    ],
+
+    color: 'from-emerald-500 to-teal-600',
+    textColor: 'text-emerald-700',
+    bgColor: 'bg-emerald-50',
+    bannerGrad: 'from-emerald-500 via-teal-600 to-cyan-700',
+    image: sapCourseImg,
+
+    syllabus: [
+      'Introduction to SAP FICCO',
+      'Finance Transaction Migrations to SAP S/4 HANA',
+      'SAP HANA FI – Enterprise Structure',
+      'Financial Accounting Global Settings',
+      'General Ledgers',
+      'GL Document Types',
+      'New General Ledger Accounting',
+      'Accounts Payable',
+      'Special GL Transactions for Vendor',
+      'Accounts Receivable',
+      'Special GL Transactions for Customer',
+      'Business Partners',
+      'Terms of Payment / Discount Scenario',
+      'GST – Goods & Service Tax Settings',
+      'Dunning Process',
+      'House Bank & Accounts',
+      'Automatic Payment Programmes',
+      'Cash Journal / Petty Cash Book',
+      'With-Holding Tax',
+      'Assets Accounting',
+      'Depreciation Keys',
+      'Integration (FI with MM & SD)',
+      'Financial Reporting',
+      'Final Closing Activities',
+      'Maintain Controlling Area',
+    ],
+
+    modules: [
+
+      // =========================================================
+      // MODULE 1 — INTRODUCTION TO SAP FICCO
+      // =========================================================
+
+      {
+        concept: 'Introduction to SAP FICCO',
+        title: 'Module 1 – Introduction to SAP FICCO',
+        lessons: [
+          'Introduction to ERP',
+          'Introduction to SAP',
+          'What is SAP ECC & SAP S/4 HANA?',
+          'Differences Between SAP ECC & SAP S/4 HANA',
+          'SAP History & SAP Versions',
+          'SAP Releases',
+          'SAP R/3 Architecture',
+          'Types of Servers',
+          'Commonly Used SAP Abbreviations',
+          'Types of SAP Projects',
+          'Module Introduction',
+          'SAP Project Phases',
+        ],
+      },
+
+      {
+        concept: 'Introduction to SAP FICCO',
+        title: 'Module 1B – SAP Methodology (ACTIVATE & ASAP)',
+        lessons: [
+          'ACTIVATE Methodology – Discover',
+          'ACTIVATE Methodology – Prepare',
+          'ACTIVATE Methodology – Configuration / Customization',
+          'ACTIVATE Methodology – Realize',
+          'ACTIVATE Methodology – Deploy',
+          'ACTIVATE Methodology – Run',
+          'ASAP Methodology – Project Preparation',
+          'ASAP Methodology – BBP (Business Blue Print)',
+          'ASAP Methodology – Configuration / Customization',
+          'ASAP Methodology – Final Preparation',
+          'ASAP Methodology – Go Live',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 2 — FINANCE TRANSACTION MIGRATIONS
+      // =========================================================
+
+      {
+        concept: 'Finance Transaction Migrations to SAP S/4 HANA',
+        title: 'Module 2 – Finance Transaction Migrations to SAP S/4 HANA',
+        lessons: [
+          'Pre-Check Programs and Integration',
+          'Preparation of Entries and Integration',
+          'Installation of SAP S/4 HANA',
+          'Customer-Vendor Migration Programs',
+          'Data Migration (General Ledger / AP / AR / CO / FI-AA / ML / CM)',
+          'Customizing and Configuration',
+          'Reconciliation and Checks after Migration',
+          'Migration of House-Banks',
+          'Post-Processing',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 3 — ENTERPRISE STRUCTURE
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – Enterprise Structure',
+        title: 'Module 3 – SAP HANA FI – Enterprise Structure',
+        lessons: [
+          'Company Creation',
+          'Company Code Configuration',
+          'Business Area',
+          'Consolidation Business Area',
+          'Define Functional Area',
+          'Define Financial Management Area',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 4 — FINANCIAL ACCOUNTING GLOBAL SETTINGS
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – Financial Accounting Global Settings',
+        title: 'Module 4 – Financial Accounting Global Settings',
+        lessons: [
+          'Define & Assign Fiscal Year Variant',
+          'Define & Assign Posting Period Variant',
+          'Define Open & Close Posting Period',
+          'Define Document Types',
+          'Define Posting Keys',
+          'Define & Assign Field Status Variant',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 5 — GENERAL LEDGERS
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – General Ledgers',
+        title: 'Module 5 – General Ledgers',
+        lessons: [
+          'Define & Assign Chart of Account',
+          'Define Account Groups',
+          'Define Retained Earning Account',
+          'Define Tolerance Group for GL',
+          'Define Tolerance Group for Employee',
+          'Define Number Ranges for GL Document',
+          'Define Global Parameters',
+          'GL A/C Creation Session',
+          'How to Create & Manage Sessions',
+          'Document Splitting',
+          'General Ledger Posting',
+          'How to View G/L Line-Item Balances',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 6 — GL DOCUMENT TYPES
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – GL Document Types',
+        title: 'Module 6 – GL Document Types',
+        lessons: [
+          'Parking Document',
+          'Held Document',
+          'Recurring Document',
+          'Manual Clearing, Post with Clearing & Auto Clearing',
+          'Sample Document',
+          'Reversal / Reverse Document',
+          'Mass Reversal and Reset Clearing of Document',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 7 — NEW GENERAL LEDGER ACCOUNTING
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – New General Ledger Accounting',
+        title: 'Module 7 – New General Ledger Accounting in SAP S/4 HANA',
+        lessons: [
+          'Concept of New General Ledger Accounting in SAP S/4 HANA',
+          'Configuring Multiple Ledger',
+          'Configuring Leading and Non-Leading Ledger',
+          'Document Splitting',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 8 — ACCOUNTS PAYABLE
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – Accounts Payable',
+        title: 'Module 8 – Accounts Payable',
+        lessons: [
+          'Vendor Group Creation',
+          'Create & Assign Number Range for A/C Group',
+          'Creation of Reconciliation A/C',
+          'Define Document Types & Number Ranges for Invoice Postings',
+          'Define Tolerance for Vendor',
+          'Create & Maintain Vendor Master Data',
+          'Vendor / Purchase Invoice Posting',
+          'Vendor Payment Posting (Outgoing Payment)',
+          'How to View Vendor Balances',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 9 — SPECIAL GL TRANSACTIONS FOR VENDOR
+      // =========================================================
+
+      {
+        concept: 'Special GL Transactions for Vendor',
+        title: 'Module 9 – Special GL Transactions for Vendor',
+        lessons: [
+          'Creation of Special GL Accounts for AP',
+          'Link Between Reconciliation A/C & Special GL A/C',
+          'Vendor / Purchase Invoice Posting',
+          'Advance Payment / Down Payment to Vendor',
+          'Clearing of Accounts',
+          'Transfer of Advance Amount from Special GL to Normal GL',
+          'Residual / Partial Payment Scenario',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 10 — ACCOUNTS RECEIVABLE
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – Accounts Receivable',
+        title: 'Module 10 – Accounts Receivable',
+        lessons: [
+          'Customer Group Creation',
+          'Create & Assign Number Range for A/C Group',
+          'Creation of Reconciliation A/C',
+          'Create & Maintain Customer Master Data',
+          'Define Document Types & Number Ranges for Invoice Postings',
+          'Customer / Sales Invoice Posting',
+          'How to Make Receipt Entry (Incoming Payment)',
+          'How to View Customer Balances',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 11 — SPECIAL GL TRANSACTIONS FOR CUSTOMER
+      // =========================================================
+
+      {
+        concept: 'Special GL Transactions for Customer',
+        title: 'Module 11 – Special GL Transactions for Customer',
+        lessons: [
+          'Creation of Special GL Accounts for AR',
+          'Link Between Reconciliation A/C & Special GL A/C',
+          'Customer / Sales Invoice Posting',
+          'Advance Receipt / Down Payment from Customer',
+          'Transfer of Advance Amount from Special GL to Normal GL',
+          'Clearing of Accounts',
+          'Residual / Partial Payment Scenario',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 12 — BUSINESS PARTNERS
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – Business Partners',
+        title: 'Module 12 – Business Partners',
+        lessons: [
+          'Activate PPO Requests for Platform Objects in the Dialog',
+          'Activate Synchronization Options',
+          'Define BP Grouping and Assign Number Ranges',
+          'Define BP Roles for Customers',
+          'Define BP Roles for Vendors',
+          'Define BP Role for Direction Vendor to BP',
+          'Define BP Role for Direction Customer to BP',
+          'Define Number Assignment for Direction BP to Vendor',
+          'Create and Maintain Business Partners',
+          'Post Invoices and Payments and Use Special G/L Transactions',
+          'Reverse Invoices and Payments',
+          'Configure the Payment Program of Customers to Vendors',
+          'Explain the Connection to Vendors',
+          'Manage Partial Payments',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 13 — TERMS OF PAYMENT / DISCOUNT SCENARIO
+      // =========================================================
+
+      {
+        concept: 'Terms of Payment / Discount Scenario',
+        title: 'Module 13 – Terms of Payment / Discount Scenario',
+        lessons: [
+          'Creation of GL Accounts for Discount',
+          'Discount Configuration for AR & AP',
+          'Payment Posting with Discount Scenario',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 14 — GST SETTINGS
+      // =========================================================
+
+      {
+        concept: 'GST – Goods & Service Tax Settings in SAP S/4 HANA',
+        title: 'Module 14 – GST – Goods & Service Tax Settings in SAP S/4 HANA',
+        lessons: [
+          'What is SAP GST',
+          'Types of GST in India',
+          'Define Tax Access Sequence',
+          'Define Condition Types',
+          'Define Account Keys',
+          'Define Tax Calculation Procedure for GST',
+          'Assign Tax Calculation Procedure to Country (India)',
+          'Assign G/L to Account Keys',
+          'Define GST Tax Codes',
+          'Maintain Tax Condition Records',
+          'Invoice Posting with GST (Output & Input)',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 15 — DUNNING PROCESS
+      // =========================================================
+
+      {
+        concept: 'SAP HANA FI – Dunning Process',
+        title: 'Module 15 – Dunning Process',
+        lessons: [
+          'Define Dunning Area',
+          'Define Dunning Procedure',
+          'Assign Dunning Procedure to Customer Master',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 16 — HOUSE BANK & ACCOUNTS
+      // =========================================================
+
+      {
+        concept: 'Creation of House Bank & Accounts in SAP HANA FI',
+        title: 'Module 16 – Creation of House Bank & Accounts',
+        lessons: [
+          'Define House Bank',
+          'Creation of A/C ID',
+          'Creation of Cheque Lot',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 17 — AUTOMATIC PAYMENT PROGRAMMES
+      // =========================================================
+
+      {
+        concept: 'Automatic Payment Programmes in SAP HANA FI',
+        title: 'Module 17 – Automatic Payment Programmes',
+        lessons: [
+          'Set Up Company Codes for Payment Transaction',
+          'Setup Paying Company Codes for Payment Transaction',
+          'Set Up Payment Methods per Country for Payment Transaction',
+          'Set Up Payment Methods per Company Code for Payment Transaction',
+          'Set Up Bank Determination for Payment Transactions',
+          'Payment with Print',
+          'Data Medium Exchange Engine',
+          'MBRS & EBRS',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 18 — CASH JOURNAL / PETTY CASH BOOK
+      // =========================================================
+
+      {
+        concept: 'Cash Journal / Petty Cash Book',
+        title: 'Module 18 – Cash Journal / Petty Cash Book',
+        lessons: [
+          'Creation of G/L Accounts',
+          'Set Up Cash Journal',
+          'Create / Change / Delete Business Transactions',
+          'Define Number Ranges for Cash Journal',
+          'Posting of Transaction',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 19 — WITH-HOLDING TAX
+      // =========================================================
+
+      {
+        concept: 'With-Holding Tax',
+        title: 'Module 19 – With-Holding Tax',
+        lessons: [
+          'Define With-Holding Countries',
+          'Define With-Hold Tax Type for Invoice Posting',
+          'Define With-Hold Tax Type for Payment Posting',
+          'Define With-Holding Tax Codes',
+          'Define Formulas for Calculating With-Holding Tax',
+          'Assign With-Holding Tax Types to Company Code',
+          'Activate With-Holding Tax',
+          'Create G/L A/C',
+          'Define Automatic Posting',
+          'Assign With-Holding Tax Type to Vendor Master',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 20 — ASSETS ACCOUNTING
+      // =========================================================
+
+      {
+        concept: 'Assets Accounting in SAP HANA FI',
+        title: 'Module 20 – Assets Accounting in SAP HANA FI',
+        lessons: [
+          'Copy Chart of Depreciation',
+          'Creation of Tax Code',
+          'Assign Tax Code for Non-Taxable Transaction',
+          'Assign Chart of Depreciation to Company Code',
+          'Specify Account Determination',
+          'Create Screen Layout Rules',
+          'Define Asset Classes',
+          'Define Number Ranges',
+          'Creation of G/L Accounts',
+          'Integration with G/L',
+          'Determine Depreciation Areas in Asset Classes',
+          'Define Screen Layout for Asset Master Data',
+          'Define Screen Layout for Asset Depreciation Areas',
+          'Define Number Ranges for Depreciation Postings',
+          'Specify Intervals and Posting Rules',
+          'Specify Round Up Net Book Valuation',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 21 — DEPRECIATION KEYS
+      // =========================================================
+
+      {
+        concept: 'Depreciation Keys',
+        title: 'Module 21 – Depreciation Keys',
+        lessons: [
+          'Define Base Method',
+          'Define Declining Balance Method',
+          'Define Multilevel Method',
+          'Define Period Control Method',
+          'Define Sub Depreciation Method',
+          'Define Depreciation Key',
+          'Creation of Asset Master',
+          'Asset Purchase Posting',
+          'How to View the Asset',
+          'How to View Asset Value Balances',
+          'Depreciation Run',
+          'Sale of Asset',
+          'Transfer of Asset',
+          'Sub Asset Balances',
+          'Scraping of an Asset',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 22 — INTEGRATION
+      // =========================================================
+
+      {
+        concept: 'Integration',
+        title: 'Module 22 – Integration (FI with MM & SD)',
+        lessons: [
+          'FI with MM (Overview)',
+          'MM Flow – Procurement through Goods Receipt and Invoice Processing',
+          'FI with SD (Overview)',
+          'SD Flow – Sales Order through Delivery, Billing, and Financial Posting',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 23 — FINANCIAL REPORTING
+      // =========================================================
+
+      {
+        concept: 'Financial Reporting',
+        title: 'Module 23 – Financial Reporting',
+        lessons: [
+          'Financial Statement Version',
+          'Balance Sheet & P/L Statement',
+          'Trial Balances',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 24 — FINAL CLOSING ACTIVITIES
+      // =========================================================
+
+      {
+        concept: 'Final Closing Activities',
+        title: 'Module 24 – Final Closing Activities',
+        lessons: [
+          'Carry Forward the Balances of Customers & Vendors',
+          'Carry Forward of G/L Balances',
+          'Carry Forward to Asset Balances',
+          'Carry Forward the Number Ranges',
+        ],
+      },
+
+      // =========================================================
+      // MODULE 25 — MAINTAIN CONTROLLING AREA
+      // =========================================================
+
+      {
+        concept: 'Controlling & Cost Element Accounting',
+        title: 'Module 25 – Maintain Controlling Area',
+        lessons: [
+          'Operating Concern',
+          'Controlling Area',
+          'Cost Element Accounting (Primary & Secondary)',
+        ],
+      },
+    ],
+
+    skills: [
+      'SAP FICCO',
+      'SAP S/4HANA',
+      'SAP Finance',
+      'SAP Controlling',
+      'General Ledger Accounting',
+      'Accounts Payable',
+      'Accounts Receivable',
+      'Asset Accounting',
+      'Depreciation Configuration',
+      'GST in SAP',
+      'Withholding Tax',
+      'Business Partner Configuration',
+      'Automatic Payment Programme',
+      'Cash Journal',
+      'Dunning Process',
+      'House Bank Configuration',
+      'Financial Reporting',
+      'SAP Integration (FI-MM, FI-SD)',
+      'New GL Accounting',
+      'Document Splitting',
+      'Fiscal Year Configuration',
+      'Controlling Area',
+      'Cost Element Accounting',
+    ],
+
+    tools: [
+      'SAP ERP',
+      'SAP ECC',
+      'SAP S/4HANA',
+      'SAP HANA',
+      'SAP FI',
+      'SAP CO',
+      'SAP Fiori',
+    ],
+
+    projects: [
+      {
+        title: 'End-to-End Financial Accounting Configuration',
+        desc: 'Configure enterprise structure, fiscal year variant, posting period variant, document types, field status groups, and chart of accounts for a complete SAP FI setup.',
+      },
+      {
+        title: 'Accounts Payable & Accounts Receivable Cycle',
+        desc: 'Set up vendor and customer master data, process invoices, incoming/outgoing payments, special GL transactions, down payments, and clearing operations.',
+      },
+      {
+        title: 'Asset Accounting & Depreciation',
+        desc: 'Configure asset classes, chart of depreciation, depreciation keys, asset master creation, and execute depreciation runs with asset purchase, transfer, sale, and scrapping.',
+      },
+      {
+        title: 'GST & Withholding Tax Implementation',
+        desc: 'Configure GST tax procedure for India, define tax codes, condition types, account keys, and process invoices with input/output GST and withholding tax.',
+      },
+      {
+        title: 'Automatic Payment Programme',
+        desc: 'Set up company codes, paying company codes, payment methods, bank determination, and execute automatic payment runs with printed outputs.',
+      },
+      {
+        title: 'Financial Reporting & Period Closing',
+        desc: 'Generate Balance Sheet, P&L statements, and trial balances; perform final closing activities including carry forward of balances for the new fiscal year.',
+      },
+    ],
+
+    careers: [
+      'SAP FICO Consultant',
+      'SAP FI Functional Consultant',
+      'SAP CO Consultant',
+      'SAP S/4HANA Finance Consultant',
+      'SAP Financial Analyst',
+      'SAP Finance Support Consultant',
+      'SAP FICCO Functional Analyst',
+    ],
+
+    faqs: [
+      {
+        q: 'What is the duration of the SAP S/4 HANA FICCO course?',
+        a: 'The SAP S/4 HANA Finance & Controlling program is a 100-hour online training program with live and recorded sessions.',
+      },
+      {
+        q: 'What does this course cover?',
+        a: 'The program covers SAP FICCO fundamentals, enterprise structure, general ledger, accounts payable, accounts receivable, asset accounting, depreciation, GST, withholding tax, automatic payments, cash journal, dunning, business partners, financial reporting, final closing, and controlling.',
+      },
+      {
+        q: 'What is the difference between SAP ECC and SAP S/4 HANA?',
+        a: 'The course covers the key differences in architecture, technology, database, and business capabilities between SAP ECC and SAP S/4HANA, helping you understand the migration path.',
+      },
+      {
+        q: 'Will I learn GST configuration in SAP?',
+        a: 'Yes. The course includes a dedicated module on GST for India covering types of GST, tax access sequences, condition types, account keys, tax codes, condition records, and invoice posting with input/output GST.',
+      },
+      {
+        q: 'Does the course include Asset Accounting?',
+        a: 'Yes. Asset Accounting covers chart of depreciation, asset classes, asset master creation, depreciation keys, asset purchase/transfer/sale/scrapping, and depreciation runs.',
+      },
+      {
+        q: 'Will I learn the Automatic Payment Programme?',
+        a: 'Yes. The course covers the full automatic payment programme configuration including company codes, paying company codes, payment methods per country/company code, bank determination, payment with print, and electronic payments.',
+      },
+      {
+        q: 'Does the course cover integration with other SAP modules?',
+        a: 'Yes. Module 22 covers FI integration with Materials Management (MM) and Sales & Distribution (SD), including the end-to-end MM and SD process flows.',
+      },
+      {
+        q: 'What is taught in the Controlling module?',
+        a: 'The controlling section covers maintaining the controlling area, operating concern, and primary & secondary cost elements for internal cost tracking and management accounting.',
+      },
+      {
+        q: 'Does the training include practical learning?',
+        a: 'Yes. The program includes practical projects, assessments and quizzes, doubt clearing sessions, mock interview preparation, and dedicated career support.',
+      },
+      {
+        q: 'What career roles can I target after this course?',
+        a: 'You can target roles such as SAP FICO Consultant, SAP FI Functional Consultant, SAP CO Consultant, SAP S/4HANA Finance Consultant, and SAP Finance Support Consultant.',
+      },
+    ],
+  },
+
+  // 8
+  {
+    id: 8,
     slug: 'aws-devops-engineer-ai',
     title: 'AWS DevOps Engineer & AI Program',
     category: 'DEVOPS and AI',
@@ -4412,6 +5075,7 @@ export const COURSE_OPTIONS = [
   'Advanced SQL Server Program',
   'Advanced Data Analytics with Snowflake & AI',
   'SAP MM + S/4 HANA Program',
+  'SAP S/4 HANA Finance & Controlling Program',
   'Advanced Data Analytics with Databricks & AI',
   'AWS DevOps Engineer & AI Program',
 ]
