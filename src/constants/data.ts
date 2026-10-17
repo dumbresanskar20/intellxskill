@@ -3589,7 +3589,7 @@ export const COURSES: Course[] = [
     ],
   },
 
-  // 7 — SAP S/4 HANA FICCO
+  // 7 — SAP S/4 HANA FICO
   {
     id: 7,
     slug: 'sap-s4-hana-finance-controlling',
@@ -3600,10 +3600,10 @@ export const COURSES: Course[] = [
     mode: 'Online Training',
     level: 'Beginner to Advanced',
     description:
-      'Master SAP S/4 HANA Finance & Controlling (FICCO) from fundamentals to advanced configuration, covering enterprise structure, general ledger, accounts payable, accounts receivable, asset accounting, GST, withholding tax, automatic payments, cash journal, depreciation, integration with MM/SD, financial reporting, and controlling.',
+      'Master SAP S/4 HANA Finance & Controlling (FICO) from fundamentals to advanced configuration, covering enterprise structure, general ledger, accounts payable, accounts receivable, asset accounting, GST, withholding tax, automatic payments, cash journal, depreciation, integration with MM/SD, financial reporting, and controlling.',
 
     tags: [
-      'SAP FICCO',
+      'SAP FICO',
       'SAP S/4HANA',
       'SAP Finance',
       'SAP Controlling',
@@ -3622,7 +3622,7 @@ export const COURSES: Course[] = [
     image: sapCourseImg,
 
     syllabus: [
-      'Introduction to SAP FICCO',
+      'Introduction to SAP FICO',
       'Finance Transaction Migrations to SAP S/4 HANA',
       'SAP HANA FI – Enterprise Structure',
       'Financial Accounting Global Settings',
@@ -3652,12 +3652,12 @@ export const COURSES: Course[] = [
     modules: [
 
       // =========================================================
-      // MODULE 1 — INTRODUCTION TO SAP FICCO
+      // MODULE 1 — INTRODUCTION TO SAP FICO
       // =========================================================
 
       {
-        concept: 'Introduction to SAP FICCO',
-        title: 'Module 1 – Introduction to SAP FICCO',
+        concept: 'Introduction to SAP FICO',
+        title: 'Module 1 – Introduction to SAP FICO',
         lessons: [
           'Introduction to ERP',
           'Introduction to SAP',
@@ -3675,7 +3675,7 @@ export const COURSES: Course[] = [
       },
 
       {
-        concept: 'Introduction to SAP FICCO',
+        concept: 'Introduction to SAP FICO',
         title: 'Module 1B – SAP Methodology (ACTIVATE & ASAP)',
         lessons: [
           'ACTIVATE Methodology – Discover',
@@ -4135,7 +4135,7 @@ export const COURSES: Course[] = [
     ],
 
     skills: [
-      'SAP FICCO',
+      'SAP FICO',
       'SAP S/4HANA',
       'SAP Finance',
       'SAP Controlling',
@@ -4204,17 +4204,17 @@ export const COURSES: Course[] = [
       'SAP S/4HANA Finance Consultant',
       'SAP Financial Analyst',
       'SAP Finance Support Consultant',
-      'SAP FICCO Functional Analyst',
+      'SAP FICO Functional Analyst',
     ],
 
     faqs: [
       {
-        q: 'What is the duration of the SAP S/4 HANA FICCO course?',
+        q: 'What is the duration of the SAP S/4 HANA FICO course?',
         a: 'The SAP S/4 HANA Finance & Controlling program is a 100-hour online training program with live and recorded sessions.',
       },
       {
         q: 'What does this course cover?',
-        a: 'The program covers SAP FICCO fundamentals, enterprise structure, general ledger, accounts payable, accounts receivable, asset accounting, depreciation, GST, withholding tax, automatic payments, cash journal, dunning, business partners, financial reporting, final closing, and controlling.',
+        a: 'The program covers SAP FICO fundamentals, enterprise structure, general ledger, accounts payable, accounts receivable, asset accounting, depreciation, GST, withholding tax, automatic payments, cash journal, dunning, business partners, financial reporting, final closing, and controlling.',
       },
       {
         q: 'What is the difference between SAP ECC and SAP S/4 HANA?',
